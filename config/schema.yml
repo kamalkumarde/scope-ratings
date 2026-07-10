@@ -1,0 +1,139 @@
+extraction_meta:
+  sheet_name: "MASTER"
+  anchors:
+    - name: "Rated entity"
+      offset: 1
+      type: "str"
+      required: true
+    - name: "CorporateSector"
+      offset: 1
+      type: "str"
+      required: true
+      allowed_values: ["Automobiles & Parts","Basic Materials","Chemicals","Construction & Materials","Financial Services","Food & Beverage","Healthcare","Industrial Goods & Services","Media","Oil & Gas","Personal & Household Goods","Real Estate","Retail","Technology","Telecommunications","Travel & Leisure","Utilities"] 
+    - name: "Rating methodologies applied"
+      offset: 1
+      type: "str"
+      required: true  
+      allowed_values: ["General Corporate Rating Methodology","Consumer Products Rating Methodology","Metals and Mining Rating Methodology","Government Related Entities Rating Methodology","Investment Holding Companies Rating Methodology","Retail and Wholesale Rating Methodology","Chemicals Rating Methodology","European Utilities Rating Methodology","Automotive and Commercial Vehicle Manufacturers Rating Methodology","European Automotive Suppliers Rating Methodology","Construction and Construction Materials Rating Methodology","European Real Estate Rating Methodology","Pharmaceutical Companies’ Rating Methodology - Innovative","Pharmaceutical Companies’ Rating Methodology - Generic","European Business and Consumer Services Rating Methodology","Oil and Gas Rating Methodology"]
+    - name: "Industry risk"
+      offset: 1
+      type: "list"
+      required: true  
+      allowed_values: ["Agribusiness","Automotive and Commercial Vehicle Manufacturers","Automotive Suppliers","Business and Consumer Services: asset-light, unspecialised workforce","Business and Consumer Services: asset-light, specialised workforce","Business and Consumer Services: asset-heavy, unspecialised workforce","Business and Consumer Services: asset-heavy, specialised workforce","Capital Goods","Chemicals: Commodity-focused chemical corporates","Chemicals: Specialty chemical corporates","Construction: Buildings and small civil engineering projects","Construction: Concessions","Construction: Construction materials","Construction: Infrastructure and civil engineering","Consumer Products: Discretionary","Consumer Products: Non-Discretionary","Healthcare: Generic pharmaceuticals","Healthcare: Healthcare Services","Healthcare: Innovative pharmaceuticals","Healthcare: Medical Devices","Leisure and Entertainment","Media","Metals & Mining","Oil&Gas: Refining","Oil&Gas: E&P","Postal Services: Letter Mail","Postal Services: Parcels & Express Logistics","Real Estate: Commercial","Real Estate: Commercial development","Real Estate: Homebuilding","Real Estate: Multifamily","Retail: Discretionary retail","Retail: Non-discretionary retail","Technology: Software and IT Services","Telecommunications","Transportation: Airlines","Transportation: Airports","Transportation: Ferries","Transportation: Rail","Transportation: Road transportation and logistics","Utilities: Non-regulated power generation","Utilities: Quasi-regulated activities","Utilities: Regulated network/grid operators","Utilities: Regulated power generation","Utilities: Regulated water infrastructure","Utilities: Trading activities (retail)","Utilities: Trading activities (wholesale)"]
+    - name: "Industry risk score"
+      offset: 1
+      type: "str"
+      required: false
+      allowed_values: ["BBB","BB","A","B","AA","AAA", ""]
+      default: ""
+    - name: "Industry weight"
+      offset: 1
+      type: "str"
+      required: false
+      #allowed_values: ["100%","95%","90%","85%","80%","75%","70%","65%","60%","55%","50%","45%","40%","35%","30%","25%","20%","15%","10%","5%","0%"]
+      range: ["0","1"]
+      default: "0"
+    - name: "Segmentation criteria"
+      offset: 1
+      type: "str"
+      required: true
+      allowed_values: ["Revenue contribution","EBITDA contribution","Other"]
+    - name: "Reporting Currency/Units"
+      offset: 1
+      type: "str"
+      required: true
+      allowed_values: ["EUR","HUF","USD","AMD","AED","AZN","BAM","BGN","BYN","CHF","CZK","DKK","GBP","GEL","HRK","ISK","MDL","MKD","NGN","NOK","PLN","RMB","RON","RSD","RUB","SEK","TRY","UAH"]
+    - name: "Country of origin"
+      offset: 1
+      type: "str"
+      required: true
+      allowed_values: ["Czech Republic","Federal Republic of Germany","Federal Republic of Nigeria","French Republic","Grand Duchy of Luxemburg","Hellenic Republic","Hungary","Ireland","Isle of Man","Italian Republic","Kingdom of Belgium","Kingdom of Denmark","Kingdom of Morocco","Kingdom of Norway","Kingdom of Spain","Kingdom of Sweden","Kingdom of the Netherlands","People's Republic of China","Portuguese Republic","Republic of Austria","Republic of Bulgaria","Republic of Croatia","Republic of Cyprus","Republic of Estonia","Republic of Finland","Republic of Georgia","Republic of Latvia","Republic of Lithuania","Republic of Poland","Republic of Serbia","Republic of Slovenia","Republic of Turkey","Romania","State of Israel","Swiss Confederation","Ukraine","United Arab Emirates","United Kingdom","United States of America"]
+    - name: "Accounting principles"
+      offset: 1
+      type: "str"
+      required: true
+      allowed_values: ["IFRS","US-GAAP","Local GAAP"]
+    - name: "End of business year"
+      offset: 1
+      type: "str"
+      required: true
+      allowed_values: ["December","January","February","March","April","May","June","July","August","September","October","November"]
+    - name: "Business risk profile"
+      offset: 1
+      type: "str"
+      required: true
+      allowed_values: ["AAA","AA+","AA","AA-","A+","A","A-","BBB+","BBB","BBB-","BB+","BB","BB-","B+","B","B-","CCC","CC","C","SD","D"]
+    - name: "(Blended) Industry risk profile"
+      offset: 1
+      type: "str"
+      required: true
+      allowed_values: ["AAA","AA+","AA","AA-","A+","A","A-","BBB+","BBB","BBB-","BB+","BB","BB-","B+","B","B-","CCC","CC","C","SD","D"]
+    - name: "Competitive Positioning"
+      offset: 1
+      type: "str"
+      required: true
+      allowed_values: ["AAA","AA+","AA","AA-","A+","A","A-","BBB+","BBB","BBB-","BB+","BB","BB-","B+","B","B-","CCC","CC","C","SD","D"]
+    - name: "Market share"
+      offset: 1
+      type: "str"
+      required: true
+      allowed_values: ["AAA","AA+","AA","AA-","A+","A","A-","BBB+","BBB","BBB-","BB+","BB","BB-","B+","B","B-","CCC","CC","C","SD","D"]
+    - name: "Diversification"
+      offset: 1
+      type: "str"
+      required: true
+      allowed_values: ["AAA","AA+","AA","AA-","A+","A","A-","BBB+","BBB","BBB-","BB+","BB","BB-","B+","B","B-","CCC","CC","C","SD","D"]
+    - name: "Operating profitability"
+      offset: 1
+      type: "str"
+      required: true
+      allowed_values: ["AAA","AA+","AA","AA-","A+","A","A-","BBB+","BBB","BBB-","BB+","BB","BB-","B+","B","B-","CCC","CC","C","SD","D"]
+    - name: "Sector/company-specific factors (1)"
+      offset: 1
+      type: "str"
+      required: true
+      allowed_values: ["AAA","AA+","AA","AA-","A+","A","A-","BBB+","BBB","BBB-","BB+","BB","BB-","B+","B","B-","CCC","CC","C","SD","D"]
+    - name: "Sector/company-specific factors (2)"
+      offset: 1
+      type: "str"
+      required: false
+      
+      allowed_values: ["AAA","AA+","AA","AA-","A+","A","A-","BBB+","BBB","BBB-","BB+","BB","BB-","B+","B","B-","CCC","CC","C","SD","D",""]
+      default: ""
+    - name: "Financial risk profile"
+      offset: 1
+      type: "str"
+      required: true
+      allowed_values: ["AAA","AA+","AA","AA-","A+","A","A-","BBB+","BBB","BBB-","BB+","BB","BB-","B+","B","B-","CCC","CC","C","SD","D"]
+    - name: "Leverage"
+      offset: 1
+      type: "str"
+      required: true
+      allowed_values: ["AAA","AA+","AA","AA-","A+","A","A-","BBB+","BBB","BBB-","BB+","BB","BB-","B+","B","B-","CCC","CC","C","SD","D"]
+    - name: "Interest cover"
+      offset: 1
+      type: "str"
+      required: true
+      allowed_values: ["AAA","AA+","AA","AA-","A+","A","A-","BBB+","BBB","BBB-","BB+","BB","BB-","B+","B","B-","CCC","CC","C","SD","D"]
+    - name: "Cash flow cover"
+      offset: 1
+      type: "str"
+      required: true
+      allowed_values: ["AAA","AA+","AA","AA-","A+","A","A-","BBB+","BBB","BBB-","BB+","BB","BB-","B+","B","B-","CCC","CC","C","SD","D"]
+    - name: "Liquidity"
+      offset: 1
+      type: "str"
+      required: true
+      allowed_values: ["+4 notches","+3 notches","+2 notches","+1 notch","± 0 notches","-1 notch","-2 notches","-3 notches","-4 notches"]
+
+cross_validation:
+  - rule_type: "equal_lengths"
+    fields: ["Industry risk", "Industry risk score", "Industry weight"]
+    required: true
+
+tables:
+  - anchor_label: "[Scope Credit Metrics]"
+    expected_rows: 6
+    columns_mapping:
+      index_column: "Metric"
+      ignore_trailing_after: "Locked"

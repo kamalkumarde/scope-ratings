@@ -1,0 +1,19 @@
+import logging,os
+
+from src.ingestionpipeline import IngestionPipeline
+
+if __name__ == "__main__":
+    logging.basicConfig(
+        level=logging.INFO, 
+        format="%(asctime)s [%(levelname)s] %(name)s: %(message)s"
+    )
+    logger = logging.getLogger("MainOrchestrator")
+    
+    logger.info("Initializing multi-entity file ingestion suite...")
+    try:
+        logger.info("Pipe Creation Started")
+        pipeline = IngestionPipeline()
+        logger.info("Batch execution sequence finished successfully.")
+    except Exception as e:
+        logger.critical("Batch sequence halted due to an unhandled exception: %s", e)
+        

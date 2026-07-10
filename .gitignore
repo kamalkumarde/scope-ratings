@@ -1,0 +1,24 @@
+.env
+.secrets/
+
+# Python cache and byte-compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE and Editor files
+.vscode/
+.idea/
+.DS_Store
+
+# Logs and temporary data
+logs/
+data/*.xlsm
+archive/
+dlq/
+
+# Virtual environments
+venv/
+env/
+.env/
