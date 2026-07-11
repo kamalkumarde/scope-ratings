@@ -13,6 +13,7 @@ class WarehouseLoader:
             entity_key = self.load_entity(submission_id=submission_id, tcur=trn_cursor, lcur=log_cursor)
             profile_key = self.load_profile(submission_id=submission_id, tcur=trn_cursor, lcur=log_cursor)
             ind_prof_keys = self.load_ind_profile(submission_id=submission_id, tcur=trn_cursor, lcur=log_cursor)
+            ind_fact_keyss = self.load_fct_metric(submission_id=submission_id, tcur=trn_cursor, lcur=log_cursor)
             self.logger.info("Entity ID %s Profile id %s", entity_key, profile_key)
 
     def load_entity(self, tcur: any, lcur: any, submission_id: int) -> int:
@@ -377,6 +378,7 @@ class WarehouseLoader:
     def load_fct_metric(self, tcur: any, lcur: any, submission_id: int)  -> List[int]:
         """Populates industrial sector segmentation metrics grids."""
         try:
+            self.logger.info("************Inside Fact Load  **************** %s")
             sql_insert =  """INSERT INTO fct_rating_metric (
                     entity_key,
                     profile_key,
@@ -393,7 +395,7 @@ class WarehouseLoader:
                 WITH raw_submission AS (
                     SELECT id AS submission_id, parsed_data
                     FROM public.submissions
-                    WHERE id = 199
+                    WHERE id = %s
                 ),
                 stg_dimensions AS (
                     SELECT DISTINCT
@@ -444,21 +446,28 @@ class WarehouseLoader:
                     metric_name, year_label, calendar_year, is_forecast,
                     metric_value, metric_value_formatted, processing_status
                 FROM stg_timeline_metrics
-                ON CONFLICT (submission_id, industry_aggregate_hash_key, metric_name, calendar_year)
+                ON CONFLICT (entity_key, metric_name, calendar_year)
                 DO UPDATE SET
-                    metric_value           = EXCLUDED.metric_value,
-                    metric_value_formatted = EXCLUDED.metric_value_formatted,
-                    processing_status      = EXCLUDED.processing_status,
-                    entity_key             = EXCLUDED.entity_key,
-                    profile_key            = EXCLUDED.profile_key,
-                    year_label             = EXCLUDED.year_label,
-                    is_forecast            = EXCLUDED.is_forecast;
+                    metric_value                = EXCLUDED.metric_value,
+                    metric_value_formatted      = EXCLUDED.metric_value_formatted,
+                    processing_status           = EXCLUDED.processing_status,
+                    submission_id               = EXCLUDED.submission_id,               -- Keeps track of the most recent payload file
+                    profile_key                 = EXCLUDED.profile_key,                 -- Links cleanly to latest parent configuration state
+                    industry_aggregate_hash_key = EXCLUDED.industry_aggregate_hash_key, -- Links cleanly to latest batch aggregate variant hash
+                    year_label                  = EXCLUDED.year_label,
+                    is_forecast                 = EXCLUDED.is_forecast,
+                    updated_at                  = NOW();
 
-              """    
-            tcur.execute(sql_insert_query, (submission_id,))
+              """
+            self.logger.info("************Before Fact  Insert **************** %s")    
+            tcur.execute(sql_insert, (submission_id,))
+            self.logger.info("************After FAct Insert **************** %s")
+            """
             results = tcur.fetchall()
+
+            self.logger.info("************After FAct Insert **************** %s")
             if len(results) > 0:
-                return [row[0] for row in tcur.fetchall()]
+                return [row[0] for row in tcur.fetchall()]"""
             return [0]
         except Exception as err:
             self.logger.error("Failed executing Type-2 SCD split process for dim_ind_profile: %s", err)
