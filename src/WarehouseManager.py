@@ -1,6 +1,5 @@
 
-
-import logging
+import logging, json
 from psycopg2.extensions import connection
 from psycopg2 import sql
 
@@ -29,25 +28,31 @@ class WarehouseManager:
             self.logger.error("Failed to initialize submission for file %s: %s", file_name, e)
             raise e
     
-    def update_submission_single_column(self, conn: connection, submission_id: int, column_name: str, column_value: any) -> int:
-        query = sql.SQL("""     UPDATE submissions 
-                SET {col} = %s ,
-                    updated_at = NOW()              WHERE id = %s
-                RETURNING id;
-    """).format(col=sql.Identifier(column_name))
-        try:
-                
-            with conn:
-                with conn.cursor() as cur:
-                    # The execution tuple remains unchanged as NOW() requires no input parameters
-                    cur.execute(query, (column_value, submission_id))
-                    updated_id = cur.fetchone()
-                    self.logger.info("Sucessfully updated Column %s of submission id  %s", column_name, submission_id)
-                    return updated_id
+
+    def update_submission_post_validate(self, conn: connection, submission_id: int, final_status: str,current_status:str,parsed_data:any):
+            
+            ps = json.dumps(parsed_data)                                
+            query = sql.SQL("""     UPDATE submissions 
+                    SET final_status = %s ,
+                        current_status = %s , 
+                        parsed_data = %s ,                               
+                        current_status_time = NOW()              WHERE id = %s
+                    RETURNING id;
+        """)
+            try:
                     
-        except Exception as e:
-                
-                self.logger.error("Failed to update column %s for ID %s: %s", column_name, submission_id, e)
-                raise e
+                with conn:
+                    with conn.cursor() as cur:
+                        # The execution tuple remains unchanged as NOW() requires no input parameters
+                        cur.execute(query, (final_status,current_status,ps, submission_id))
+                        updated_id = cur.fetchone()
+                        self.logger.info("Sucessfully updated Column %s of submission id  %s", final_status, submission_id)
+                        return updated_id
+                        
+            except Exception as e:
+                    
+                    self.logger.error("Failed to update column %s for ID %s: %s", final_status, submission_id, e)
+                    raise e
+        
         
         

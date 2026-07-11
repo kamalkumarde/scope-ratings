@@ -6,6 +6,8 @@ from src.ConfigManager import ConfigManager
 from src.DatabaseManager import DatabaseManager
 from psycopg2.extensions import connection
 from src.WarehouseManager import WarehouseManager
+from src.ExcelLineageExtractor import ExcelLineageExtractor
+from src.SchemaValidator import SchemaValidator
 
 
 class IngestionPipeline:
@@ -30,9 +32,11 @@ class IngestionPipeline:
             "host": os.getenv("DB_HOST", "localhost"),
             "port": int(os.getenv("DB_PORT", 5432))
         })
-        self.whmanger = WarehouseManager()
+        self.sub_whmanger= WarehouseManager()
 
         self.extractor = ExcelLineageExtractor()
+
+        self.validator = SchemaValidator(self.schema)
        
         
         
@@ -70,8 +74,48 @@ class IngestionPipeline:
 
     def _process_single_file(self, file_path: Path, batch_id: int,lconn: connection,tconn:connection):
         self.logger.info("Extraction Starting for %s",file_path)
-        submission_id = self.whmanger.insert_submission(file_name=file_path.name,conn=lconn)
+        submission_id = self.sub_whmanger.insert_submission(file_name=file_path.name,conn=lconn)
         self.logger.info("New Submission id Created %s",submission_id)
+        extract, lineage = self.extractor.extract(file_path=file_path)
+        self.logger.info("Data Extraction. Completed %s",submission_id)
+        valid,errors,valid_data =  self.validator.validate(raw_data=extract)
+
+        if len(errors) == 0 :
+            self.logger.info("Schema Validation Sucess ")
+            # Update Submission status sucess
+            sub_final_status = "IN PROGRESS"
+            sub_current_status = "VALIDATION SUCCESS" 
+
+        else:
+            self.logger.info("Schema Validation Failure ")
+            sub_final_status = "FAILED"
+            sub_current_status = "VALIDATION FAILURE" 
+
+
+        self.logger.info("Clean Data  %s", valid_data)    
+        
+        sid = self.sub_whmanger.update_submission_post_validate(conn=lconn,submission_id=submission_id, 
+                                                               final_status= sub_final_status, current_status=sub_current_status,
+                                                               parsed_data=valid_data
+                                                               )
+        
+
+            
+
+
+
+            #Update Submssion status
+            
+
+
+
+        
+        
+
+
+
+
+
 
 
 
@@ -84,26 +128,7 @@ class IngestionPipeline:
         self.process_all_files(file_list=files)
 
 
-import logging
-import pandas as pd
-from typing import Any, Tuple, Dict, List, Optional
-from pathlib import Path
-import hashlib
-import datetime
-        
 
-class ExcelLineageExtractor:
-
-    """E - Phase 1: Extracts raw layouts from cells and compiles asset audit fingerprints."""
-    
-    # Configuration-driven anchors to avoid hardcoding in logic
-    
-    def __init__(self):
-        self.logger = logging.getLogger(self.__class__.__name__)
-        self.ANCHOR_KEYS = {
-        "SCOPE_METRICS": "[Scope Credit Metrics]"
-    }
-        
 
               
         
