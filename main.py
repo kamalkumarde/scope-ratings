@@ -1,6 +1,7 @@
 import logging, os
 from src.ingestionpipeline import IngestionPipeline
 from dotenv import load_dotenv
+
 os.environ["DB_NAME"] = "rating_warehouse"
 os.environ["DB_USER"] = "rating_warehouse_user"
 os.environ["DB_PASSWORD"] = "your_secure_password"
@@ -24,5 +25,5 @@ if __name__ == "__main__":
         logger.info("Batch execution sequence finished successfully. %s ",pipeline.datapath )
     except Exception as e:
         logger.critical("Batch sequence halted due to an unhandled exception: %s", e)
-        
+
         
