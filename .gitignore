@@ -14,7 +14,7 @@ __pycache__/
 
 # Logs and temporary data
 logs/
-data/*.xlsm
+data/
 archive/
 dlq/
 
@@ -22,3 +22,5 @@ dlq/
 venv/
 env/
 .env/
+
+

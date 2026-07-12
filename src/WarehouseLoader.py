@@ -1,22 +1,152 @@
-
 import logging
 from psycopg2.extensions import connection
 from typing import List
+#from src.audit import AuditLogger
 
 class WarehouseLoader:
     """Handles dimensional star-schema loading logic."""
-    def __init__(self):
+    def __init__(self,auditor):
         self.logger = logging.getLogger(self.__class__.__name__)
+        self.auditor = auditor
+        
+    def load(self, tconn: connection, submission_id: int) ->bool:       
 
-    def load(self, lconn: connection, tconn: connection, submission_id: int):
-        with tconn.cursor() as trn_cursor, lconn.cursor() as log_cursor:
-            entity_key = self.load_entity(submission_id=submission_id, tcur=trn_cursor, lcur=log_cursor)
-            profile_key = self.load_profile(submission_id=submission_id, tcur=trn_cursor, lcur=log_cursor)
-            ind_prof_keys = self.load_ind_profile(submission_id=submission_id, tcur=trn_cursor, lcur=log_cursor)
-            ind_fact_keyss = self.load_fct_metric(submission_id=submission_id, tcur=trn_cursor, lcur=log_cursor)
-            self.logger.info("Entity ID %s Profile id %s", entity_key, profile_key)
+        with tconn.cursor() as trn_cursor:
+            try:
+                
+                stage = "4.1 Entity Load"
+                status = "START"
+                self.auditor.log(status= stage,submission_id=submission_id,error=status)
 
-    def load_entity(self, tcur: any, lcur: any, submission_id: int) -> int:
+                natural_key = self.get_natural_key(submission_id=submission_id, tcur=trn_cursor)
+
+                self.logger.info("Natural Key for Submission %s is %s",submission_id,natural_key)
+                
+                entity_key = self.load_entity(submission_id=submission_id, tcur=trn_cursor, natural_key=natural_key)
+
+                self.logger.info("Entity Key is : %s ", entity_key)
+
+                status = 'LOAD DIM ENTITY'
+
+                stage = "4.2 Profile Load"
+                self.auditor.log(status= stage,submission_id=submission_id,error=status)
+
+
+                profile_key = self.load_profile(submission_id=submission_id, tcur=trn_cursor, entity_key=entity_key)
+
+                self.logger.info("Profile Key is : %s ", profile_key)            
+
+                status = 'LOAD DIM PROFILE'
+                self.auditor.log(status= stage,submission_id=submission_id,error=status)
+                
+                ind_prof_keys = self.load_ind_profile(submission_id=submission_id, tcur=trn_cursor, profile_key=profile_key)
+
+                self.logger.info("No of Profile Key is : %s ", len(ind_prof_keys))  
+
+                stage = "4.3 Industry Profile load"
+                status = 'LOAD DIM IND PROFILE'
+                self.auditor.log(status= stage,submission_id=submission_id,error=status)
+
+                fact_keys = self.load_fct_metric(submission_id=submission_id, tcur=trn_cursor, profile_key=profile_key)
+                
+                status = 'LOAD FACT METRIC'
+                stage = "4.4 Profile Metric load"
+                self.auditor.log(status= stage,submission_id=submission_id,error=status)
+
+                
+                self.logger.info("No of  Facts for profile %s", len(fact_keys))
+
+                if len(fact_keys) > 0 :
+                    return True
+                else:
+                    return False
+            except Exception as e:
+                 self.logger.error("Failed no Entity key for natural key id %s : %s", natural_key, e)
+
+        
+                
+            
+
+    
+
+    def get_natural_key(self, tcur: any, submission_id: int) -> str:
+        try:
+            
+            nsql =  """
+        WITH prestage AS (
+                    SELECT id AS submission_id, NOW() AS now, parsed_data
+                    FROM public.submissions WHERE id = %s 
+                )
+             select    COALESCE(parsed_data->'metadata'->>'Rated entity', parsed_data->'parsed_data'->>'Rated entity') AS natural_key
+             from prestage;
+                """
+            
+            tcur.execute(nsql, (submission_id,))
+            result = tcur.fetchone()
+            if result:
+                return result[0]
+            return []      
+            
+        
+        except Exception as e:
+            self.logger.error("Failed no natural key for submissio id %s : %s", submission_id, e)
+            raise e
+    def get_entity_key(self, tcur: any, natural_key: str) -> int:
+        try:            
+            nsql =  """ select entity_key from dim_entities where natural_key = %s and is_current = true  """            
+            tcur.execute(nsql, (natural_key,))
+            result = tcur.fetchone()
+            if result:
+                return result[0]
+            return []
+        except Exception as e:
+            self.logger.error("Failed no Entity key for natural key id %s : %s", natural_key, e)
+            raise e
+    def get_profile_key(self, tcur: any, entity_key: int) -> int:
+        try:            
+            nsql =  """ select profile_key from dim_profiles where entity_key = %s and is_current = true  """            
+            tcur.execute(nsql, (entity_key,))
+            result = tcur.fetchone()
+            if result:
+                return result[0]
+            return []
+        except Exception as e:
+            self.logger.error("Failed no Profile key for entity key id %s : %s", entity_key, e)
+            raise e      
+
+    def get_ind_profile_keys(self, tcur: any, profile_key: int) -> List[int]:
+        try:            
+            nsql =  """ select industry_profile_key from dim_ind_profile  where profile_key = %s and is_current = true  """            
+            tcur.execute(nsql, (profile_key,))
+            result = tcur.fetchall()
+            if result:
+                return result
+            return []
+        
+        except Exception as e:
+            self.logger.error("Failed no Ind Profile key for entity key id %s : %s", profile_key, e)
+            raise e
+              
+    def get_fact_keys(self, tcur: any, profile_key: int) -> List[int]:
+        try:            
+            nsql =  """ select fact_metric_key from fct_rating_metric where profile_key = %s  """            
+            tcur.execute(nsql, (profile_key,))
+            result = tcur.fetchall()
+            if result:
+                return result
+            return []
+        
+        except Exception as e:
+            self.logger.error("Failed no Ind Profile key for entity key id %s : %s", profile_key, e)
+            raise e
+
+            
+                 
+
+
+    
+
+    def load_entity(self, tcur: any , submission_id: int, natural_key:str) -> int:
         try:
             shared_cte = """
                 WITH prestage AS (
@@ -55,6 +185,8 @@ class WarehouseLoader:
             """
             tcur.execute(sql_update, (submission_id,))
 
+            status = 'DIM ENTITY UPDATED'
+
             sql_insert = shared_cte + """
                 INSERT INTO dim_entities (
                     natural_key, entity_name, country_of_origin, sector, accounting_principles, 
@@ -70,19 +202,26 @@ class WarehouseLoader:
                 RETURNING entity_key;
             """
             tcur.execute(sql_insert, (submission_id,))
-            result = tcur.fetchone()
+
+            entity_key = self.get_entity_key(tcur=tcur,natural_key=natural_key)
+
+            if entity_key:
+                return entity_key        
+
+
+           
+
             
-            return result[0] if result else 0
             
         except Exception as e:
             self.logger.error("Failed dimensional entity pipeline load on submission %s: %s", submission_id, e)
             raise e
 
-    def load_profile(self, tcur: any, lcur: any, submission_id: int) -> int:
+    def load_profile(self, tcur: any, submission_id: int, entity_key:int) -> int:
         """Populates analytical profile attributes into dim_profiles using split SCD2 commands."""
         try:
             
-            self.logger.info("************Inside Profile Load ****************")
+            #self.logger.info("************Inside Profile Load ****************")
             sql_update = """
                 WITH raw_submission AS (
                     SELECT id AS submission_id, parsed_data, NOW() AS now
@@ -149,10 +288,10 @@ class WarehouseLoader:
                 AND dp.profile_hash_key != ph.profile_hash_key
                 RETURNING dp.profile_key;
             """
-            self.logger.info("************Befpr Profile update ****************")
+            #self.logger.info("************Befpr Profile update ****************")
             tcur.execute(sql_update, (submission_id,))
-            self.logger.info("************After Profile update ****************")
-            result = tcur.fetchone()
+            #self.logger.info("************After Profile update ****************")
+            #result = tcur.fetchone()
 
             sql_insert = """
                 WITH raw_submission AS (
@@ -229,12 +368,14 @@ class WarehouseLoader:
                 WHERE dp.profile_key IS NULL OR dp.profile_hash_key != ph.profile_hash_key
                 RETURNING profile_key;
                 """
-            self.logger.info("************Before Profile Insert **************** %s",sql_insert)
+            #self.logger.info("************Before Profile Insert **************** %s",sql_insert)
             tcur.execute(sql_insert, (submission_id,))
-            self.logger.info("************After Profile insert ****************")
-            result = tcur.fetchone()
-            
-            return result[0] if result else 0
+            #self.logger.info("************After Profile insert ****************")
+            profile_key = self.get_profile_key(tcur=tcur, entity_key=entity_key)
+
+            if profile_key:
+                return profile_key
+            return 0
         
                 
 
@@ -244,10 +385,10 @@ class WarehouseLoader:
             raise e
     
 
-    def load_ind_profile(self, tcur: any, lcur: any, submission_id: int)  -> List[int]:
+    def load_ind_profile(self, tcur: any, submission_id: int, profile_key:int)  -> List[int]:
         
         try:
-            self.logger.info("************Inside  Ind profile  **************** %s")
+            #self.logger.info("************Inside  Ind profile  **************** %s")
             sql_update_query = """
 
                         WITH raw_submission AS (
@@ -294,9 +435,9 @@ class WarehouseLoader:
             RETURNING dip.industry_profile_key;
                
             """
-            self.logger.info("************Before ind Profile update **************** %s")
+            #self.logger.info("************Before ind Profile update **************** %s")
             tcur.execute(sql_update_query, (submission_id,))
-            self.logger.info("***********After  ind Profile update **************** %s")
+            #self.logger.info("***********After  ind Profile update **************** %s")
  
             sql_insert_query = """
                  
@@ -362,23 +503,24 @@ class WarehouseLoader:
                     RETURNING industry_profile_key;
   
             """
-            self.logger.info("************Before ind  Profile Insert **************** %s")
+            #self.logger.info("************Before ind  Profile Insert **************** %s")
             tcur.execute(sql_insert_query, (submission_id,))
-            self.logger.info("************After ind Profile Insert **************** %s")
+            #self.logger.info("************After ind Profile Insert **************** %s")
 
-            results = tcur.fetchall()
-            if len(results) > 0:
-                return [row[0] for row in tcur.fetchall()]
-            return [0]
+            ind_profiles = self.get_ind_profile_keys(tcur=tcur,profile_key=profile_key)
+            if ind_profiles:
+                return ind_profiles
+            return []
+        
         except Exception as err:
             self.logger.error("Failed executing Type-2 SCD split process for dim_ind_profile: %s", err)
             raise err
         
 
-    def load_fct_metric(self, tcur: any, lcur: any, submission_id: int)  -> List[int]:
+    def load_fct_metric(self, tcur: any, submission_id: int,profile_key:int)  -> List[int]:
         """Populates industrial sector segmentation metrics grids."""
         try:
-            self.logger.info("************Inside Fact Load  **************** %s")
+            #self.logger.info("************Inside Fact Load  **************** %s")
             sql_insert =  """INSERT INTO fct_rating_metric (
                     entity_key,
                     profile_key,
@@ -446,29 +588,24 @@ class WarehouseLoader:
                     metric_name, year_label, calendar_year, is_forecast,
                     metric_value, metric_value_formatted, processing_status
                 FROM stg_timeline_metrics
-                ON CONFLICT (entity_key, metric_name, calendar_year)
+                ON CONFLICT (entity_key,profile_key, metric_name, calendar_year)
                 DO UPDATE SET
                     metric_value                = EXCLUDED.metric_value,
                     metric_value_formatted      = EXCLUDED.metric_value_formatted,
                     processing_status           = EXCLUDED.processing_status,
-                    submission_id               = EXCLUDED.submission_id,               -- Keeps track of the most recent payload file
-                    profile_key                 = EXCLUDED.profile_key,                 -- Links cleanly to latest parent configuration state
-                    industry_aggregate_hash_key = EXCLUDED.industry_aggregate_hash_key, -- Links cleanly to latest batch aggregate variant hash
+                    submission_id               = EXCLUDED.submission_id,               
+                    profile_key                 = EXCLUDED.profile_key,                 
+                    industry_aggregate_hash_key = EXCLUDED.industry_aggregate_hash_key, 
                     year_label                  = EXCLUDED.year_label,
                     is_forecast                 = EXCLUDED.is_forecast,
-                    updated_at                  = NOW();
-
+                    updated_at                  = NOW()
+                    RETURNING fact_metric_key;
               """
-            self.logger.info("************Before Fact  Insert **************** %s")    
             tcur.execute(sql_insert, (submission_id,))
-            self.logger.info("************After FAct Insert **************** %s")
-            """
-            results = tcur.fetchall()
-
-            self.logger.info("************After FAct Insert **************** %s")
-            if len(results) > 0:
-                return [row[0] for row in tcur.fetchall()]"""
-            return [0]
+            result = self.get_fact_keys(tcur=tcur,profile_key=profile_key)
+            if result:
+                return result
+            return []
         except Exception as err:
             self.logger.error("Failed executing Type-2 SCD split process for dim_ind_profile: %s", err)
             raise err

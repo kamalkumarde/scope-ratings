@@ -1,5 +1,6 @@
 from  psycopg2  import pool  
-import logging         
+import logging 
+
 
 class DatabaseManager:
     def __init__(self, db_config: dict, min_conn: int = 1, max_conn: int = 10):
@@ -15,3 +16,4 @@ class DatabaseManager:
     def get_connection(self): return self.pool.getconn()
     def put_connection(self, conn): self.pool.putconn(conn)
     def close_all(self): self.pool.closeall()
+    

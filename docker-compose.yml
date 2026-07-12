@@ -1,5 +1,5 @@
 services:
-  postgres_db:
+  db:
     image: postgres:15-alpine
     container_name: credit_warehouse_postgres
     restart: always
@@ -10,10 +10,67 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - ../pg_storage:/var/lib/postgresql/data
-      - ./init-db:/docker-entrypoint-initdb.d
+      - postgres_data:/var/lib/postgresql/data
+      - ./init-db:/docker-entrypoint-initdb.d:ro
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U rating_warehouse_user -d rating_warehouse"]
       interval: 10s
       timeout: 5s
       retries: 5
+    networks:
+      - warehouse_network
+
+  # 1. Background batch processor service
+  pipeline:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: rating_ingestion_pipeline
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      - DB_NAME=rating_warehouse
+      - DB_USER=rating_warehouse_user
+      - DB_PASSWORD=your_secure_password
+      - DB_HOST=db  
+      - DB_PORT=5432
+      - PYTHONPATH=.
+    volumes:
+      - .:/app
+      - ./data:/app/data
+      - ./tests:/app/tests
+    networks:
+      - warehouse_network
+
+  # 2. FastAPI web interface service instance
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: rating_api_service
+    # Overrides the default "python main.py" inside your multi-stage Dockerfile
+    command: uvicorn src.api.main:app --host 0.0.0.0 --port 8000
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      - DB_NAME=rating_warehouse
+      - DB_USER=rating_warehouse_user
+      - DB_PASSWORD=your_secure_password
+      - DB_HOST=db
+      - DB_PORT=5432
+      - PYTHONPATH=.
+    volumes:
+      - ./data:/app/data
+    networks:
+      - warehouse_network
+
+volumes:
+  postgres_data:
+
+networks:
+  warehouse_network:
+    driver: bridge

@@ -1,11 +1,10 @@
-
 import logging
 from typing import List, Tuple, Dict
 import json
-
+import copy
 
 class SchemaValidator:
-    """T - Phase 1: Validates compliance constraints, bounds, and tag presence."""
+    """Validates compliance constraints, bounds, and tag presence."""
     
     def __init__(self, schema_rules: dict):
         self.logger = logging.getLogger(self.__class__.__name__)
@@ -28,41 +27,27 @@ class SchemaValidator:
                 for item in items:
                     if str(item).strip() not in allowed_values:
                         failures.append(f"Value violation on '{field_name}': Element '{item}' is out of bounds.")
-
         return failures 
 
-
-
-
-
-
-
     def validate(self,raw_data:dict)->Tuple[bool,List[str],Dict]:
-
-
-        boundryfailures = self.checkboundaries(raw_data=raw_data)
-        if len(boundryfailures) > 0:
-            self.logger.info("Boundry Failures")       
-                
+        boundary_failures = self.checkboundaries(raw_data=raw_data)
+        #self.logger.info("*******Start******************")
         math_pass, trans_errs, clean_data = self.transform(raw_data=raw_data)
 
-        if len(trans_errs) > 0 :
-            self.loger.info("Maths Failure")
-
-        if not ( len(boundryfailures) > 0  and   len(trans_errs) > 0):
-            return True, [] , clean_data
+        if len(boundary_failures) == 0 and len(trans_errs) == 0:
+            return True, [], clean_data
         else:
-            errors = boundryfailures + trans_errs
-            return False, errors. clean_data
+            errors = boundary_failures + trans_errs
+            return False, errors, clean_data
         
     def transform(self, raw_data: dict) -> Tuple[bool, List[str], dict]:
-        
-        transformed = json.loads(json.dumps(raw_data)) # Deep copy payload
+
+        transformed = copy.deepcopy(raw_data)  # Better deep copy
 
         metadata = transformed.get("metadata", {})
         failures: List[str] = []
 
-        # 1. Run Dynamic Matrix Array Padding 
+        # 1. Dynamic Matrix Array Padding 
         industry_fields = ["Industry risk", "Industry risk score", "Industry weight"]
         max_len = max(len(metadata.get(f, [])) if isinstance(metadata.get(f, []), list) else (1 if metadata.get(f) is not None else 0) for f in industry_fields)
         anchor_defaults = {a.get("name"): a.get("default") for a in self.anchors if "default" in a}
@@ -83,7 +68,9 @@ class SchemaValidator:
                 final_weight = str(w or "0%")
             
             structured_industries.append({
-                "sector": s, "Industry risk score": "" if sc is None else str(sc), "Industry weight": final_weight
+                "sector": s, 
+                "Industry risk score": "" if sc is None else str(sc), 
+                "Industry weight": final_weight
             })
         
         metadata["Industry risk"] = structured_industries
@@ -92,30 +79,20 @@ class SchemaValidator:
 
         # 3. Mathematical Sum Allocation Constraints Checking
         total_weight = 0.0
+        #self.logger.info("*******1111111111******************")
+
         for item in structured_industries:
             try:
                 total_weight += float(item.get("Industry weight", "0%").replace("%", "").strip())
+                #self.logger.info("*******ind   Weight ****************** %s", total_weight )
+
             except ValueError:
-                failures.append(f"Failed parsing allocation percentage footprint string.")
-        
+                
+                failures.append("Failed parsing allocation percentage.")
+               
+        #self.logger.info("*******Total    Weight ****************** %s", total_weight )
         if not failures and round(total_weight, 2) != 100.0:
-            failures.append(f"Mathematical allocation error: Combined weights sum to {total_weight}% instead of exactly 100%.")
+            failures.append(f"Mathematical allocation error: Combined weights sum to {total_weight}% instead of 100%.")
 
         transformed["metadata"] = metadata
         return len(failures) == 0, failures, transformed
-    
-
-
-        
-
-        
-
-        
-        
-        
-
-
-
-
-
-        
