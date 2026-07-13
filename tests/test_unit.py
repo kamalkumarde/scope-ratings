@@ -116,3 +116,5 @@ def test_api_get_invalid_upload_details_404(api_client):
     response = api_client.get("/api/v1/uploads/999999/details")
     assert response.status_code == 404
     assert "detail" in response.json()
+
+    

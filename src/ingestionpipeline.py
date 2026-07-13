@@ -60,12 +60,18 @@ class IngestionPipeline:
         
         try:
             # 1. Initialize macro batch tracking record and fetch the auto-generated identity from the DB
+            #self.logger.info("*****************")
             run_id = self.run_manager.insert_run(conn, len(file_list))
-
+            #self.logger.info("*********22222222222********")
+             
+            
+            
             conn.commit()
+
 
             for ifile in file_list:
                 file_path = Path(ifile)
+
                 self.logger.info(f"Processing File {file_path} under DB Run ID: {run_id}")
                 
                 # 2. Extract and Validate the file
@@ -73,6 +79,7 @@ class IngestionPipeline:
                 stats[outcome] += 1
                 
                 # 3. Save raw file asset and structural execution states tied to the new run_id
+                #self.logger.info("**********333333333333*******")
                 self.run_manager.insert_file_detail(
                     conn=conn, 
                     run_id=run_id, 
@@ -223,7 +230,7 @@ class IngestionPipeline:
 
     def _is_duplicate(self, file_hash: str, conn) -> bool:
         with conn.cursor() as cur:
-            self.logger.info("************* %s",file_hash)
+            #self.logger.info("************* %s",file_hash)
             cur.execute(
                 "SELECT id FROM submissions WHERE file_metadata->>'file_sha256_checksum' = %s AND final_status = %s", 
                 (file_hash, "SUCCESS")
