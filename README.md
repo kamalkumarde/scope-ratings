@@ -44,6 +44,10 @@ mkdir data dlq archive
 ### 2. Build and Deploy
 ```bash
 docker compose up -d --build
+# veify API health
+curl -X GET http://localhost:8000/health
+
+docker compose run pipeline
 ```
 
 ### 3. Database Initialization
