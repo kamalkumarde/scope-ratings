@@ -1,39 +1,108 @@
-# scope-ratings
-Entry Point
+# Scope Ratings Pipeline
 
-1. Start Run
-   1.1 Initialize the project Load 2 db connections for Data and Audit
-   1.2 Load Env
-       Directories/folders etc 
-   1.3 Check DB objects
-        
+This project is an automated data ingestion and transformation pipeline designed to process rating-related metadata from Excel sheets and load them into a relational warehouse using SCD Type 2 (Slowly Changing Dimension) tracking.
 
-Orchestration 
+## 📌 Project Overview
+The pipeline automates the extraction, validation, and loading of credit rating data, ensuring structural integrity and historical traceability.
 
-2. Load file List
+## 🚀 Key Features
+* **Automated Validation**: Ensures data compliance with predefined schema rules.
+* **Data Transformation**: Handles complex logic such as dynamic matrix padding and JSON restructuring.
+* **SCD Type 2 Warehouse**: Maintains historical records using hash-based change detection.
+* **Atomic Transactions**: Processes submissions using robust SQL transactions to prevent data inconsistency.
 
-3. Process Each single File
+## 📂 Project Structure
+```plaintext
+scope-ratings/
+├── api/                    # FastAPI endpoints and business logic layers
+│   ├── __init__.py
+│   ├── analytical.py
+│   ├── dependencies.py
+│   ├── main.py
+│   ├── schemas.py
+│   └── services.py
+├── audit.py                # Logging and lineage tracking
+├── ConfigManager.py        # Configuration and environment handling
+├── DatabaseManager.py      # Core database connection and transaction handling
+├── ExcelLineageExtractor.py# Parsing logic for Excel metadata
+├── ingestionpipeline.py    # Orchestrates the flow from extraction to storage
+├── PipelineRunManager.py   # Manages state and execution of pipeline runs
+├── SchemaValidator.py      # Structural and value compliance logic
+├── WarehouseLoader.py      # Handles data persistence into SCD tables
+└── WarehouseManager.py     # High-level management of warehouse interactions
+```
 
-   3.01 Insert Submission record.
+## 🛠️ Installation & Setup
 
-   
-   3.1 Extract Excel Fields to Json
+### 1. Clone the Repository
+```bash
+git clone https://github.com/kamalkumarde/scope-ratings.git
+cd scope-ratings
+mkdir data dlq archive
+```
 
-   3.2 Validate Json
-	       3.2.1 Schema Validation
-	       3.2.2 Type Validation
-	       3.2.3 Business Validation.
-	       3.2.4 Record Inddividual Errors
+### 2. Build and Deploy
+```bash
+docker compose up -d --build
+```
 
-   3.3 Load Valid Json  to DB 
+### 3. Database Initialization
+Ensure the PostgreSQL container is running and execute your DDL migration scripts to initialize the required schema tables.
 
-   3.4 Load Warehouse
+## 🔌 API Documentation
+The project includes a RESTful API built with FastAPI.  
+**Base URL**: `http://localhost:8000/api/v1`
 
-       3.4.1 Load DIM Entity
-       3.4.2 Load DIM Profile
-       3.4.3 Load DIM Ind Profile
-       3.4.4 Load FCT Metric
+### Company Endpoints
+* **List Companies**:
+  ```bash
+  curl -s -X 'GET' 'http://localhost:8000/api/v1/companies?limit=10&offset=0' -H 'accept: application/json' | jq
+  ```
+* **Get Company**:
+  ```bash
+  curl -s -X 'GET' 'http://localhost:8000/api/v1/companies/43' -H 'accept: application/json' | jq
+  ```
+* **List Versions**:
+  ```bash
+  curl -s -X 'GET' 'http://localhost:8000/api/v1/companies/Company%20A/versions' -H 'accept: application/json' | jq
+  ```
+* **Get History**:
+  ```bash
+  curl -s -X 'GET' 'http://localhost:8000/api/v1/companies/Company%20A/history' -H 'accept: application/json' | jq
+  ```
+* **Compare Companies**:
+  ```bash
+  curl -s -X 'GET' 'http://localhost:8000/api/v1/companies/compare?company_ids=Company%20A&company_ids=Company%20B&as_of_date=2026-07-13' -H 'accept: application/json' | jq
+  ```
 
-   3.5 Log Metrics
+### Snapshot Endpoints
+* **Filter by Company**:
+  ```bash
+  curl -s -X 'GET' 'http://localhost:8000/api/v1/snapshots?company_id=Company%20A' -H 'accept: application/json' | jq
+  ```
+* **Latest Snapshot**:
+  ```bash
+  curl -s -X 'GET' 'http://localhost:8000/api/v1/snapshots/latest' -H 'accept: application/json' | jq
+  ```
 
-4 Cleanup and Close Connections
+### Upload & Submission Endpoints
+* **List Uploads**:
+  ```bash
+  curl -s -X 'GET' 'http://localhost:8000/api/v1/uploads?limit=10' -H 'accept: application/json' | jq
+  ```
+* **Download File**:
+  ```bash
+  curl -X 'GET' 'http://localhost:8000/api/v1/uploads/568/file' -H 'accept: application/json' -o submission_013_valid.xlsm
+  ```
+
+## ⚙️ Usage
+
+### Run the Pipeline
+```bash
+python ingestionpipeline.py
+```
+
+### Run the API
+```bash
+uvicorn api.main:app --reload
+``` 
