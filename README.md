@@ -101,6 +101,13 @@ The project includes a RESTful API built with FastAPI.
 
 ## ⚙️ Usage
 
+### Run Tests
+```bash
+docker compose run --rm -v "$(pwd):/app" pipeline pytest tests/test_pipeline/ tests/test_integration.py -v
+docker compose run --rm -v "$(pwd):/app" --workdir /app api pytest tests/test_api/ tests/test_integration.py::test_api_upload_file_streaming_lifecycle -v
+```
+
+
 ### Run the Pipeline
 ```bash
 docker compose run pipeline 
