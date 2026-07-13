@@ -103,10 +103,6 @@ The project includes a RESTful API built with FastAPI.
 
 ### Run the Pipeline
 ```bash
-python ingestionpipeline.py
+docker compose run pipeline 
 ```
-
-### Run the API
-```bash
-uvicorn api.main:app --reload
-``` 
+ 
