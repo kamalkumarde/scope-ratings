@@ -1,0 +1,1 @@
+mkdir -p logs data archive dlq && touch logs/.gitkeep data/.gitkeep archive/.gitkeep dlq/.gitkeep

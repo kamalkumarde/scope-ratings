@@ -1,0 +1,585 @@
+Script started on Mon Jul 13 19:43:29 2026
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+[?1034hbash-3.2$ 
+bash-3.2$ dow[K[K[Kdocker compose down
+[1A[1B[0G[?25l[+] Running 1/2
+ [32m✔[0m Container rating_ingestion_pipeline  [32mRemoved[0m                                                                                                                  [34m0.0s [0m
+ [33m⠋[0m Container rating_api_service         Stopping                                                                                                                 [34m0.1s [0m
+[?25h[1A[1A[1A[0G[?25l[+] Running 1/2
+ [32m✔[0m Container rating_ingestion_pipeline  [32mRemoved[0m                                                                                                                  [34m0.0s [0m
+ [33m⠙[0m Container rating_api_service         Stopping                                                                                                                 [34m0.2s [0m
+[?25h[1A[1A[1A[0G[?25l[+] Running 1/2
+ [32m✔[0m Container rating_ingestion_pipeline  [32mRemoved[0m                                                                                                                  [34m0.0s [0m
+ [33m⠹[0m Container rating_api_service         Stopping                                                                                                                 [34m0.3s [0m
+[?25h[1A[1A[1A[0G[?25l[+] Running 1/2
+ [32m✔[0m Container rating_ingestion_pipeline  [32mRemoved[0m                                                                                                                  [34m0.0s [0m
+ [33m⠸[0m Container rating_api_service         Stopping                                                                                                                 [34m0.4s [0m
+[?25h[1A[1A[1A[0G[?25l[34m[+] Running 2/3[0m
+ [32m✔[0m Container rating_ingestion_pipeline  [32mRemoved[0m                                                                                                                  [34m0.0s [0m
+ [32m✔[0m Container rating_api_service         [32mRemoved[0m                                                                                                                  [34m0.4s [0m
+ [33m⠋[0m Container credit_warehouse_postgres  Stopping                                                                                                                 [34m0.1s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 2/3
+ [32m✔[0m Container rating_ingestion_pipeline  [32mRemoved[0m                                                                                                                  [34m0.0s [0m
+ [32m✔[0m Container rating_api_service         [32mRemoved[0m                                                                                                                  [34m0.4s [0m
+ [33m⠙[0m Container credit_warehouse_postgres  Stopping                                                                                                                 [34m0.2s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[34m[+] Running 3/4[0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mRemoved[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_api_service             [32mRemoved[0m                                                                                                              [34m0.4s [0m
+ [32m✔[0m Container credit_warehouse_postgres      [32mRemoved[0m                                                                                                              [34m0.2s [0m
+ [33m⠋[0m Network scope-ratings_warehouse_network  Removing                                                                                                             [34m0.1s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Container rating_ingestion_pipeline      [32mRemoved[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_api_service             [32mRemoved[0m                                                                                                              [34m0.4s [0m
+ [32m✔[0m Container credit_warehouse_postgres      [32mRemoved[0m                                                                                                              [34m0.2s [0m
+ [33m⠙[0m Network scope-ratings_warehouse_network  Removing                                                                                                             [34m0.2s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[34m[+] Running 4/4[0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mRemoved[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_api_service             [32mRemoved[0m                                                                                                              [34m0.4s [0m
+ [32m✔[0m Container credit_warehouse_postgres      [32mRemoved[0m                                                                                                              [34m0.2s [0m
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mRemoved[0m                                                                                                              [34m0.2s [0m
+[?25hbash-3.2$ docker compose down[K[K[K[Kup -d
+[33mWARN[0m[0000] Found orphan containers ([scope-ratings-pipeline-run-fb3a529d54ca scope-ratings-pipeline-run-4b1c11578a7e scope-ratings-pipeline-run-7ec655a3821d scope-ratings-pipeline-run-1d727c562b11 scope-ratings-pipeline-run-4a11aac77080 scope-ratings-pipeline-run-4395079c8642 scope-ratings-pipeline-run-0457e221b42b scope-ratings-pipeline-run-61196840ba7a scope-ratings-pipeline-run-6d3813966a78 scope-ratings-pipeline-run-454580a6b9d2 scope-ratings-pipeline-run-655aa51f1cc1 scope-ratings-pipeline-run-d11a33ae7418]) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up. 
+[1A[1B[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠋[0m Container credit_warehouse_postgres      Starting                                                                                                             [34m0.1s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠙[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m0.2s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠹[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m0.3s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠸[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m0.4s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠼[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m0.5s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠴[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m0.6s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠦[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m0.7s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠧[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m0.8s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠇[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m0.9s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠏[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m1.0s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠋[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m1.1s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠙[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m1.2s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠹[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m1.3s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠸[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m1.4s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠼[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m1.5s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠴[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m1.6s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠦[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m1.7s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠧[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m1.8s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠇[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m1.9s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠏[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m2.0s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠋[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m2.1s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠙[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m2.2s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠹[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m2.3s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠸[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m2.4s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠼[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m2.5s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠴[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m2.6s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠦[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m2.7s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠧[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m2.8s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠇[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m2.9s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠏[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m3.0s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠋[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m3.1s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠙[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m3.2s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠹[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m3.3s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠸[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m3.4s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠼[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m3.5s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠴[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m3.6s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠦[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m3.7s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠧[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m3.8s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠇[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m3.9s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠏[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m4.0s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠋[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m4.1s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠙[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m4.2s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠹[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m4.3s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠸[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m4.4s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠼[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m4.5s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠴[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m4.6s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠦[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m4.7s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠧[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m4.8s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠇[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m4.9s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠏[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m5.0s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠋[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m5.1s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠙[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m5.2s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠹[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m5.3s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠸[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m5.4s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠼[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m5.5s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠴[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m5.6s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠦[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m5.7s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠧[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m5.8s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠇[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m5.9s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠏[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m6.0s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠋[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m6.1s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠙[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m6.2s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠹[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m6.3s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠸[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m6.4s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠼[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m6.5s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠴[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m6.6s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠦[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m6.7s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠧[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m6.8s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠇[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m6.9s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠏[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m7.0s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠋[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m7.1s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠙[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m7.2s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠹[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m7.3s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠸[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m7.4s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠼[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m7.5s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠴[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m7.6s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠦[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m7.7s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠧[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m7.8s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠇[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m7.9s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠏[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m8.0s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠋[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m8.1s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠙[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m8.2s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠹[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m8.3s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠸[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m8.4s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠼[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m8.5s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠴[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m8.6s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠦[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m8.7s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠧[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m8.8s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠇[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m8.9s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠏[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m9.0s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠋[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m9.1s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠙[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m9.2s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠹[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m9.3s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠸[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m9.4s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠼[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m9.5s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠴[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m9.6s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠦[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m9.7s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠧[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m9.8s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠇[0m Container credit_warehouse_postgres      Waiting                                                                                                              [34m9.9s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠏[0m Container credit_warehouse_postgres      Waiting                                                                                                             [34m10.0s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠋[0m Container credit_warehouse_postgres      Waiting                                                                                                             [34m10.1s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠙[0m Container credit_warehouse_postgres      Waiting                                                                                                             [34m10.2s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠹[0m Container credit_warehouse_postgres      Waiting                                                                                                             [34m10.3s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠸[0m Container credit_warehouse_postgres      Waiting                                                                                                             [34m10.4s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠼[0m Container credit_warehouse_postgres      Waiting                                                                                                             [34m10.5s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [33m⠴[0m Container credit_warehouse_postgres      Waiting                                                                                                             [34m10.6s [0m
+ [32m✔[0m Container rating_api_service             [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mCreated[0m                                                                                                              [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 2/4
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container credit_warehouse_postgres      [32mHealthy[0m                                                                                                             [34m10.6s [0m
+ [33m⠙[0m Container rating_api_service             Starting                                                                                                            [34m10.6s [0m
+ [33m⠙[0m Container rating_ingestion_pipeline      Starting                                                                                                            [34m10.6s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[34m[+] Running 4/4[0m
+ [32m✔[0m Network scope-ratings_warehouse_network  [32mCreated[0m                                                                                                              [34m0.0s [0m
+ [32m✔[0m Container credit_warehouse_postgres      [32mHealthy[0m                                                                                                             [34m10.6s [0m
+ [32m✔[0m Container rating_api_service             [32mStarted[0m                                                                                                             [34m10.7s [0m
+ [32m✔[0m Container rating_ingestion_pipeline      [32mStarted[0m                                                                                                             [34m10.7s [0m
+[?25hbash-3.2$ docker compose up -d[1Pdown[C[C[C[C[C[C[C[C[C[C[3Pmkdir DE_Content[C[C[C[C[C[C[C[C[C[Cdocker compose down[C[C[C[C[C[C[C[C[C[C[3Pmkdir DE_Content[C[C[C[C[C[C[C[C[C[C[3Pcd Downloads/[C[C[C[C[C[C[C[C[C[Cpwd[Kdocker exec -it b9f9ecfa72c21985f98c4fe571742e41e4be34dba8936dd6796a18395e4a6a66 /bin/sh[C[C[C[C[C[C[C[C[C[C conda activate base[K
