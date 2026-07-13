@@ -9,19 +9,19 @@ class WarehouseManager:
     def __init__(self):
          self.logger = logging.getLogger(self.__class__.__name__)
 
-    def insert_submission(self, conn: connection, file_name: str,file_meta: Dict,final_status: str,current_status:str) -> int:
+    def insert_submission(self, conn: connection, run_id: int, file_name: str,file_meta: Dict,final_status: str,current_status:str) -> int:
         # 1. Added "RETURNING id" so fetchone() actually has something to grab
         fm = json.dumps(file_meta)  
         sql = """
-            INSERT INTO submissions (filename, final_status, current_status, execution_duration_seconds,file_metadata)
-            VALUES (%s, %s, %s, %s,%s)
+            INSERT INTO submissions (filename, final_status, current_status, execution_duration_seconds,file_metadata,run_id)
+            VALUES (%s, %s, %s, %s,%s,%s)
             RETURNING id;
         """
         try:
             with conn:
                 with conn.cursor() as cur:
                     # 2. Package ALL four parameters into a single tuple argument
-                    cur.execute(sql, (file_name, final_status, current_status, "0",fm))
+                    cur.execute(sql, (file_name, final_status, current_status, "0",fm,run_id))
                     
                     # 3. Safely extract the returned ID
                     submission_id = cur.fetchone()[0]

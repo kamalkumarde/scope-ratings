@@ -1,0 +1,68 @@
+[
+  {
+    "natural_id": "Company A",
+    "entity_name": "Company A",
+    "country_of_origin": "Federal Republic of Germany",
+    "is_current": true,
+    "valid_from": "2026-07-13T06:46:06.260373",
+    "valid_to": null,
+    "submission_id": 552,
+    "sector": null,
+    "currency": null
+  },
+  {
+    "natural_id": "Company A",
+    "entity_name": "Company A",
+    "country_of_origin": "Federal Republic of Germany",
+    "is_current": false,
+    "valid_from": "2026-07-13T06:46:05.012149",
+    "valid_to": "2026-07-13T06:46:06.260373",
+    "submission_id": 499,
+    "sector": null,
+    "currency": null
+  },
+  {
+    "natural_id": "Company A",
+    "entity_name": "Company A",
+    "country_of_origin": "Federal Republic of Germany",
+    "is_current": false,
+    "valid_from": "2026-07-13T06:46:04.419075",
+    "valid_to": "2026-07-13T06:46:05.012149",
+    "submission_id": 477,
+    "sector": null,
+    "currency": null
+  },
+  {
+    "natural_id": "Company A",
+    "entity_name": "Company A",
+    "country_of_origin": "Federal Republic of Germany",
+    "is_current": false,
+    "valid_from": "2026-07-13T06:46:04.290841",
+    "valid_to": "2026-07-13T06:46:04.419075",
+    "submission_id": 476,
+    "sector": null,
+    "currency": null
+  },
+  {
+    "natural_id": "Company A",
+    "entity_name": "Company A",
+    "country_of_origin": "Federal Republic of Germany",
+    "is_current": false,
+    "valid_from": "2026-07-13T06:46:04.127508",
+    "valid_to": "2026-07-13T06:46:04.290841",
+    "submission_id": 473,
+    "sector": null,
+    "currency": null
+  },
+  {
+    "natural_id": "Company A",
+    "entity_name": "Company A",
+    "country_of_origin": "Federal Republic of Germany",
+    "is_current": false,
+    "valid_from": "2026-07-13T06:46:03.379074",
+    "valid_to": "2026-07-13T06:46:04.127508",
+    "submission_id": 446,
+    "sector": null,
+    "currency": null
+  }
+]

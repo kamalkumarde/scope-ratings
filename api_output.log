@@ -1,0 +1,3190 @@
+[H[2J[3J🧪 Starting Data Warehouse API End-to-End Verification Suite 🧪
+-e 
+========================================================================
+-e 🚀 MODULE: ENTITY MANAGEMENT CLUSTER (/companies)
+-e ========================================================================
+-e 
+✨ Testing Endpoint: List & Paginate Companies
+-e 👉 Command: curl -s 'http://localhost:8000/api/v1/companies?limit=10&offset=0' | jq
+-e ------------------------------------------------------------------------
+[
+  {
+    "natural_id": "Borealis Chemical Group SE",
+    "entity_name": "Borealis Chemical Group SE",
+    "country_of_origin": "Federal Republic of Germany",
+    "is_current": true,
+    "valid_from": "2026-07-13T06:46:05.242947",
+    "valid_to": null,
+    "submission_id": 509,
+    "metadata": {
+      "Leverage": "CCC",
+      "Liquidity": "-2 notches",
+      "Market share": "BB-",
+      "Rated entity": "Borealis Chemical Group SE",
+      "Industry risk": [
+        {
+          "sector": "Automotive Suppliers",
+          "Industry weight": "10%",
+          "Industry risk score": "A"
+        },
+        {
+          "sector": "Automotive Suppliers",
+          "Industry weight": "90%",
+          "Industry risk score": "BB"
+        }
+      ],
+      "Interest cover": "B-",
+      "Cash flow cover": "CCC",
+      "CorporateSector": "Technology",
+      "Diversification": "B+",
+      "Country of origin": "Federal Republic of Germany",
+      "End of business year": "December",
+      "Accounting principles": "Local GAAP",
+      "Business risk profile": "CCC",
+      "Segmentation criteria": "EBITDA contribution",
+      "Financial risk profile": "C",
+      "Competitive Positioning": "B+",
+      "Operating profitability": "BB-",
+      "Reporting Currency/Units": "EUR",
+      "Rating methodologies applied": [
+        "General Corporate Rating Methodology",
+        "Consumer Products Rating Methodology"
+      ],
+      "(Blended) Industry risk profile": "A",
+      "Sector/company-specific factors (1)": "B-",
+      "Sector/company-specific factors (2)": null
+    }
+  },
+  {
+    "natural_id": "Chronos Logistics & Transport",
+    "entity_name": "Chronos Logistics & Transport",
+    "country_of_origin": "Federal Republic of Germany",
+    "is_current": true,
+    "valid_from": "2026-07-13T06:46:05.328483",
+    "valid_to": null,
+    "submission_id": 513,
+    "metadata": {
+      "Leverage": "CCC",
+      "Liquidity": "-2 notches",
+      "Market share": "BB-",
+      "Rated entity": "Chronos Logistics & Transport",
+      "Industry risk": [
+        {
+          "sector": "Automotive Suppliers",
+          "Industry weight": "95%",
+          "Industry risk score": "BBB"
+        },
+        {
+          "sector": "Automotive Suppliers",
+          "Industry weight": "5%",
+          "Industry risk score": "BB"
+        }
+      ],
+      "Interest cover": "B-",
+      "Cash flow cover": "CCC",
+      "CorporateSector": "Technology",
+      "Diversification": "B+",
+      "Country of origin": "Federal Republic of Germany",
+      "End of business year": "December",
+      "Accounting principles": "IFRS",
+      "Business risk profile": "BBB",
+      "Segmentation criteria": "EBITDA contribution",
+      "Financial risk profile": "C",
+      "Competitive Positioning": "B+",
+      "Operating profitability": "BB-",
+      "Reporting Currency/Units": "EUR",
+      "Rating methodologies applied": [
+        "General Corporate Rating Methodology",
+        "Consumer Products Rating Methodology"
+      ],
+      "(Blended) Industry risk profile": "A",
+      "Sector/company-specific factors (1)": "B-",
+      "Sector/company-specific factors (2)": null
+    }
+  },
+  {
+    "natural_id": "Company A",
+    "entity_name": "Company A",
+    "country_of_origin": "Federal Republic of Germany",
+    "is_current": true,
+    "valid_from": "2026-07-13T06:46:06.260373",
+    "valid_to": null,
+    "submission_id": 552,
+    "metadata": {
+      "Leverage": "CCC",
+      "Liquidity": "-2 notches",
+      "Market share": "B+",
+      "Rated entity": "Company A",
+      "Industry risk": [
+        {
+          "sector": "Consumer Products: Non-Discretionary",
+          "Industry weight": "100%",
+          "Industry risk score": "BBB"
+        }
+      ],
+      "Interest cover": "B-",
+      "Cash flow cover": "CCC",
+      "CorporateSector": "Personal & Household Goods",
+      "Diversification": "B+",
+      "Country of origin": "Federal Republic of Germany",
+      "End of business year": "December",
+      "Accounting principles": "IFRS",
+      "Business risk profile": "B",
+      "Segmentation criteria": "EBITDA contribution",
+      "Financial risk profile": "CC",
+      "Competitive Positioning": "B+",
+      "Operating profitability": "B",
+      "Reporting Currency/Units": "EUR",
+      "Rating methodologies applied": "General Corporate Rating Methodology",
+      "(Blended) Industry risk profile": "A",
+      "Sector/company-specific factors (1)": "B-",
+      "Sector/company-specific factors (2)": null
+    }
+  },
+  {
+    "natural_id": "Company B",
+    "entity_name": "Company B",
+    "country_of_origin": "Swiss Confederation",
+    "is_current": true,
+    "valid_from": "2026-07-13T06:46:03.666092",
+    "valid_to": null,
+    "submission_id": 454,
+    "metadata": {
+      "Leverage": "BB+",
+      "Liquidity": "+1 notch",
+      "Market share": "BBB+",
+      "Rated entity": "Company B",
+      "Industry risk": [
+        {
+          "sector": "Automotive Suppliers",
+          "Industry weight": "20%",
+          "Industry risk score": "BBB"
+        },
+        {
+          "sector": "Automotive and Commercial Vehicle Manufacturers",
+          "Industry weight": "25%",
+          "Industry risk score": "BB"
+        },
+        {
+          "sector": "Automotive and Commercial Vehicle Manufacturers",
+          "Industry weight": "55%",
+          "Industry risk score": "B"
+        }
+      ],
+      "Interest cover": "BBB+",
+      "Cash flow cover": "A-",
+      "CorporateSector": "Automobiles & Parts",
+      "Diversification": "A-",
+      "Country of origin": "Swiss Confederation",
+      "End of business year": "March",
+      "Accounting principles": "IFRS",
+      "Business risk profile": "BBB-",
+      "Segmentation criteria": "EBITDA contribution",
+      "Financial risk profile": "BB",
+      "Competitive Positioning": "A+",
+      "Operating profitability": "BB+",
+      "Reporting Currency/Units": "CHF",
+      "Rating methodologies applied": "Automotive and Commercial Vehicle Manufacturers Rating Methodology",
+      "(Blended) Industry risk profile": "A",
+      "Sector/company-specific factors (1)": "BBB+",
+      "Sector/company-specific factors (2)": null
+    }
+  },
+  {
+    "natural_id": "Delta Energy Infrastructure Corp",
+    "entity_name": "Delta Energy Infrastructure Corp",
+    "country_of_origin": "Federal Republic of Germany",
+    "is_current": true,
+    "valid_from": "2026-07-13T06:46:06.175141",
+    "valid_to": null,
+    "submission_id": 548,
+    "metadata": {
+      "Leverage": "CCC",
+      "Liquidity": "-2 notches",
+      "Market share": "BB-",
+      "Rated entity": "Delta Energy Infrastructure Corp",
+      "Industry risk": [
+        {
+          "sector": "Automotive Suppliers",
+          "Industry weight": "5%",
+          "Industry risk score": "BBB"
+        },
+        {
+          "sector": "Automotive Suppliers",
+          "Industry weight": "95%",
+          "Industry risk score": "BB"
+        }
+      ],
+      "Interest cover": "B-",
+      "Cash flow cover": "CCC",
+      "CorporateSector": "Personal & Household Goods",
+      "Diversification": "B+",
+      "Country of origin": "Federal Republic of Germany",
+      "End of business year": "December",
+      "Accounting principles": "Local GAAP",
+      "Business risk profile": "A",
+      "Segmentation criteria": "EBITDA contribution",
+      "Financial risk profile": "C",
+      "Competitive Positioning": "B+",
+      "Operating profitability": "BB-",
+      "Reporting Currency/Units": "EUR",
+      "Rating methodologies applied": [
+        "General Corporate Rating Methodology",
+        "Consumer Products Rating Methodology"
+      ],
+      "(Blended) Industry risk profile": "A",
+      "Sector/company-specific factors (1)": "B-",
+      "Sector/company-specific factors (2)": null
+    }
+  },
+  {
+    "natural_id": "Ironclad Industrial Goods",
+    "entity_name": "Ironclad Industrial Goods",
+    "country_of_origin": "Federal Republic of Germany",
+    "is_current": true,
+    "valid_from": "2026-07-13T06:46:06.067952",
+    "valid_to": null,
+    "submission_id": 544,
+    "metadata": {
+      "Leverage": "CCC",
+      "Liquidity": "-2 notches",
+      "Market share": "BB-",
+      "Rated entity": "Ironclad Industrial Goods",
+      "Industry risk": [
+        {
+          "sector": "Automotive Suppliers",
+          "Industry weight": "85%",
+          "Industry risk score": "A"
+        },
+        {
+          "sector": "Automotive Suppliers",
+          "Industry weight": "15%",
+          "Industry risk score": "BB"
+        }
+      ],
+      "Interest cover": "B-",
+      "Cash flow cover": "CCC",
+      "CorporateSector": "Personal & Household Goods",
+      "Diversification": "B+",
+      "Country of origin": "Federal Republic of Germany",
+      "End of business year": "December",
+      "Accounting principles": "IFRS",
+      "Business risk profile": "C",
+      "Segmentation criteria": "EBITDA contribution",
+      "Financial risk profile": "C",
+      "Competitive Positioning": "B+",
+      "Operating profitability": "BB-",
+      "Reporting Currency/Units": "EUR",
+      "Rating methodologies applied": [
+        "General Corporate Rating Methodology",
+        "Consumer Products Rating Methodology"
+      ],
+      "(Blended) Industry risk profile": "A",
+      "Sector/company-specific factors (1)": "B-",
+      "Sector/company-specific factors (2)": null
+    }
+  },
+  {
+    "natural_id": "Keystone Construction Materials",
+    "entity_name": "Keystone Construction Materials",
+    "country_of_origin": "Federal Republic of Germany",
+    "is_current": true,
+    "valid_from": "2026-07-13T06:46:04.610130",
+    "valid_to": null,
+    "submission_id": 485,
+    "metadata": {
+      "Leverage": "CCC",
+      "Liquidity": "-2 notches",
+      "Market share": "BB-",
+      "Rated entity": "Keystone Construction Materials",
+      "Industry risk": [
+        {
+          "sector": "Consumer Products: Non-Discretionary",
+          "Industry weight": "85%",
+          "Industry risk score": "A"
+        },
+        {
+          "sector": "Automotive Suppliers",
+          "Industry weight": "15%",
+          "Industry risk score": "BB"
+        }
+      ],
+      "Interest cover": "B-",
+      "Cash flow cover": "CCC",
+      "CorporateSector": "Chemicals",
+      "Diversification": "B+",
+      "Country of origin": "Federal Republic of Germany",
+      "End of business year": "December",
+      "Accounting principles": "IFRS",
+      "Business risk profile": "B+",
+      "Segmentation criteria": "EBITDA contribution",
+      "Financial risk profile": "C",
+      "Competitive Positioning": "B+",
+      "Operating profitability": "BB-",
+      "Reporting Currency/Units": "EUR",
+      "Rating methodologies applied": [
+        "General Corporate Rating Methodology",
+        "Consumer Products Rating Methodology"
+      ],
+      "(Blended) Industry risk profile": "A",
+      "Sector/company-specific factors (1)": "B-",
+      "Sector/company-specific factors (2)": null
+    }
+  },
+  {
+    "natural_id": "Luminary Software & IT Services",
+    "entity_name": "Luminary Software & IT Services",
+    "country_of_origin": "Federal Republic of Germany",
+    "is_current": true,
+    "valid_from": "2026-07-13T06:46:05.039842",
+    "valid_to": null,
+    "submission_id": 500,
+    "metadata": {
+      "Leverage": "CCC",
+      "Liquidity": "-2 notches",
+      "Market share": "BB-",
+      "Rated entity": "Luminary Software & IT Services",
+      "Industry risk": [
+        {
+          "sector": "Automotive Suppliers",
+          "Industry weight": "95%",
+          "Industry risk score": "BBB"
+        },
+        {
+          "sector": "Automotive Suppliers",
+          "Industry weight": "5%",
+          "Industry risk score": "BB"
+        }
+      ],
+      "Interest cover": "B-",
+      "Cash flow cover": "CCC",
+      "CorporateSector": "Chemicals",
+      "Diversification": "B+",
+      "Country of origin": "Federal Republic of Germany",
+      "End of business year": "December",
+      "Accounting principles": "Local GAAP",
+      "Business risk profile": "C",
+      "Segmentation criteria": "EBITDA contribution",
+      "Financial risk profile": "C",
+      "Competitive Positioning": "B+",
+      "Operating profitability": "BB-",
+      "Reporting Currency/Units": "EUR",
+      "Rating methodologies applied": [
+        "General Corporate Rating Methodology",
+        "Consumer Products Rating Methodology"
+      ],
+      "(Blended) Industry risk profile": "A",
+      "Sector/company-specific factors (1)": "B-",
+      "Sector/company-specific factors (2)": null
+    }
+  },
+  {
+    "natural_id": "Nexus Aerospace & Defence",
+    "entity_name": "Nexus Aerospace & Defence",
+    "country_of_origin": "Federal Republic of Germany",
+    "is_current": true,
+    "valid_from": "2026-07-13T06:46:05.839107",
+    "valid_to": null,
+    "submission_id": 534,
+    "metadata": {
+      "Leverage": "CCC",
+      "Liquidity": "-2 notches",
+      "Market share": "BB-",
+      "Rated entity": "Nexus Aerospace & Defence",
+      "Industry risk": [
+        {
+          "sector": "Consumer Products: Non-Discretionary",
+          "Industry weight": "35%",
+          "Industry risk score": "A"
+        },
+        {
+          "sector": "Automotive Suppliers",
+          "Industry weight": "65%",
+          "Industry risk score": "BB"
+        }
+      ],
+      "Interest cover": "B-",
+      "Cash flow cover": "CCC",
+      "CorporateSector": "Personal & Household Goods",
+      "Diversification": "B+",
+      "Country of origin": "Federal Republic of Germany",
+      "End of business year": "December",
+      "Accounting principles": "IFRS",
+      "Business risk profile": "B+",
+      "Segmentation criteria": "EBITDA contribution",
+      "Financial risk profile": "C",
+      "Competitive Positioning": "B+",
+      "Operating profitability": "BB-",
+      "Reporting Currency/Units": "EUR",
+      "Rating methodologies applied": [
+        "General Corporate Rating Methodology",
+        "Consumer Products Rating Methodology"
+      ],
+      "(Blended) Industry risk profile": "A",
+      "Sector/company-specific factors (1)": "B-",
+      "Sector/company-specific factors (2)": null
+    }
+  },
+  {
+    "natural_id": "Summit Network Utilities",
+    "entity_name": "Summit Network Utilities",
+    "country_of_origin": "Federal Republic of Germany",
+    "is_current": true,
+    "valid_from": "2026-07-13T06:46:04.069632",
+    "valid_to": null,
+    "submission_id": 471,
+    "metadata": {
+      "Leverage": "CCC",
+      "Liquidity": "-2 notches",
+      "Market share": "BB-",
+      "Rated entity": "Summit Network Utilities",
+      "Industry risk": [
+        {
+          "sector": "Consumer Products: Non-Discretionary",
+          "Industry weight": "30%",
+          "Industry risk score": "BBB"
+        },
+        {
+          "sector": "Automotive Suppliers",
+          "Industry weight": "70%",
+          "Industry risk score": "BB"
+        }
+      ],
+      "Interest cover": "B-",
+      "Cash flow cover": "CCC",
+      "CorporateSector": "Technology",
+      "Diversification": "B+",
+      "Country of origin": "Federal Republic of Germany",
+      "End of business year": "December",
+      "Accounting principles": "IFRS",
+      "Business risk profile": "C",
+      "Segmentation criteria": "EBITDA contribution",
+      "Financial risk profile": "C",
+      "Competitive Positioning": "B+",
+      "Operating profitability": "BB-",
+      "Reporting Currency/Units": "EUR",
+      "Rating methodologies applied": [
+        "General Corporate Rating Methodology",
+        "Consumer Products Rating Methodology"
+      ],
+      "(Blended) Industry risk profile": "A",
+      "Sector/company-specific factors (1)": "B-",
+      "Sector/company-specific factors (2)": null
+    }
+  }
+]
+-e 
+✨ Testing Endpoint: Get Master Company Details (ID: 43)
+-e 👉 Command: curl -s 'http://localhost:8000/api/v1/companies/43' | jq
+-e ------------------------------------------------------------------------
+{
+  "natural_id": "Company A",
+  "entity_name": "Company A",
+  "country_of_origin": "Federal Republic of Germany",
+  "is_current": true,
+  "valid_from": "2026-07-13T06:46:06.260373",
+  "valid_to": null,
+  "submission_id": 552,
+  "metadata": {
+    "Leverage": "CCC",
+    "Liquidity": "-2 notches",
+    "Market share": "B+",
+    "Rated entity": "Company A",
+    "Industry risk": [
+      {
+        "sector": "Consumer Products: Non-Discretionary",
+        "Industry weight": "100%",
+        "Industry risk score": "BBB"
+      }
+    ],
+    "Interest cover": "B-",
+    "Cash flow cover": "CCC",
+    "CorporateSector": "Personal & Household Goods",
+    "Diversification": "B+",
+    "Country of origin": "Federal Republic of Germany",
+    "End of business year": "December",
+    "Accounting principles": "IFRS",
+    "Business risk profile": "B",
+    "Segmentation criteria": "EBITDA contribution",
+    "Financial risk profile": "CC",
+    "Competitive Positioning": "B+",
+    "Operating profitability": "B",
+    "Reporting Currency/Units": "EUR",
+    "Rating methodologies applied": "General Corporate Rating Methodology",
+    "(Blended) Industry risk profile": "A",
+    "Sector/company-specific factors (1)": "B-",
+    "Sector/company-specific factors (2)": null
+  }
+}
+-e 
+✨ Testing Endpoint: Get Company Version Dimensions (Company A)
+-e 👉 Command: curl -s 'http://localhost:8000/api/v1/companies/Company%20A/versions' | jq
+-e ------------------------------------------------------------------------
+[
+  {
+    "submission_id": 552,
+    "valid_from": "2026-07-13T06:46:06.260373",
+    "valid_to": null,
+    "is_current": true
+  },
+  {
+    "submission_id": 499,
+    "valid_from": "2026-07-13T06:46:05.012149",
+    "valid_to": "2026-07-13T06:46:06.260373",
+    "is_current": false
+  },
+  {
+    "submission_id": 477,
+    "valid_from": "2026-07-13T06:46:04.419075",
+    "valid_to": "2026-07-13T06:46:05.012149",
+    "is_current": false
+  },
+  {
+    "submission_id": 476,
+    "valid_from": "2026-07-13T06:46:04.290841",
+    "valid_to": "2026-07-13T06:46:04.419075",
+    "is_current": false
+  },
+  {
+    "submission_id": 473,
+    "valid_from": "2026-07-13T06:46:04.127508",
+    "valid_to": "2026-07-13T06:46:04.290841",
+    "is_current": false
+  },
+  {
+    "submission_id": 446,
+    "valid_from": "2026-07-13T06:46:03.379074",
+    "valid_to": "2026-07-13T06:46:04.127508",
+    "is_current": false
+  }
+]
+-e 
+✨ Testing Endpoint: Get Historical Audit Timeline (Company A)
+-e 👉 Command: curl -s 'http://localhost:8000/api/v1/companies/Company%20A/history' | jq
+-e ------------------------------------------------------------------------
+[
+  {
+    "natural_id": "Company A",
+    "metric_name": "Liquidity",
+    "history": [
+      {
+        "calendar_year": 2018,
+        "year_label": "2018",
+        "metric_value": "4.86",
+        "metric_value_formatted": "4.86",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2019,
+        "year_label": "2019",
+        "metric_value": "4.86",
+        "metric_value_formatted": "4.86",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2020,
+        "year_label": "2020",
+        "metric_value": "4.86",
+        "metric_value_formatted": "4.86",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2021,
+        "year_label": "2021",
+        "metric_value": "21.53",
+        "metric_value_formatted": "21.53",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2022,
+        "year_label": "2022",
+        "metric_value": "21.53",
+        "metric_value_formatted": "21.53",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2023,
+        "year_label": "2023",
+        "metric_value": "21.53",
+        "metric_value_formatted": "21.53",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2024,
+        "year_label": "2024",
+        "metric_value": "21.53",
+        "metric_value_formatted": "21.53",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2025,
+        "year_label": "2025E",
+        "metric_value": "21.53",
+        "metric_value_formatted": "21.53",
+        "is_forecast": true,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2026,
+        "year_label": "2026E",
+        "metric_value": "21.53",
+        "metric_value_formatted": "21.53",
+        "is_forecast": true,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2027,
+        "year_label": "2027E",
+        "metric_value": "23.0",
+        "metric_value_formatted": "23.00",
+        "is_forecast": true,
+        "processing_status": "Locked"
+      }
+    ]
+  },
+  {
+    "natural_id": "Company A",
+    "metric_name": "Scope-adjusted EBITDA interest cover",
+    "history": [
+      {
+        "calendar_year": 2018,
+        "year_label": "2018",
+        "metric_value": "27.33",
+        "metric_value_formatted": "27.33",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2019,
+        "year_label": "2019",
+        "metric_value": "27.33",
+        "metric_value_formatted": "27.33",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2020,
+        "year_label": "2020",
+        "metric_value": "27.33",
+        "metric_value_formatted": "27.33",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2021,
+        "year_label": "2021",
+        "metric_value": "4.86",
+        "metric_value_formatted": "4.86",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2022,
+        "year_label": "2022",
+        "metric_value": "4.86",
+        "metric_value_formatted": "4.86",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2023,
+        "year_label": "2023",
+        "metric_value": "4.86",
+        "metric_value_formatted": "4.86",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2024,
+        "year_label": "2024",
+        "metric_value": "36.8",
+        "metric_value_formatted": "36.80",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2025,
+        "year_label": "2025E",
+        "metric_value": "36.8",
+        "metric_value_formatted": "36.80",
+        "is_forecast": true,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2026,
+        "year_label": "2026E",
+        "metric_value": "18.49",
+        "metric_value_formatted": "18.49",
+        "is_forecast": true,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2027,
+        "year_label": "2027E",
+        "metric_value": "18.49",
+        "metric_value_formatted": "18.49",
+        "is_forecast": true,
+        "processing_status": "Locked"
+      }
+    ]
+  },
+  {
+    "natural_id": "Company A",
+    "metric_name": "Scope-adjusted FFO/debt",
+    "history": [
+      {
+        "calendar_year": 2018,
+        "year_label": "2018",
+        "metric_value": "22.0",
+        "metric_value_formatted": "22.00",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2019,
+        "year_label": "2019",
+        "metric_value": "27.33",
+        "metric_value_formatted": "27.33",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2020,
+        "year_label": "2020",
+        "metric_value": "22.0",
+        "metric_value_formatted": "22.00",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2021,
+        "year_label": "2021",
+        "metric_value": "36.8",
+        "metric_value_formatted": "36.80",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2022,
+        "year_label": "2022",
+        "metric_value": "36.8",
+        "metric_value_formatted": "36.80",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2023,
+        "year_label": "2023",
+        "metric_value": "27.33",
+        "metric_value_formatted": "27.33",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2024,
+        "year_label": "2024",
+        "metric_value": "29.0",
+        "metric_value_formatted": "29.00",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2025,
+        "year_label": "2025E",
+        "metric_value": "29.0",
+        "metric_value_formatted": "29.00",
+        "is_forecast": true,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2026,
+        "year_label": "2026E",
+        "metric_value": "29.0",
+        "metric_value_formatted": "29.00",
+        "is_forecast": true,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2027,
+        "year_label": "2027E",
+        "metric_value": "8.0",
+        "metric_value_formatted": "8.00",
+        "is_forecast": true,
+        "processing_status": "Locked"
+      }
+    ]
+  },
+  {
+    "natural_id": "Company A",
+    "metric_name": "Scope-adjusted FOCF/debt",
+    "history": [
+      {
+        "calendar_year": 2018,
+        "year_label": "2018",
+        "metric_value": "21.53",
+        "metric_value_formatted": "21.53",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2019,
+        "year_label": "2019",
+        "metric_value": "21.53",
+        "metric_value_formatted": "21.53",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2020,
+        "year_label": "2020",
+        "metric_value": "21.53",
+        "metric_value_formatted": "21.53",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2021,
+        "year_label": "2021",
+        "metric_value": "21.53",
+        "metric_value_formatted": "21.53",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2022,
+        "year_label": "2022",
+        "metric_value": "4.86",
+        "metric_value_formatted": "4.86",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2023,
+        "year_label": "2023",
+        "metric_value": "4.86",
+        "metric_value_formatted": "4.86",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2024,
+        "year_label": "2024",
+        "metric_value": "4.86",
+        "metric_value_formatted": "4.86",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2025,
+        "year_label": "2025E",
+        "metric_value": "4.86",
+        "metric_value_formatted": "4.86",
+        "is_forecast": true,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2026,
+        "year_label": "2026E",
+        "metric_value": "4.86",
+        "metric_value_formatted": "4.86",
+        "is_forecast": true,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2027,
+        "year_label": "2027E",
+        "metric_value": "4.86",
+        "metric_value_formatted": "4.86",
+        "is_forecast": true,
+        "processing_status": "Locked"
+      }
+    ]
+  },
+  {
+    "natural_id": "Company A",
+    "metric_name": "Scope-adjusted debt/EBITDA",
+    "history": [
+      {
+        "calendar_year": 2018,
+        "year_label": "2018",
+        "metric_value": "18.49",
+        "metric_value_formatted": "18.49",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2019,
+        "year_label": "2019",
+        "metric_value": "18.49",
+        "metric_value_formatted": "18.49",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2020,
+        "year_label": "2020",
+        "metric_value": "18.49",
+        "metric_value_formatted": "18.49",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2021,
+        "year_label": "2021",
+        "metric_value": "18.49",
+        "metric_value_formatted": "18.49",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2022,
+        "year_label": "2022",
+        "metric_value": "18.49",
+        "metric_value_formatted": "18.49",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2023,
+        "year_label": "2023",
+        "metric_value": "18.49",
+        "metric_value_formatted": "18.49",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2024,
+        "year_label": "2024",
+        "metric_value": "36.8",
+        "metric_value_formatted": "36.80",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2025,
+        "year_label": "2025E",
+        "metric_value": "36.8",
+        "metric_value_formatted": "36.80",
+        "is_forecast": true,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2026,
+        "year_label": "2026E",
+        "metric_value": "18.49",
+        "metric_value_formatted": "18.49",
+        "is_forecast": true,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2027,
+        "year_label": "2027E",
+        "metric_value": "18.49",
+        "metric_value_formatted": "18.49",
+        "is_forecast": true,
+        "processing_status": "Locked"
+      }
+    ]
+  },
+  {
+    "natural_id": "Company A",
+    "metric_name": "Scope-adjusted loan/value",
+    "history": [
+      {
+        "calendar_year": 2018,
+        "year_label": "2018",
+        "metric_value": "27.33",
+        "metric_value_formatted": "27.33",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2019,
+        "year_label": "2019",
+        "metric_value": "27.33",
+        "metric_value_formatted": "27.33",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2020,
+        "year_label": "2020",
+        "metric_value": "27.33",
+        "metric_value_formatted": "27.33",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2021,
+        "year_label": "2021",
+        "metric_value": "36.8",
+        "metric_value_formatted": "36.80",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2022,
+        "year_label": "2022",
+        "metric_value": "36.8",
+        "metric_value_formatted": "36.80",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2023,
+        "year_label": "2023",
+        "metric_value": null,
+        "metric_value_formatted": null,
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2024,
+        "year_label": "2024",
+        "metric_value": "27.33",
+        "metric_value_formatted": "27.33",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2025,
+        "year_label": "2025E",
+        "metric_value": "27.33",
+        "metric_value_formatted": "27.33",
+        "is_forecast": true,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2026,
+        "year_label": "2026E",
+        "metric_value": "27.33",
+        "metric_value_formatted": "27.33",
+        "is_forecast": true,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2027,
+        "year_label": "2027E",
+        "metric_value": "4.86",
+        "metric_value_formatted": "4.86",
+        "is_forecast": true,
+        "processing_status": "Locked"
+      }
+    ]
+  }
+]
+-e 
+✨ Testing Endpoint: Point-in-Time Peer Comparison Analysis
+-e 👉 Command: curl -s 'http://localhost:8000/api/v1/companies/compare?company_ids=Company%20A&company_ids=Company%20B&as_of_date=2026-07-13' | jq
+-e ------------------------------------------------------------------------
+[
+  {
+    "natural_id": "Company B",
+    "entity_name": "Company B",
+    "country_of_origin": "Swiss Confederation",
+    "is_current": true,
+    "valid_from": "2026-07-13T06:46:03.666092",
+    "valid_to": null,
+    "submission_id": 454,
+    "metadata": {
+      "Leverage": "BB+",
+      "Liquidity": "+1 notch",
+      "Market share": "BBB+",
+      "Rated entity": "Company B",
+      "Industry risk": [
+        {
+          "sector": "Automotive Suppliers",
+          "Industry weight": "20%",
+          "Industry risk score": "BBB"
+        },
+        {
+          "sector": "Automotive and Commercial Vehicle Manufacturers",
+          "Industry weight": "25%",
+          "Industry risk score": "BB"
+        },
+        {
+          "sector": "Automotive and Commercial Vehicle Manufacturers",
+          "Industry weight": "55%",
+          "Industry risk score": "B"
+        }
+      ],
+      "Interest cover": "BBB+",
+      "Cash flow cover": "A-",
+      "CorporateSector": "Automobiles & Parts",
+      "Diversification": "A-",
+      "Country of origin": "Swiss Confederation",
+      "End of business year": "March",
+      "Accounting principles": "IFRS",
+      "Business risk profile": "BBB-",
+      "Segmentation criteria": "EBITDA contribution",
+      "Financial risk profile": "BB",
+      "Competitive Positioning": "A+",
+      "Operating profitability": "BB+",
+      "Reporting Currency/Units": "CHF",
+      "Rating methodologies applied": "Automotive and Commercial Vehicle Manufacturers Rating Methodology",
+      "(Blended) Industry risk profile": "A",
+      "Sector/company-specific factors (1)": "BBB+",
+      "Sector/company-specific factors (2)": null
+    }
+  },
+  {
+    "natural_id": "Company A",
+    "entity_name": "Company A",
+    "country_of_origin": "Federal Republic of Germany",
+    "is_current": false,
+    "valid_from": "2026-07-13T06:46:03.379074",
+    "valid_to": "2026-07-13T06:46:04.127508",
+    "submission_id": 446,
+    "metadata": {
+      "Leverage": "CCC",
+      "Liquidity": "-2 notches",
+      "Market share": "B+",
+      "Rated entity": "Company A",
+      "Industry risk": [
+        {
+          "sector": "Consumer Products: Non-Discretionary",
+          "Industry weight": "100%",
+          "Industry risk score": "BBB"
+        }
+      ],
+      "Interest cover": "B-",
+      "Cash flow cover": "CCC",
+      "CorporateSector": "Construction & Materials",
+      "Diversification": "B+",
+      "Country of origin": "Federal Republic of Germany",
+      "End of business year": "December",
+      "Accounting principles": "IFRS",
+      "Business risk profile": "B",
+      "Segmentation criteria": "EBITDA contribution",
+      "Financial risk profile": "CC",
+      "Competitive Positioning": "B+",
+      "Operating profitability": "B",
+      "Reporting Currency/Units": "EUR",
+      "Rating methodologies applied": "Metals and Mining Rating Methodology",
+      "(Blended) Industry risk profile": "A",
+      "Sector/company-specific factors (1)": "B-",
+      "Sector/company-specific factors (2)": null
+    }
+  },
+  {
+    "natural_id": "Company A",
+    "entity_name": "Company A",
+    "country_of_origin": "Federal Republic of Germany",
+    "is_current": false,
+    "valid_from": "2026-07-13T06:46:04.127508",
+    "valid_to": "2026-07-13T06:46:04.290841",
+    "submission_id": 473,
+    "metadata": {
+      "Leverage": "CCC",
+      "Liquidity": "-2 notches",
+      "Market share": "BB-",
+      "Rated entity": "Company A",
+      "Industry risk": [
+        {
+          "sector": "Consumer Products: Non-Discretionary",
+          "Industry weight": "100%",
+          "Industry risk score": "A"
+        }
+      ],
+      "Interest cover": "B-",
+      "Cash flow cover": "CCC",
+      "CorporateSector": "Personal & Household Goods",
+      "Diversification": "B+",
+      "Country of origin": "Federal Republic of Germany",
+      "End of business year": "December",
+      "Accounting principles": "IFRS",
+      "Business risk profile": "B+",
+      "Segmentation criteria": "EBITDA contribution",
+      "Financial risk profile": "C",
+      "Competitive Positioning": "B+",
+      "Operating profitability": "BB-",
+      "Reporting Currency/Units": "EUR",
+      "Rating methodologies applied": [
+        "General Corporate Rating Methodology",
+        "Consumer Products Rating Methodology"
+      ],
+      "(Blended) Industry risk profile": "A",
+      "Sector/company-specific factors (1)": "B-",
+      "Sector/company-specific factors (2)": null
+    }
+  },
+  {
+    "natural_id": "Company A",
+    "entity_name": "Company A",
+    "country_of_origin": "Federal Republic of Germany",
+    "is_current": false,
+    "valid_from": "2026-07-13T06:46:04.290841",
+    "valid_to": "2026-07-13T06:46:04.419075",
+    "submission_id": 476,
+    "metadata": {
+      "Leverage": "CCC",
+      "Liquidity": "-2 notches",
+      "Market share": "B+",
+      "Rated entity": "Company A",
+      "Industry risk": [
+        {
+          "sector": "Consumer Products: Non-Discretionary",
+          "Industry weight": "100%",
+          "Industry risk score": "BBB"
+        }
+      ],
+      "Interest cover": "B-",
+      "Cash flow cover": "CCC",
+      "CorporateSector": "Construction & Materials",
+      "Diversification": "B+",
+      "Country of origin": "Federal Republic of Germany",
+      "End of business year": "December",
+      "Accounting principles": "IFRS",
+      "Business risk profile": "B",
+      "Segmentation criteria": "EBITDA contribution",
+      "Financial risk profile": "CC",
+      "Competitive Positioning": "B+",
+      "Operating profitability": "B",
+      "Reporting Currency/Units": "USD",
+      "Rating methodologies applied": "Government Related Entities Rating Methodology",
+      "(Blended) Industry risk profile": "A",
+      "Sector/company-specific factors (1)": "B-",
+      "Sector/company-specific factors (2)": null
+    }
+  },
+  {
+    "natural_id": "Company A",
+    "entity_name": "Company A",
+    "country_of_origin": "Federal Republic of Germany",
+    "is_current": false,
+    "valid_from": "2026-07-13T06:46:04.419075",
+    "valid_to": "2026-07-13T06:46:05.012149",
+    "submission_id": 477,
+    "metadata": {
+      "Leverage": "CCC",
+      "Liquidity": "-2 notches",
+      "Market share": "B+",
+      "Rated entity": "Company A",
+      "Industry risk": [
+        {
+          "sector": "Consumer Products: Non-Discretionary",
+          "Industry weight": "100%",
+          "Industry risk score": "BBB"
+        }
+      ],
+      "Interest cover": "B-",
+      "Cash flow cover": "CCC",
+      "CorporateSector": "Construction & Materials",
+      "Diversification": "B+",
+      "Country of origin": "Federal Republic of Germany",
+      "End of business year": "December",
+      "Accounting principles": "IFRS",
+      "Business risk profile": "B",
+      "Segmentation criteria": "EBITDA contribution",
+      "Financial risk profile": "CC",
+      "Competitive Positioning": "B+",
+      "Operating profitability": "B",
+      "Reporting Currency/Units": "EUR",
+      "Rating methodologies applied": "Government Related Entities Rating Methodology",
+      "(Blended) Industry risk profile": "A",
+      "Sector/company-specific factors (1)": "B-",
+      "Sector/company-specific factors (2)": null
+    }
+  },
+  {
+    "natural_id": "Company A",
+    "entity_name": "Company A",
+    "country_of_origin": "Federal Republic of Germany",
+    "is_current": false,
+    "valid_from": "2026-07-13T06:46:05.012149",
+    "valid_to": "2026-07-13T06:46:06.260373",
+    "submission_id": 499,
+    "metadata": {
+      "Leverage": "CCC",
+      "Liquidity": "-2 notches",
+      "Market share": "B+",
+      "Rated entity": "Company A",
+      "Industry risk": [
+        {
+          "sector": "Consumer Products: Non-Discretionary",
+          "Industry weight": "100%",
+          "Industry risk score": "BBB"
+        }
+      ],
+      "Interest cover": "B-",
+      "Cash flow cover": "CCC",
+      "CorporateSector": "Construction & Materials",
+      "Diversification": "B+",
+      "Country of origin": "Federal Republic of Germany",
+      "End of business year": "December",
+      "Accounting principles": "IFRS",
+      "Business risk profile": "B",
+      "Segmentation criteria": "EBITDA contribution",
+      "Financial risk profile": "CC",
+      "Competitive Positioning": "B+",
+      "Operating profitability": "B",
+      "Reporting Currency/Units": "AED",
+      "Rating methodologies applied": "Government Related Entities Rating Methodology",
+      "(Blended) Industry risk profile": "A",
+      "Sector/company-specific factors (1)": "B-",
+      "Sector/company-specific factors (2)": null
+    }
+  },
+  {
+    "natural_id": "Company A",
+    "entity_name": "Company A",
+    "country_of_origin": "Federal Republic of Germany",
+    "is_current": true,
+    "valid_from": "2026-07-13T06:46:06.260373",
+    "valid_to": null,
+    "submission_id": 552,
+    "metadata": {
+      "Leverage": "CCC",
+      "Liquidity": "-2 notches",
+      "Market share": "B+",
+      "Rated entity": "Company A",
+      "Industry risk": [
+        {
+          "sector": "Consumer Products: Non-Discretionary",
+          "Industry weight": "100%",
+          "Industry risk score": "BBB"
+        }
+      ],
+      "Interest cover": "B-",
+      "Cash flow cover": "CCC",
+      "CorporateSector": "Personal & Household Goods",
+      "Diversification": "B+",
+      "Country of origin": "Federal Republic of Germany",
+      "End of business year": "December",
+      "Accounting principles": "IFRS",
+      "Business risk profile": "B",
+      "Segmentation criteria": "EBITDA contribution",
+      "Financial risk profile": "CC",
+      "Competitive Positioning": "B+",
+      "Operating profitability": "B",
+      "Reporting Currency/Units": "EUR",
+      "Rating methodologies applied": "General Corporate Rating Methodology",
+      "(Blended) Industry risk profile": "A",
+      "Sector/company-specific factors (1)": "B-",
+      "Sector/company-specific factors (2)": null
+    }
+  }
+]
+-e 
+========================================================================
+-e 🚀 MODULE: STATE SNAPSHOTS CLUSTER (/snapshots)
+-e ========================================================================
+-e 
+✨ Testing Endpoint: Filter Snapshots for Company A
+-e 👉 Command: curl -s 'http://localhost:8000/api/v1/snapshots?company_id=Company%20A' | jq
+-e ------------------------------------------------------------------------
+[
+  {
+    "natural_id": "Company A",
+    "entity_name": "Company A",
+    "country_of_origin": "Federal Republic of Germany",
+    "is_current": true,
+    "valid_from": "2026-07-13T06:46:06.260373",
+    "valid_to": null,
+    "submission_id": 552,
+    "sector": null,
+    "currency": null
+  },
+  {
+    "natural_id": "Company A",
+    "entity_name": "Company A",
+    "country_of_origin": "Federal Republic of Germany",
+    "is_current": false,
+    "valid_from": "2026-07-13T06:46:05.012149",
+    "valid_to": "2026-07-13T06:46:06.260373",
+    "submission_id": 499,
+    "sector": null,
+    "currency": null
+  },
+  {
+    "natural_id": "Company A",
+    "entity_name": "Company A",
+    "country_of_origin": "Federal Republic of Germany",
+    "is_current": false,
+    "valid_from": "2026-07-13T06:46:04.419075",
+    "valid_to": "2026-07-13T06:46:05.012149",
+    "submission_id": 477,
+    "sector": null,
+    "currency": null
+  },
+  {
+    "natural_id": "Company A",
+    "entity_name": "Company A",
+    "country_of_origin": "Federal Republic of Germany",
+    "is_current": false,
+    "valid_from": "2026-07-13T06:46:04.290841",
+    "valid_to": "2026-07-13T06:46:04.419075",
+    "submission_id": 476,
+    "sector": null,
+    "currency": null
+  },
+  {
+    "natural_id": "Company A",
+    "entity_name": "Company A",
+    "country_of_origin": "Federal Republic of Germany",
+    "is_current": false,
+    "valid_from": "2026-07-13T06:46:04.127508",
+    "valid_to": "2026-07-13T06:46:04.290841",
+    "submission_id": 473,
+    "sector": null,
+    "currency": null
+  },
+  {
+    "natural_id": "Company A",
+    "entity_name": "Company A",
+    "country_of_origin": "Federal Republic of Germany",
+    "is_current": false,
+    "valid_from": "2026-07-13T06:46:03.379074",
+    "valid_to": "2026-07-13T06:46:04.127508",
+    "submission_id": 446,
+    "sector": null,
+    "currency": null
+  }
+]
+-e 
+✨ Testing Endpoint: Get Isolated Structural Snapshot (ID: 25)
+-e 👉 Command: curl -s 'http://localhost:8000/api/v1/snapshots/25' | jq
+-e ------------------------------------------------------------------------
+{
+  "snapshot_id": 25,
+  "company_id": "Company A",
+  "as_of_date": "2026-07-13",
+  "data": {
+    "metadata": {
+      "Leverage": "CCC",
+      "Liquidity": "-2 notches",
+      "Market share": "B+",
+      "Rated entity": "Company A",
+      "Industry risk": [
+        {
+          "sector": "Consumer Products: Non-Discretionary",
+          "Industry weight": "100%",
+          "Industry risk score": "BBB"
+        }
+      ],
+      "Interest cover": "B-",
+      "Cash flow cover": "CCC",
+      "CorporateSector": "Construction & Materials",
+      "Diversification": "B+",
+      "Country of origin": "Federal Republic of Germany",
+      "End of business year": "December",
+      "Accounting principles": "IFRS",
+      "Business risk profile": "B",
+      "Segmentation criteria": "EBITDA contribution",
+      "Financial risk profile": "CC",
+      "Competitive Positioning": "B+",
+      "Operating profitability": "B",
+      "Reporting Currency/Units": "EUR",
+      "Rating methodologies applied": "Metals and Mining Rating Methodology",
+      "(Blended) Industry risk profile": "A",
+      "Sector/company-specific factors (1)": "B-",
+      "Sector/company-specific factors (2)": null
+    },
+    "scopeCreditMetrics": {
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        "2025E",
+        "2026E",
+        "2027E"
+      ],
+      "metrics": {
+        "Liquidity": {
+          "2018": 4.86,
+          "2019": 4.86,
+          "2020": 4.86,
+          "2021": 21.53,
+          "2022": 21.53,
+          "2023": 21.53,
+          "2024": 21.53,
+          "2025E": 21.53,
+          "2026E": 21.53,
+          "2027E": 23,
+          "status": "Locked"
+        },
+        "Scope-adjusted FFO/debt": {
+          "2018": 22,
+          "2019": 22,
+          "2020": 22,
+          "2021": 36.8,
+          "2022": 36.8,
+          "2023": 27.33,
+          "2024": 29,
+          "2025E": 29,
+          "2026E": 29,
+          "2027E": 8,
+          "status": "Locked"
+        },
+        "Scope-adjusted FOCF/debt": {
+          "2018": 21.53,
+          "2019": 21.53,
+          "2020": 21.53,
+          "2021": 21.53,
+          "2022": 4.86,
+          "2023": 4.86,
+          "2024": 4.86,
+          "2025E": 4.86,
+          "2026E": 4.86,
+          "2027E": 4.86,
+          "status": "Locked"
+        },
+        "Scope-adjusted loan/value": {
+          "2018": 27.33,
+          "2019": 27.33,
+          "2020": 27.33,
+          "2021": 36.8,
+          "2022": 36.8,
+          "2023": null,
+          "2024": 27.33,
+          "2025E": 27.33,
+          "2026E": 27.33,
+          "2027E": 4.86,
+          "status": "Locked"
+        },
+        "Scope-adjusted debt/EBITDA": {
+          "2018": 18.49,
+          "2019": 18.49,
+          "2020": 18.49,
+          "2021": 18.49,
+          "2022": 18.49,
+          "2023": 18.49,
+          "2024": 36.8,
+          "2025E": 36.8,
+          "2026E": 18.49,
+          "2027E": 18.49,
+          "status": "Locked"
+        },
+        "Scope-adjusted EBITDA interest cover": {
+          "2018": 27.33,
+          "2019": 27.33,
+          "2020": 27.33,
+          "2021": 4.86,
+          "2022": 4.86,
+          "2023": 4.86,
+          "2024": 36.8,
+          "2025E": 36.8,
+          "2026E": 18.49,
+          "2027E": 18.49,
+          "status": "Locked"
+        }
+      }
+    }
+  }
+}
+-e 
+✨ Testing Endpoint: Get Absolute Latest State Matrix Across Portfolio
+-e 👉 Command: curl -s 'http://localhost:8000/api/v1/snapshots/latest' | jq
+-e ------------------------------------------------------------------------
+[
+  {
+    "snapshot_id": 26,
+    "company_id": "Company B",
+    "as_of_date": "2026-07-13",
+    "data": {
+      "metadata": {
+        "Leverage": "BB+",
+        "Liquidity": "+1 notch",
+        "Market share": "BBB+",
+        "Rated entity": "Company B",
+        "Industry risk": [
+          {
+            "sector": "Automotive Suppliers",
+            "Industry weight": "20%",
+            "Industry risk score": "BBB"
+          },
+          {
+            "sector": "Automotive and Commercial Vehicle Manufacturers",
+            "Industry weight": "25%",
+            "Industry risk score": "BB"
+          },
+          {
+            "sector": "Automotive and Commercial Vehicle Manufacturers",
+            "Industry weight": "55%",
+            "Industry risk score": "B"
+          }
+        ],
+        "Interest cover": "BBB+",
+        "Cash flow cover": "A-",
+        "CorporateSector": "Automobiles & Parts",
+        "Diversification": "A-",
+        "Country of origin": "Swiss Confederation",
+        "End of business year": "March",
+        "Accounting principles": "IFRS",
+        "Business risk profile": "BBB-",
+        "Segmentation criteria": "EBITDA contribution",
+        "Financial risk profile": "BB",
+        "Competitive Positioning": "A+",
+        "Operating profitability": "BB+",
+        "Reporting Currency/Units": "CHF",
+        "Rating methodologies applied": "Automotive and Commercial Vehicle Manufacturers Rating Methodology",
+        "(Blended) Industry risk profile": "A",
+        "Sector/company-specific factors (1)": "BBB+",
+        "Sector/company-specific factors (2)": null
+      },
+      "scopeCreditMetrics": {
+        "years": [
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024,
+          2025,
+          "2026E",
+          "2027E",
+          "2028E"
+        ],
+        "metrics": {
+          "Liquidity": {
+            "2019": 1,
+            "2020": 1,
+            "2021": 1,
+            "2022": 1,
+            "2023": 3,
+            "2024": 3,
+            "2025": 3,
+            "2026E": 3,
+            "2027E": 3,
+            "2028E": 3,
+            "status": "Locked"
+          },
+          "Scope-adjusted FFO/debt": {
+            "2019": 1,
+            "2020": 1,
+            "2021": 1,
+            "2022": 1,
+            "2023": 2,
+            "2024": 2,
+            "2025": 2,
+            "2026E": 3,
+            "2027E": 3,
+            "2028E": 3,
+            "status": "Locked"
+          },
+          "Scope-adjusted FOCF/debt": {
+            "2019": 1,
+            "2020": 1,
+            "2021": 1,
+            "2022": 1,
+            "2023": 3,
+            "2024": 3,
+            "2025": 3,
+            "2026E": 3,
+            "2027E": 3,
+            "2028E": 3,
+            "status": "Locked"
+          },
+          "Scope-adjusted loan/value": {
+            "2019": 1,
+            "2020": 1,
+            "2021": 1,
+            "2022": 1,
+            "2023": 3,
+            "2024": 3,
+            "2025": 3,
+            "2026E": 3,
+            "2027E": 3,
+            "2028E": 3,
+            "status": "Locked"
+          },
+          "Scope-adjusted debt/EBITDA": {
+            "2019": 1,
+            "2020": 1,
+            "2021": 1,
+            "2022": 1,
+            "2023": 2,
+            "2024": 2,
+            "2025": 2,
+            "2026E": 3,
+            "2027E": 3,
+            "2028E": 3,
+            "status": "Locked"
+          },
+          "Scope-adjusted EBITDA interest cover": {
+            "2019": 1,
+            "2020": 1,
+            "2021": 1,
+            "2022": null,
+            "2023": 2,
+            "2024": 2,
+            "2025": 2,
+            "2026E": 3,
+            "2027E": 3,
+            "2028E": 3,
+            "status": "Locked"
+          }
+        }
+      }
+    }
+  },
+  {
+    "snapshot_id": 28,
+    "company_id": "Summit Network Utilities",
+    "as_of_date": "2026-07-13",
+    "data": {
+      "metadata": {
+        "Leverage": "CCC",
+        "Liquidity": "-2 notches",
+        "Market share": "BB-",
+        "Rated entity": "Summit Network Utilities",
+        "Industry risk": [
+          {
+            "sector": "Consumer Products: Non-Discretionary",
+            "Industry weight": "30%",
+            "Industry risk score": "BBB"
+          },
+          {
+            "sector": "Automotive Suppliers",
+            "Industry weight": "70%",
+            "Industry risk score": "BB"
+          }
+        ],
+        "Interest cover": "B-",
+        "Cash flow cover": "CCC",
+        "CorporateSector": "Technology",
+        "Diversification": "B+",
+        "Country of origin": "Federal Republic of Germany",
+        "End of business year": "December",
+        "Accounting principles": "IFRS",
+        "Business risk profile": "C",
+        "Segmentation criteria": "EBITDA contribution",
+        "Financial risk profile": "C",
+        "Competitive Positioning": "B+",
+        "Operating profitability": "BB-",
+        "Reporting Currency/Units": "EUR",
+        "Rating methodologies applied": [
+          "General Corporate Rating Methodology",
+          "Consumer Products Rating Methodology"
+        ],
+        "(Blended) Industry risk profile": "A",
+        "Sector/company-specific factors (1)": "B-",
+        "Sector/company-specific factors (2)": null
+      },
+      "scopeCreditMetrics": {
+        "years": [
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024,
+          "2025E",
+          "2026E",
+          "2027E"
+        ],
+        "metrics": {
+          "Liquidity": {
+            "2018": 4.86,
+            "2019": 4.86,
+            "2020": 4.86,
+            "2021": 21.53,
+            "2022": 21.53,
+            "2023": 21.53,
+            "2024": 21.53,
+            "2025E": 21.53,
+            "2026E": 21.53,
+            "2027E": 21.53,
+            "status": "Locked"
+          },
+          "Scope-adjusted FFO/debt": {
+            "2018": 27.33,
+            "2019": 27.33,
+            "2020": 27.33,
+            "2021": 36.8,
+            "2022": 36.8,
+            "2023": 27.33,
+            "2024": 27.33,
+            "2025E": 27.33,
+            "2026E": 27.33,
+            "2027E": 4.86,
+            "status": "Locked"
+          },
+          "Scope-adjusted FOCF/debt": {
+            "2018": 21.53,
+            "2019": 21.53,
+            "2020": 21.53,
+            "2021": 21.53,
+            "2022": 4.86,
+            "2023": 4.86,
+            "2024": 4.86,
+            "2025E": 4.86,
+            "2026E": 4.86,
+            "2027E": 4.86,
+            "status": "Locked"
+          },
+          "Scope-adjusted loan/value": {
+            "2018": 27.33,
+            "2019": 27.33,
+            "2020": 27.33,
+            "2021": 36.8,
+            "2022": 36.8,
+            "2023": null,
+            "2024": 27.33,
+            "2025E": 27.33,
+            "2026E": 27.33,
+            "2027E": 4.86,
+            "status": "Locked"
+          },
+          "Scope-adjusted debt/EBITDA": {
+            "2018": 18.49,
+            "2019": 18.49,
+            "2020": 18.49,
+            "2021": 18.49,
+            "2022": 18.49,
+            "2023": 18.49,
+            "2024": 36.8,
+            "2025E": 36.8,
+            "2026E": 18.49,
+            "2027E": 18.49,
+            "status": "Locked"
+          },
+          "Scope-adjusted EBITDA interest cover": {
+            "2018": 27.33,
+            "2019": 27.33,
+            "2020": 27.33,
+            "2021": 4.86,
+            "2022": 4.86,
+            "2023": 4.86,
+            "2024": 36.8,
+            "2025E": 36.8,
+            "2026E": 18.49,
+            "2027E": 18.49,
+            "status": "Locked"
+          }
+        }
+      }
+    }
+  },
+  {
+    "snapshot_id": 32,
+    "company_id": "Vanguard Bio-Pharmaceuticals",
+    "as_of_date": "2026-07-13",
+    "data": {
+      "metadata": {
+        "Leverage": "CCC",
+        "Liquidity": "-2 notches",
+        "Market share": "BB-",
+        "Rated entity": "Vanguard Bio-Pharmaceuticals",
+        "Industry risk": [
+          {
+            "sector": "Consumer Products: Non-Discretionary",
+            "Industry weight": "15%",
+            "Industry risk score": "A"
+          },
+          {
+            "sector": "Automotive Suppliers",
+            "Industry weight": "85%",
+            "Industry risk score": "BB"
+          }
+        ],
+        "Interest cover": "B-",
+        "Cash flow cover": "CCC",
+        "CorporateSector": "Technology",
+        "Diversification": "B+",
+        "Country of origin": "Federal Republic of Germany",
+        "End of business year": "December",
+        "Accounting principles": "Local GAAP",
+        "Business risk profile": "B+",
+        "Segmentation criteria": "EBITDA contribution",
+        "Financial risk profile": "C",
+        "Competitive Positioning": "B+",
+        "Operating profitability": "BB-",
+        "Reporting Currency/Units": "EUR",
+        "Rating methodologies applied": [
+          "General Corporate Rating Methodology",
+          "Consumer Products Rating Methodology"
+        ],
+        "(Blended) Industry risk profile": "A",
+        "Sector/company-specific factors (1)": "B-",
+        "Sector/company-specific factors (2)": null
+      },
+      "scopeCreditMetrics": {
+        "years": [
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024,
+          "2025E",
+          "2026E",
+          "2027E"
+        ],
+        "metrics": {
+          "Liquidity": {
+            "2018": 4.86,
+            "2019": 4.86,
+            "2020": 4.86,
+            "2021": 21.53,
+            "2022": 21.53,
+            "2023": 21.53,
+            "2024": 21.53,
+            "2025E": 21.53,
+            "2026E": 21.53,
+            "2027E": 21.53,
+            "status": "Locked"
+          },
+          "Scope-adjusted FFO/debt": {
+            "2018": 27.33,
+            "2019": 27.33,
+            "2020": 27.33,
+            "2021": 36.8,
+            "2022": 36.8,
+            "2023": 27.33,
+            "2024": 27.33,
+            "2025E": 27.33,
+            "2026E": 27.33,
+            "2027E": 4.86,
+            "status": "Locked"
+          },
+          "Scope-adjusted FOCF/debt": {
+            "2018": 21.53,
+            "2019": 21.53,
+            "2020": 21.53,
+            "2021": 21.53,
+            "2022": 4.86,
+            "2023": 4.86,
+            "2024": 4.86,
+            "2025E": 4.86,
+            "2026E": 4.86,
+            "2027E": 4.86,
+            "status": "Locked"
+          },
+          "Scope-adjusted loan/value": {
+            "2018": 27.33,
+            "2019": 27.33,
+            "2020": 27.33,
+            "2021": 36.8,
+            "2022": 36.8,
+            "2023": null,
+            "2024": 27.33,
+            "2025E": 27.33,
+            "2026E": 27.33,
+            "2027E": 4.86,
+            "status": "Locked"
+          },
+          "Scope-adjusted debt/EBITDA": {
+            "2018": 18.49,
+            "2019": 18.49,
+            "2020": 18.49,
+            "2021": 18.49,
+            "2022": 18.49,
+            "2023": 18.49,
+            "2024": 36.8,
+            "2025E": 36.8,
+            "2026E": 18.49,
+            "2027E": 18.49,
+            "status": "Locked"
+          },
+          "Scope-adjusted EBITDA interest cover": {
+            "2018": 27.33,
+            "2019": 27.33,
+            "2020": 27.33,
+            "2021": 4.86,
+            "2022": 4.86,
+            "2023": 4.86,
+            "2024": 36.8,
+            "2025E": 36.8,
+            "2026E": 18.49,
+            "2027E": 18.49,
+            "status": "Locked"
+          }
+        }
+      }
+    }
+  },
+  {
+    "snapshot_id": 33,
+    "company_id": "Keystone Construction Materials",
+    "as_of_date": "2026-07-13",
+    "data": {
+      "metadata": {
+        "Leverage": "CCC",
+        "Liquidity": "-2 notches",
+        "Market share": "BB-",
+        "Rated entity": "Keystone Construction Materials",
+        "Industry risk": [
+          {
+            "sector": "Consumer Products: Non-Discretionary",
+            "Industry weight": "85%",
+            "Industry risk score": "A"
+          },
+          {
+            "sector": "Automotive Suppliers",
+            "Industry weight": "15%",
+            "Industry risk score": "BB"
+          }
+        ],
+        "Interest cover": "B-",
+        "Cash flow cover": "CCC",
+        "CorporateSector": "Chemicals",
+        "Diversification": "B+",
+        "Country of origin": "Federal Republic of Germany",
+        "End of business year": "December",
+        "Accounting principles": "IFRS",
+        "Business risk profile": "B+",
+        "Segmentation criteria": "EBITDA contribution",
+        "Financial risk profile": "C",
+        "Competitive Positioning": "B+",
+        "Operating profitability": "BB-",
+        "Reporting Currency/Units": "EUR",
+        "Rating methodologies applied": [
+          "General Corporate Rating Methodology",
+          "Consumer Products Rating Methodology"
+        ],
+        "(Blended) Industry risk profile": "A",
+        "Sector/company-specific factors (1)": "B-",
+        "Sector/company-specific factors (2)": null
+      },
+      "scopeCreditMetrics": {
+        "years": [
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024,
+          "2025E",
+          "2026E",
+          "2027E"
+        ],
+        "metrics": {
+          "Liquidity": {
+            "2018": 4.86,
+            "2019": 4.86,
+            "2020": 4.86,
+            "2021": 21.53,
+            "2022": 21.53,
+            "2023": 21.53,
+            "2024": 21.53,
+            "2025E": 21.53,
+            "2026E": 21.53,
+            "2027E": 21.53,
+            "status": "Locked"
+          },
+          "Scope-adjusted FFO/debt": {
+            "2018": 27.33,
+            "2019": 27.33,
+            "2020": 27.33,
+            "2021": 36.8,
+            "2022": 36.8,
+            "2023": 27.33,
+            "2024": 27.33,
+            "2025E": 27.33,
+            "2026E": 27.33,
+            "2027E": 4.86,
+            "status": "Locked"
+          },
+          "Scope-adjusted FOCF/debt": {
+            "2018": 21.53,
+            "2019": 21.53,
+            "2020": 21.53,
+            "2021": 21.53,
+            "2022": 4.86,
+            "2023": 4.86,
+            "2024": 4.86,
+            "2025E": 4.86,
+            "2026E": 4.86,
+            "2027E": 4.86,
+            "status": "Locked"
+          },
+          "Scope-adjusted loan/value": {
+            "2018": 27.33,
+            "2019": 27.33,
+            "2020": 27.33,
+            "2021": 36.8,
+            "2022": 36.8,
+            "2023": null,
+            "2024": 27.33,
+            "2025E": 27.33,
+            "2026E": 27.33,
+            "2027E": 4.86,
+            "status": "Locked"
+          },
+          "Scope-adjusted debt/EBITDA": {
+            "2018": 18.49,
+            "2019": 18.49,
+            "2020": 18.49,
+            "2021": 18.49,
+            "2022": 18.49,
+            "2023": 18.49,
+            "2024": 36.8,
+            "2025E": 36.8,
+            "2026E": 18.49,
+            "2027E": 18.49,
+            "status": "Locked"
+          },
+          "Scope-adjusted EBITDA interest cover": {
+            "2018": 27.33,
+            "2019": 27.33,
+            "2020": 27.33,
+            "2021": 4.86,
+            "2022": 4.86,
+            "2023": 4.86,
+            "2024": 36.8,
+            "2025E": 36.8,
+            "2026E": 18.49,
+            "2027E": 18.49,
+            "status": "Locked"
+          }
+        }
+      }
+    }
+  },
+  {
+    "snapshot_id": 35,
+    "company_id": "Luminary Software & IT Services",
+    "as_of_date": "2026-07-13",
+    "data": {
+      "metadata": {
+        "Leverage": "CCC",
+        "Liquidity": "-2 notches",
+        "Market share": "BB-",
+        "Rated entity": "Luminary Software & IT Services",
+        "Industry risk": [
+          {
+            "sector": "Automotive Suppliers",
+            "Industry weight": "95%",
+            "Industry risk score": "BBB"
+          },
+          {
+            "sector": "Automotive Suppliers",
+            "Industry weight": "5%",
+            "Industry risk score": "BB"
+          }
+        ],
+        "Interest cover": "B-",
+        "Cash flow cover": "CCC",
+        "CorporateSector": "Chemicals",
+        "Diversification": "B+",
+        "Country of origin": "Federal Republic of Germany",
+        "End of business year": "December",
+        "Accounting principles": "Local GAAP",
+        "Business risk profile": "C",
+        "Segmentation criteria": "EBITDA contribution",
+        "Financial risk profile": "C",
+        "Competitive Positioning": "B+",
+        "Operating profitability": "BB-",
+        "Reporting Currency/Units": "EUR",
+        "Rating methodologies applied": [
+          "General Corporate Rating Methodology",
+          "Consumer Products Rating Methodology"
+        ],
+        "(Blended) Industry risk profile": "A",
+        "Sector/company-specific factors (1)": "B-",
+        "Sector/company-specific factors (2)": null
+      },
+      "scopeCreditMetrics": {
+        "years": [
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024,
+          "2025E",
+          "2026E",
+          "2027E"
+        ],
+        "metrics": {
+          "Liquidity": {
+            "2018": 4.86,
+            "2019": 4.86,
+            "2020": 4.86,
+            "2021": 21.53,
+            "2022": 21.53,
+            "2023": 21.53,
+            "2024": 21.53,
+            "2025E": 21.53,
+            "2026E": 21.53,
+            "2027E": 21.53,
+            "status": "Locked"
+          },
+          "Scope-adjusted FFO/debt": {
+            "2018": 27.33,
+            "2019": 27.33,
+            "2020": 27.33,
+            "2021": 36.8,
+            "2022": 36.8,
+            "2023": 27.33,
+            "2024": 27.33,
+            "2025E": 27.33,
+            "2026E": 27.33,
+            "2027E": 4.86,
+            "status": "Locked"
+          },
+          "Scope-adjusted FOCF/debt": {
+            "2018": 21.53,
+            "2019": 21.53,
+            "2020": 21.53,
+            "2021": 21.53,
+            "2022": 4.86,
+            "2023": 4.86,
+            "2024": 4.86,
+            "2025E": 4.86,
+            "2026E": 4.86,
+            "2027E": 4.86,
+            "status": "Locked"
+          },
+          "Scope-adjusted loan/value": {
+            "2018": 27.33,
+            "2019": 27.33,
+            "2020": 27.33,
+            "2021": 36.8,
+            "2022": 36.8,
+            "2023": null,
+            "2024": 27.33,
+            "2025E": 27.33,
+            "2026E": 27.33,
+            "2027E": 4.86,
+            "status": "Locked"
+          },
+          "Scope-adjusted debt/EBITDA": {
+            "2018": 18.49,
+            "2019": 18.49,
+            "2020": 18.49,
+            "2021": 18.49,
+            "2022": 18.49,
+            "2023": 18.49,
+            "2024": 36.8,
+            "2025E": 36.8,
+            "2026E": 18.49,
+            "2027E": 18.49,
+            "status": "Locked"
+          },
+          "Scope-adjusted EBITDA interest cover": {
+            "2018": 27.33,
+            "2019": 27.33,
+            "2020": 27.33,
+            "2021": 4.86,
+            "2022": 4.86,
+            "2023": 4.86,
+            "2024": 36.8,
+            "2025E": 36.8,
+            "2026E": 18.49,
+            "2027E": 18.49,
+            "status": "Locked"
+          }
+        }
+      }
+    }
+  },
+  {
+    "snapshot_id": 36,
+    "company_id": "Borealis Chemical Group SE",
+    "as_of_date": "2026-07-13",
+    "data": {
+      "metadata": {
+        "Leverage": "CCC",
+        "Liquidity": "-2 notches",
+        "Market share": "BB-",
+        "Rated entity": "Borealis Chemical Group SE",
+        "Industry risk": [
+          {
+            "sector": "Automotive Suppliers",
+            "Industry weight": "10%",
+            "Industry risk score": "A"
+          },
+          {
+            "sector": "Automotive Suppliers",
+            "Industry weight": "90%",
+            "Industry risk score": "BB"
+          }
+        ],
+        "Interest cover": "B-",
+        "Cash flow cover": "CCC",
+        "CorporateSector": "Technology",
+        "Diversification": "B+",
+        "Country of origin": "Federal Republic of Germany",
+        "End of business year": "December",
+        "Accounting principles": "Local GAAP",
+        "Business risk profile": "CCC",
+        "Segmentation criteria": "EBITDA contribution",
+        "Financial risk profile": "C",
+        "Competitive Positioning": "B+",
+        "Operating profitability": "BB-",
+        "Reporting Currency/Units": "EUR",
+        "Rating methodologies applied": [
+          "General Corporate Rating Methodology",
+          "Consumer Products Rating Methodology"
+        ],
+        "(Blended) Industry risk profile": "A",
+        "Sector/company-specific factors (1)": "B-",
+        "Sector/company-specific factors (2)": null
+      },
+      "scopeCreditMetrics": {
+        "years": [
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024,
+          "2025E",
+          "2026E",
+          "2027E"
+        ],
+        "metrics": {
+          "Liquidity": {
+            "2018": 4.86,
+            "2019": 4.86,
+            "2020": 4.86,
+            "2021": 21.53,
+            "2022": 21.53,
+            "2023": 21.53,
+            "2024": 21.53,
+            "2025E": 21.53,
+            "2026E": 21.53,
+            "2027E": 21.53,
+            "status": "Locked"
+          },
+          "Scope-adjusted FFO/debt": {
+            "2018": 27.33,
+            "2019": 27.33,
+            "2020": 27.33,
+            "2021": 36.8,
+            "2022": 36.8,
+            "2023": 27.33,
+            "2024": 27.33,
+            "2025E": 27.33,
+            "2026E": 27.33,
+            "2027E": 4.86,
+            "status": "Locked"
+          },
+          "Scope-adjusted FOCF/debt": {
+            "2018": 21.53,
+            "2019": 21.53,
+            "2020": 21.53,
+            "2021": 21.53,
+            "2022": 4.86,
+            "2023": 4.86,
+            "2024": 4.86,
+            "2025E": 4.86,
+            "2026E": 4.86,
+            "2027E": 4.86,
+            "status": "Locked"
+          },
+          "Scope-adjusted loan/value": {
+            "2018": 27.33,
+            "2019": 27.33,
+            "2020": 27.33,
+            "2021": 36.8,
+            "2022": 36.8,
+            "2023": null,
+            "2024": 27.33,
+            "2025E": 27.33,
+            "2026E": 27.33,
+            "2027E": 4.86,
+            "status": "Locked"
+          },
+          "Scope-adjusted debt/EBITDA": {
+            "2018": 18.49,
+            "2019": 18.49,
+            "2020": 18.49,
+            "2021": 18.49,
+            "2022": 18.49,
+            "2023": 18.49,
+            "2024": 36.8,
+            "2025E": 36.8,
+            "2026E": 18.49,
+            "2027E": 18.49,
+            "status": "Locked"
+          },
+          "Scope-adjusted EBITDA interest cover": {
+            "2018": 27.33,
+            "2019": 27.33,
+            "2020": 27.33,
+            "2021": 4.86,
+            "2022": 4.86,
+            "2023": 4.86,
+            "2024": 36.8,
+            "2025E": 36.8,
+            "2026E": 18.49,
+            "2027E": 18.49,
+            "status": "Locked"
+          }
+        }
+      }
+    }
+  },
+  {
+    "snapshot_id": 37,
+    "company_id": "Chronos Logistics & Transport",
+    "as_of_date": "2026-07-13",
+    "data": {
+      "metadata": {
+        "Leverage": "CCC",
+        "Liquidity": "-2 notches",
+        "Market share": "BB-",
+        "Rated entity": "Chronos Logistics & Transport",
+        "Industry risk": [
+          {
+            "sector": "Automotive Suppliers",
+            "Industry weight": "95%",
+            "Industry risk score": "BBB"
+          },
+          {
+            "sector": "Automotive Suppliers",
+            "Industry weight": "5%",
+            "Industry risk score": "BB"
+          }
+        ],
+        "Interest cover": "B-",
+        "Cash flow cover": "CCC",
+        "CorporateSector": "Technology",
+        "Diversification": "B+",
+        "Country of origin": "Federal Republic of Germany",
+        "End of business year": "December",
+        "Accounting principles": "IFRS",
+        "Business risk profile": "BBB",
+        "Segmentation criteria": "EBITDA contribution",
+        "Financial risk profile": "C",
+        "Competitive Positioning": "B+",
+        "Operating profitability": "BB-",
+        "Reporting Currency/Units": "EUR",
+        "Rating methodologies applied": [
+          "General Corporate Rating Methodology",
+          "Consumer Products Rating Methodology"
+        ],
+        "(Blended) Industry risk profile": "A",
+        "Sector/company-specific factors (1)": "B-",
+        "Sector/company-specific factors (2)": null
+      },
+      "scopeCreditMetrics": {
+        "years": [
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024,
+          "2025E",
+          "2026E",
+          "2027E"
+        ],
+        "metrics": {
+          "Liquidity": {
+            "2018": 4.86,
+            "2019": 4.86,
+            "2020": 4.86,
+            "2021": 21.53,
+            "2022": 21.53,
+            "2023": 21.53,
+            "2024": 21.53,
+            "2025E": 21.53,
+            "2026E": 21.53,
+            "2027E": 21.53,
+            "status": "Locked"
+          },
+          "Scope-adjusted FFO/debt": {
+            "2018": 27.33,
+            "2019": 27.33,
+            "2020": 27.33,
+            "2021": 36.8,
+            "2022": 36.8,
+            "2023": 27.33,
+            "2024": 27.33,
+            "2025E": 27.33,
+            "2026E": 27.33,
+            "2027E": 4.86,
+            "status": "Locked"
+          },
+          "Scope-adjusted FOCF/debt": {
+            "2018": 21.53,
+            "2019": 21.53,
+            "2020": 21.53,
+            "2021": 21.53,
+            "2022": 4.86,
+            "2023": 4.86,
+            "2024": 4.86,
+            "2025E": 4.86,
+            "2026E": 4.86,
+            "2027E": 4.86,
+            "status": "Locked"
+          },
+          "Scope-adjusted loan/value": {
+            "2018": 27.33,
+            "2019": 27.33,
+            "2020": 27.33,
+            "2021": 36.8,
+            "2022": 36.8,
+            "2023": null,
+            "2024": 27.33,
+            "2025E": 27.33,
+            "2026E": 27.33,
+            "2027E": 4.86,
+            "status": "Locked"
+          },
+          "Scope-adjusted debt/EBITDA": {
+            "2018": 18.49,
+            "2019": 18.49,
+            "2020": 18.49,
+            "2021": 18.49,
+            "2022": 18.49,
+            "2023": 18.49,
+            "2024": 36.8,
+            "2025E": 36.8,
+            "2026E": 18.49,
+            "2027E": 18.49,
+            "status": "Locked"
+          },
+          "Scope-adjusted EBITDA interest cover": {
+            "2018": 27.33,
+            "2019": 27.33,
+            "2020": 27.33,
+            "2021": 4.86,
+            "2022": 4.86,
+            "2023": 4.86,
+            "2024": 36.8,
+            "2025E": 36.8,
+            "2026E": 18.49,
+            "2027E": 18.49,
+            "status": "Locked"
+          }
+        }
+      }
+    }
+  },
+  {
+    "snapshot_id": 40,
+    "company_id": "Nexus Aerospace & Defence",
+    "as_of_date": "2026-07-13",
+    "data": {
+      "metadata": {
+        "Leverage": "CCC",
+        "Liquidity": "-2 notches",
+        "Market share": "BB-",
+        "Rated entity": "Nexus Aerospace & Defence",
+        "Industry risk": [
+          {
+            "sector": "Consumer Products: Non-Discretionary",
+            "Industry weight": "35%",
+            "Industry risk score": "A"
+          },
+          {
+            "sector": "Automotive Suppliers",
+            "Industry weight": "65%",
+            "Industry risk score": "BB"
+          }
+        ],
+        "Interest cover": "B-",
+        "Cash flow cover": "CCC",
+        "CorporateSector": "Personal & Household Goods",
+        "Diversification": "B+",
+        "Country of origin": "Federal Republic of Germany",
+        "End of business year": "December",
+        "Accounting principles": "IFRS",
+        "Business risk profile": "B+",
+        "Segmentation criteria": "EBITDA contribution",
+        "Financial risk profile": "C",
+        "Competitive Positioning": "B+",
+        "Operating profitability": "BB-",
+        "Reporting Currency/Units": "EUR",
+        "Rating methodologies applied": [
+          "General Corporate Rating Methodology",
+          "Consumer Products Rating Methodology"
+        ],
+        "(Blended) Industry risk profile": "A",
+        "Sector/company-specific factors (1)": "B-",
+        "Sector/company-specific factors (2)": null
+      },
+      "scopeCreditMetrics": {
+        "years": [
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024,
+          "2025E",
+          "2026E",
+          "2027E"
+        ],
+        "metrics": {
+          "Liquidity": {
+            "2018": 4.86,
+            "2019": 4.86,
+            "2020": 4.86,
+            "2021": 21.53,
+            "2022": 21.53,
+            "2023": 21.53,
+            "2024": 21.53,
+            "2025E": 21.53,
+            "2026E": 21.53,
+            "2027E": 21.53,
+            "status": "Locked"
+          },
+          "Scope-adjusted FFO/debt": {
+            "2018": 27.33,
+            "2019": 27.33,
+            "2020": 27.33,
+            "2021": 36.8,
+            "2022": 36.8,
+            "2023": 27.33,
+            "2024": 27.33,
+            "2025E": 27.33,
+            "2026E": 27.33,
+            "2027E": 4.86,
+            "status": "Locked"
+          },
+          "Scope-adjusted FOCF/debt": {
+            "2018": 21.53,
+            "2019": 21.53,
+            "2020": 21.53,
+            "2021": 21.53,
+            "2022": 4.86,
+            "2023": 4.86,
+            "2024": 4.86,
+            "2025E": 4.86,
+            "2026E": 4.86,
+            "2027E": 4.86,
+            "status": "Locked"
+          },
+          "Scope-adjusted loan/value": {
+            "2018": 27.33,
+            "2019": 27.33,
+            "2020": 27.33,
+            "2021": 36.8,
+            "2022": 36.8,
+            "2023": null,
+            "2024": 27.33,
+            "2025E": 27.33,
+            "2026E": 27.33,
+            "2027E": 4.86,
+            "status": "Locked"
+          },
+          "Scope-adjusted debt/EBITDA": {
+            "2018": 18.49,
+            "2019": 18.49,
+            "2020": 18.49,
+            "2021": 18.49,
+            "2022": 18.49,
+            "2023": 18.49,
+            "2024": 36.8,
+            "2025E": 36.8,
+            "2026E": 18.49,
+            "2027E": 18.49,
+            "status": "Locked"
+          },
+          "Scope-adjusted EBITDA interest cover": {
+            "2018": 27.33,
+            "2019": 27.33,
+            "2020": 27.33,
+            "2021": 4.86,
+            "2022": 4.86,
+            "2023": 4.86,
+            "2024": 36.8,
+            "2025E": 36.8,
+            "2026E": 18.49,
+            "2027E": 18.49,
+            "status": "Locked"
+          }
+        }
+      }
+    }
+  },
+  {
+    "snapshot_id": 41,
+    "company_id": "Ironclad Industrial Goods",
+    "as_of_date": "2026-07-13",
+    "data": {
+      "metadata": {
+        "Leverage": "CCC",
+        "Liquidity": "-2 notches",
+        "Market share": "BB-",
+        "Rated entity": "Ironclad Industrial Goods",
+        "Industry risk": [
+          {
+            "sector": "Automotive Suppliers",
+            "Industry weight": "85%",
+            "Industry risk score": "A"
+          },
+          {
+            "sector": "Automotive Suppliers",
+            "Industry weight": "15%",
+            "Industry risk score": "BB"
+          }
+        ],
+        "Interest cover": "B-",
+        "Cash flow cover": "CCC",
+        "CorporateSector": "Personal & Household Goods",
+        "Diversification": "B+",
+        "Country of origin": "Federal Republic of Germany",
+        "End of business year": "December",
+        "Accounting principles": "IFRS",
+        "Business risk profile": "C",
+        "Segmentation criteria": "EBITDA contribution",
+        "Financial risk profile": "C",
+        "Competitive Positioning": "B+",
+        "Operating profitability": "BB-",
+        "Reporting Currency/Units": "EUR",
+        "Rating methodologies applied": [
+          "General Corporate Rating Methodology",
+          "Consumer Products Rating Methodology"
+        ],
+        "(Blended) Industry risk profile": "A",
+        "Sector/company-specific factors (1)": "B-",
+        "Sector/company-specific factors (2)": null
+      },
+      "scopeCreditMetrics": {
+        "years": [
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024,
+          "2025E",
+          "2026E",
+          "2027E"
+        ],
+        "metrics": {
+          "Liquidity": {
+            "2018": 4.86,
+            "2019": 4.86,
+            "2020": 4.86,
+            "2021": 21.53,
+            "2022": 21.53,
+            "2023": 21.53,
+            "2024": 21.53,
+            "2025E": 21.53,
+            "2026E": 21.53,
+            "2027E": 21.53,
+            "status": "Locked"
+          },
+          "Scope-adjusted FFO/debt": {
+            "2018": 27.33,
+            "2019": 27.33,
+            "2020": 27.33,
+            "2021": 36.8,
+            "2022": 36.8,
+            "2023": 27.33,
+            "2024": 27.33,
+            "2025E": 27.33,
+            "2026E": 27.33,
+            "2027E": 4.86,
+            "status": "Locked"
+          },
+          "Scope-adjusted FOCF/debt": {
+            "2018": 21.53,
+            "2019": 21.53,
+            "2020": 21.53,
+            "2021": 21.53,
+            "2022": 4.86,
+            "2023": 4.86,
+            "2024": 4.86,
+            "2025E": 4.86,
+            "2026E": 4.86,
+            "2027E": 4.86,
+            "status": "Locked"
+          },
+          "Scope-adjusted loan/value": {
+            "2018": 27.33,
+            "2019": 27.33,
+            "2020": 27.33,
+            "2021": 36.8,
+            "2022": 36.8,
+            "2023": null,
+            "2024": 27.33,
+            "2025E": 27.33,
+            "2026E": 27.33,
+            "2027E": 4.86,
+            "status": "Locked"
+          },
+          "Scope-adjusted debt/EBITDA": {
+            "2018": 18.49,
+            "2019": 18.49,
+            "2020": 18.49,
+            "2021": 18.49,
+            "2022": 18.49,
+            "2023": 18.49,
+            "2024": 36.8,
+            "2025E": 36.8,
+            "2026E": 18.49,
+            "2027E": 18.49,
+            "status": "Locked"
+          },
+          "Scope-adjusted EBITDA interest cover": {
+            "2018": 27.33,
+            "2019": 27.33,
+            "2020": 27.33,
+            "2021": 4.86,
+            "2022": 4.86,
+            "2023": 4.86,
+            "2024": 36.8,
+            "2025E": 36.8,
+            "2026E": 18.49,
+            "2027E": 18.49,
+            "status": "Locked"
+          }
+        }
+      }
+    }
+  },
+  {
+    "snapshot_id": 42,
+    "company_id": "Delta Energy Infrastructure Corp",
+    "as_of_date": "2026-07-13",
+    "data": {
+      "metadata": {
+        "Leverage": "CCC",
+        "Liquidity": "-2 notches",
+        "Market share": "BB-",
+        "Rated entity": "Delta Energy Infrastructure Corp",
+        "Industry risk": [
+          {
+            "sector": "Automotive Suppliers",
+            "Industry weight": "5%",
+            "Industry risk score": "BBB"
+          },
+          {
+            "sector": "Automotive Suppliers",
+            "Industry weight": "95%",
+            "Industry risk score": "BB"
+          }
+        ],
+        "Interest cover": "B-",
+        "Cash flow cover": "CCC",
+        "CorporateSector": "Personal & Household Goods",
+        "Diversification": "B+",
+        "Country of origin": "Federal Republic of Germany",
+        "End of business year": "December",
+        "Accounting principles": "Local GAAP",
+        "Business risk profile": "A",
+        "Segmentation criteria": "EBITDA contribution",
+        "Financial risk profile": "C",
+        "Competitive Positioning": "B+",
+        "Operating profitability": "BB-",
+        "Reporting Currency/Units": "EUR",
+        "Rating methodologies applied": [
+          "General Corporate Rating Methodology",
+          "Consumer Products Rating Methodology"
+        ],
+        "(Blended) Industry risk profile": "A",
+        "Sector/company-specific factors (1)": "B-",
+        "Sector/company-specific factors (2)": null
+      },
+      "scopeCreditMetrics": {
+        "years": [
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024,
+          "2025E",
+          "2026E",
+          "2027E"
+        ],
+        "metrics": {
+          "Liquidity": {
+            "2018": 4.86,
+            "2019": 4.86,
+            "2020": 4.86,
+            "2021": 21.53,
+            "2022": 21.53,
+            "2023": 21.53,
+            "2024": 21.53,
+            "2025E": 21.53,
+            "2026E": 21.53,
+            "2027E": 21.53,
+            "status": "Locked"
+          },
+          "Scope-adjusted FFO/debt": {
+            "2018": 27.33,
+            "2019": 27.33,
+            "2020": 27.33,
+            "2021": 36.8,
+            "2022": 36.8,
+            "2023": 27.33,
+            "2024": 27.33,
+            "2025E": 27.33,
+            "2026E": 27.33,
+            "2027E": 4.86,
+            "status": "Locked"
+          },
+          "Scope-adjusted FOCF/debt": {
+            "2018": 21.53,
+            "2019": 21.53,
+            "2020": 21.53,
+            "2021": 21.53,
+            "2022": 4.86,
+            "2023": 4.86,
+            "2024": 4.86,
+            "2025E": 4.86,
+            "2026E": 4.86,
+            "2027E": 4.86,
+            "status": "Locked"
+          },
+          "Scope-adjusted loan/value": {
+            "2018": 27.33,
+            "2019": 27.33,
+            "2020": 27.33,
+            "2021": 36.8,
+            "2022": 36.8,
+            "2023": null,
+            "2024": 27.33,
+            "2025E": 27.33,
+            "2026E": 27.33,
+            "2027E": 4.86,
+            "status": "Locked"
+          },
+          "Scope-adjusted debt/EBITDA": {
+            "2018": 18.49,
+            "2019": 18.49,
+            "2020": 18.49,
+            "2021": 18.49,
+            "2022": 18.49,
+            "2023": 18.49,
+            "2024": 36.8,
+            "2025E": 36.8,
+            "2026E": 18.49,
+            "2027E": 18.49,
+            "status": "Locked"
+          },
+          "Scope-adjusted EBITDA interest cover": {
+            "2018": 27.33,
+            "2019": 27.33,
+            "2020": 27.33,
+            "2021": 4.86,
+            "2022": 4.86,
+            "2023": 4.86,
+            "2024": 36.8,
+            "2025E": 36.8,
+            "2026E": 18.49,
+            "2027E": 18.49,
+            "status": "Locked"
+          }
+        }
+      }
+    }
+  },
+  {
+    "snapshot_id": 43,
+    "company_id": "Company A",
+    "as_of_date": "2026-07-13",
+    "data": {
+      "metadata": {
+        "Leverage": "CCC",
+        "Liquidity": "-2 notches",
+        "Market share": "B+",
+        "Rated entity": "Company A",
+        "Industry risk": [
+          {
+            "sector": "Consumer Products: Non-Discretionary",
+            "Industry weight": "100%",
+            "Industry risk score": "BBB"
+          }
+        ],
+        "Interest cover": "B-",
+        "Cash flow cover": "CCC",
+        "CorporateSector": "Personal & Household Goods",
+        "Diversification": "B+",
+        "Country of origin": "Federal Republic of Germany",
+        "End of business year": "December",
+        "Accounting principles": "IFRS",
+        "Business risk profile": "B",
+        "Segmentation criteria": "EBITDA contribution",
+        "Financial risk profile": "CC",
+        "Competitive Positioning": "B+",
+        "Operating profitability": "B",
+        "Reporting Currency/Units": "EUR",
+        "Rating methodologies applied": "General Corporate Rating Methodology",
+        "(Blended) Industry risk profile": "A",
+        "Sector/company-specific factors (1)": "B-",
+        "Sector/company-specific factors (2)": null
+      },
+      "scopeCreditMetrics": {
+        "years": [
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024,
+          "2025E",
+          "2026E",
+          "2027E"
+        ],
+        "metrics": {
+          "Liquidity": {
+            "2018": 4.86,
+            "2019": 4.86,
+            "2020": 4.86,
+            "2021": 21.53,
+            "2022": 21.53,
+            "2023": 21.53,
+            "2024": 21.53,
+            "2025E": 21.53,
+            "2026E": 21.53,
+            "2027E": 23,
+            "status": "Locked"
+          },
+          "Scope-adjusted FFO/debt": {
+            "2018": 22,
+            "2019": 22,
+            "2020": 22,
+            "2021": 36.8,
+            "2022": 36.8,
+            "2023": 27.33,
+            "2024": 29,
+            "2025E": 29,
+            "2026E": 29,
+            "2027E": 8,
+            "status": "Locked"
+          },
+          "Scope-adjusted FOCF/debt": {
+            "2018": 21.53,
+            "2019": 21.53,
+            "2020": 21.53,
+            "2021": 21.53,
+            "2022": 4.86,
+            "2023": 4.86,
+            "2024": 4.86,
+            "2025E": 4.86,
+            "2026E": 4.86,
+            "2027E": 4.86,
+            "status": "Locked"
+          },
+          "Scope-adjusted loan/value": {
+            "2018": 27.33,
+            "2019": 27.33,
+            "2020": 27.33,
+            "2021": 36.8,
+            "2022": 36.8,
+            "2023": null,
+            "2024": 27.33,
+            "2025E": 27.33,
+            "2026E": 27.33,
+            "2027E": 4.86,
+            "status": "Locked"
+          },
+          "Scope-adjusted debt/EBITDA": {
+            "2018": 18.49,
+            "2019": 18.49,
+            "2020": 18.49,
+            "2021": 18.49,
+            "2022": 18.49,
+            "2023": 18.49,
+            "2024": 36.8,
+            "2025E": 36.8,
+            "2026E": 18.49,
+            "2027E": 18.49,
+            "status": "Locked"
+          },
+          "Scope-adjusted EBITDA interest cover": {
+            "2018": 27.33,
+            "2019": 27.33,
+            "2020": 27.33,
+            "2021": 4.86,
+            "2022": 4.86,
+            "2023": 4.86,
+            "2024": 36.8,
+            "2025E": 36.8,
+            "2026E": 18.49,
+            "2027E": 18.49,
+            "status": "Locked"
+          }
+        }
+      }
+    }
+  }
+]
+-e 
+========================================================================
+-e 🚀 MODULE: INGESTION AUDIT & LINEAGE CLUSTER (/uploads)
+-e ========================================================================
+-e 
+✨ Testing Endpoint: Fetch Aggregate Pipeline Processing Metrics
+-e 👉 Command: curl -s 'http://localhost:8000/api/v1/uploads/stats' | jq
+-e ------------------------------------------------------------------------
+{
+  "total_pipeline_runs": 1,
+  "total_files_evaluated": 119,
+  "success_count": 24,
+  "failure_count": 87,
+  "skipped_count": 8
+}
+-e 
+✨ Testing Endpoint: List Recent Pipeline File Details Logs (Limit 5)
+-e 👉 Command: curl -s 'http://localhost:8000/api/v1/uploads?limit=5' | jq
+-e ------------------------------------------------------------------------
+[
+  {
+    "upload_id": 682,
+    "filename": "submission_091_invalid.xlsm",
+    "uploaded_at": "2026-07-13T06:46:06.336665",
+    "status": "FAILURE",
+    "submission_id": 555,
+    "execution_stage": "3.Validation",
+    "error_message": "Value violation on 'Industry risk score': Element '100 Notches Down' is out of bounds.; Value violation on 'Business risk profile': Element 'CORRUPT_RISK_SCORE_INVALID_X' is out of bounds.; Mathematical allocation error: Combined weights sum to 110.0% instead of 100%."
+  },
+  {
+    "upload_id": 681,
+    "filename": "submission_048_valid.xlsm",
+    "uploaded_at": "2026-07-13T06:46:06.315393",
+    "status": "FAILURE",
+    "submission_id": 554,
+    "execution_stage": "3.Validation",
+    "error_message": "Value violation on 'Industry risk': Element 'Chemicals' is out of bounds.; Value violation on 'Industry risk score': Element 'BB-' is out of bounds."
+  },
+  {
+    "upload_id": 680,
+    "filename": "submission_096_invalid.xlsm",
+    "uploaded_at": "2026-07-13T06:46:06.295422",
+    "status": "FAILURE",
+    "submission_id": 553,
+    "execution_stage": "3.Validation",
+    "error_message": "Value violation on 'Industry risk score': Element 'MALFORMED_MATRIX_VALUE_ERR' is out of bounds.; Mathematical allocation error: Combined weights sum to 110.0% instead of 100%."
+  },
+  {
+    "upload_id": 679,
+    "filename": "corporates_A_2 copy.xlsm",
+    "uploaded_at": "2026-07-13T06:46:06.265188",
+    "status": "SUCCESS",
+    "submission_id": 552,
+    "execution_stage": "5.Transform",
+    "error_message": null
+  },
+  {
+    "upload_id": 678,
+    "filename": "submission_080_valid.xlsm",
+    "uploaded_at": "2026-07-13T06:46:06.240829",
+    "status": "FAILURE",
+    "submission_id": 551,
+    "execution_stage": "3.Validation",
+    "error_message": "Value violation on 'Industry risk': Element 'Chemicals' is out of bounds.; Value violation on 'Industry risk score': Element 'BB-' is out of bounds."
+  }
+]
+-e 
+📥 Testing Endpoint: Download Original Ingestion Asset (ID: 568)
+-e 👉 Command: curl -X 'GET' 'http://localhost:8000/api/v1/uploads/568/file' -o submission_013_valid.xlsm
+-e ------------------------------------------------------------------------
+-e ✅ Success: Asset binary downloaded cleanly into current workspace context!
+-rw-r--r--@ 1 kamalkumar  staff   124K Jul 13 15:13 submission_013_valid.xlsm
+-e 
+========================================================================
+-e 🎉 End-to-End Verification Complete!
+-e ========================================================================

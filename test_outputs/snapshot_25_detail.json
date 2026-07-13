@@ -1,0 +1,131 @@
+{
+  "snapshot_id": 25,
+  "company_id": "Company A",
+  "as_of_date": "2026-07-13",
+  "data": {
+    "metadata": {
+      "Leverage": "CCC",
+      "Liquidity": "-2 notches",
+      "Market share": "B+",
+      "Rated entity": "Company A",
+      "Industry risk": [
+        {
+          "sector": "Consumer Products: Non-Discretionary",
+          "Industry weight": "100%",
+          "Industry risk score": "BBB"
+        }
+      ],
+      "Interest cover": "B-",
+      "Cash flow cover": "CCC",
+      "CorporateSector": "Construction & Materials",
+      "Diversification": "B+",
+      "Country of origin": "Federal Republic of Germany",
+      "End of business year": "December",
+      "Accounting principles": "IFRS",
+      "Business risk profile": "B",
+      "Segmentation criteria": "EBITDA contribution",
+      "Financial risk profile": "CC",
+      "Competitive Positioning": "B+",
+      "Operating profitability": "B",
+      "Reporting Currency/Units": "EUR",
+      "Rating methodologies applied": "Metals and Mining Rating Methodology",
+      "(Blended) Industry risk profile": "A",
+      "Sector/company-specific factors (1)": "B-",
+      "Sector/company-specific factors (2)": null
+    },
+    "scopeCreditMetrics": {
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        "2025E",
+        "2026E",
+        "2027E"
+      ],
+      "metrics": {
+        "Liquidity": {
+          "2018": 4.86,
+          "2019": 4.86,
+          "2020": 4.86,
+          "2021": 21.53,
+          "2022": 21.53,
+          "2023": 21.53,
+          "2024": 21.53,
+          "2025E": 21.53,
+          "2026E": 21.53,
+          "2027E": 23,
+          "status": "Locked"
+        },
+        "Scope-adjusted FFO/debt": {
+          "2018": 22,
+          "2019": 22,
+          "2020": 22,
+          "2021": 36.8,
+          "2022": 36.8,
+          "2023": 27.33,
+          "2024": 29,
+          "2025E": 29,
+          "2026E": 29,
+          "2027E": 8,
+          "status": "Locked"
+        },
+        "Scope-adjusted FOCF/debt": {
+          "2018": 21.53,
+          "2019": 21.53,
+          "2020": 21.53,
+          "2021": 21.53,
+          "2022": 4.86,
+          "2023": 4.86,
+          "2024": 4.86,
+          "2025E": 4.86,
+          "2026E": 4.86,
+          "2027E": 4.86,
+          "status": "Locked"
+        },
+        "Scope-adjusted loan/value": {
+          "2018": 27.33,
+          "2019": 27.33,
+          "2020": 27.33,
+          "2021": 36.8,
+          "2022": 36.8,
+          "2023": null,
+          "2024": 27.33,
+          "2025E": 27.33,
+          "2026E": 27.33,
+          "2027E": 4.86,
+          "status": "Locked"
+        },
+        "Scope-adjusted debt/EBITDA": {
+          "2018": 18.49,
+          "2019": 18.49,
+          "2020": 18.49,
+          "2021": 18.49,
+          "2022": 18.49,
+          "2023": 18.49,
+          "2024": 36.8,
+          "2025E": 36.8,
+          "2026E": 18.49,
+          "2027E": 18.49,
+          "status": "Locked"
+        },
+        "Scope-adjusted EBITDA interest cover": {
+          "2018": 27.33,
+          "2019": 27.33,
+          "2020": 27.33,
+          "2021": 4.86,
+          "2022": 4.86,
+          "2023": 4.86,
+          "2024": 36.8,
+          "2025E": 36.8,
+          "2026E": 18.49,
+          "2027E": 18.49,
+          "status": "Locked"
+        }
+      }
+    }
+  }
+}

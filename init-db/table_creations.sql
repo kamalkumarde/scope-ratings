@@ -10,10 +10,42 @@ create table public.submissions
     execution_duration_seconds numeric(6, 3) not null,
     file_metadata              jsonb                    default '{}'::jsonb,
     parsed_data                jsonb                    default '{}'::jsonb,
-    lineage_trace              jsonb                    default '{}'::jsonb
+    lineage_trace              jsonb                    default '{}'::jsonb,
+    run_id                     integer                  default 0
 );
 
 alter table public.submissions
+    owner to rating_warehouse_user;
+
+create table public.pipeline_audit_logs
+(
+    id                serial
+        primary key,
+    filename          varchar(255) not null,
+    submission_id     integer,
+    execution_status  varchar(50)  not null,
+    processed_records integer                  default 0,
+    error_message     text,
+    started_at        timestamp with time zone default CURRENT_TIMESTAMP,
+    completed_at      timestamp with time zone
+);
+
+alter table public.pipeline_audit_logs
+    owner to rating_warehouse_user;
+
+create index idx_pipeline_audit_filename
+    on public.pipeline_audit_logs (filename);
+
+create table public.submission_errors
+(
+    id              serial
+        primary key,
+    submission_id integer,
+    filename      text,
+    error_message text
+);
+
+alter table public.submission_errors
     owner to rating_warehouse_user;
 
 create table public.dim_entities
@@ -21,13 +53,13 @@ create table public.dim_entities
     entity_key            serial
         primary key,
     natural_key           text                 not null,
-    sector                text,
-    currency              text,
-    accounting_principles text,
-    year_end              text,
-    entity_hash_key       char(32)             not null,
     entity_name           text                 not null,
     country_of_origin     text,
+    sector                text,
+    accounting_principles text,
+    currency              text,
+    year_end              text,
+    entity_hash_key       char(32)             not null,
     is_current            boolean default true not null,
     valid_from            timestamp            not null,
     valid_to              timestamp,
@@ -37,15 +69,24 @@ create table public.dim_entities
 alter table public.dim_entities
     owner to rating_warehouse_user;
 
+create unique index uq_active_entity
+    on public.dim_entities (natural_key)
+    where (is_current = true);
+
+create index idx_entities_natural
+    on public.dim_entities (natural_key);
+
 create table public.dim_profiles
 (
     profile_key                  serial
         primary key,
     entity_key                   integer              not null
-        constraint fk_profiles_parent_entity
+        constraint fk_profiles_entity
             references public.dim_entities
             on delete cascade,
+    entity_hash_key              char(32)             not null,
     profile_hash_key             char(32)             not null,
+    industry_aggregate_hash_key  char(32),
     business_risk_profile        text,
     blended_industry_risk        text,
     competitive_positioning      text,
@@ -64,8 +105,7 @@ create table public.dim_profiles
     is_current                   boolean default true not null,
     valid_from                   timestamp            not null,
     valid_to                     timestamp,
-    submission_id                integer              not null,
-    industry_aggregate_hash_key  char(32)
+    submission_id                integer              not null
 );
 
 alter table public.dim_profiles
@@ -75,18 +115,23 @@ create unique index uq_active_profile
     on public.dim_profiles (entity_key)
     where (is_current = true);
 
-create index idx_dim_profiles_lookup
-    on public.dim_profiles (entity_key, valid_from, valid_to);
+create index idx_profiles_entity
+    on public.dim_profiles (entity_key);
+
+create index idx_profiles_entity_hash
+    on public.dim_profiles (entity_hash_key);
 
 create table public.dim_ind_profile
 (
     industry_profile_key        serial
         primary key,
     profile_key                 integer              not null
-        constraint fk_ind_profile_parent
+        constraint fk_ind_profile
             references public.dim_profiles
             on delete cascade,
+    profile_hash_key            char(32),
     industry_hash_key           char(32)             not null,
+    industry_aggregate_hash_key char(32),
     sector_name                 text                 not null,
     industry_weight_percentage  double precision     not null,
     industry_risk_score         varchar(10),
@@ -94,62 +139,75 @@ create table public.dim_ind_profile
     valid_from                  timestamp            not null,
     valid_to                    timestamp,
     submission_id               integer              not null,
-    industry_aggregate_hash_key char(32)
+    constraint uq_profile_sector_hash
+        unique (profile_key, sector_name, industry_hash_key)
 );
 
 alter table public.dim_ind_profile
     owner to rating_warehouse_user;
 
-create unique index uq_active_ind_sector
-    on public.dim_ind_profile (profile_key, sector_name)
+create unique index uq_active_industry
+    on public.dim_ind_profile (profile_key, sector_name, industry_hash_key)
     where (is_current = true);
+
+create index idx_ind_profile_parent
+    on public.dim_ind_profile (profile_key);
 
 create table public.fct_rating_metric
 (
-    fact_metric_key             bigserial
+    fact_metric_key             serial
         primary key,
-    entity_key                  integer     not null,
-    profile_key                 integer     not null,
-    industry_aggregate_hash_key varchar,
-    submission_id               integer     not null,
-    metric_name                 text        not null,
-    year_label                  varchar(50) not null,
-    calendar_year               integer     not null,
-    is_forecast                 boolean                  default false,
+    entity_key                  integer not null,
+    profile_key                 integer not null,
+    industry_aggregate_hash_key char(32),
+    submission_id               integer not null,
+    metric_name                 text    not null,
+    year_label                  text    not null,
+    calendar_year               integer,
+    is_forecast                 boolean,
     metric_value                numeric(18, 4),
-    metric_value_formatted      varchar(100),
-    processing_status           varchar(100),
-    created_at                  timestamp with time zone default now(),
-    updated_at                  timestamp with time zone default now(),
-    constraint uq_fct_rating_metric_entity_grain
-        unique (entity_key, metric_name, calendar_year)
+    metric_value_formatted      text,
+    processing_status           text,
+    updated_at                  timestamp default now()
 );
 
 alter table public.fct_rating_metric
     owner to rating_warehouse_user;
 
-create index idx_fct_rating_entity
-    on public.fct_rating_metric (entity_key);
+create unique index uq_fact_metric
+    on public.fct_rating_metric (entity_key, profile_key, metric_name, calendar_year);
 
-create index idx_fct_rating_profile
-    on public.fct_rating_metric (profile_key);
-
-create index idx_fct_rating_ind_profile
-    on public.fct_rating_metric (industry_aggregate_hash_key);
-
-create index idx_fct_rating_metric_name
-    on public.fct_rating_metric (metric_name);
-
-CREATE TABLE IF NOT EXISTS public.pipeline_audit_logs (
-    id SERIAL PRIMARY KEY,
-    filename VARCHAR(255) NOT NULL,
-    execution_status VARCHAR(50) NOT NULL, -- 'STARTED', 'SUCCESS', 'FAILURE'
-    processed_records INT DEFAULT 0,
-    error_message TEXT,
-    started_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-    completed_at TIMESTAMP WITH TIME ZONE
+create table public.pipeline_runs
+(
+    run_id        serial
+        primary key,
+    started_at    timestamp default CURRENT_TIMESTAMP,
+    status        varchar(20),
+    total_files   integer   default 0,
+    success_count integer   default 0,
+    failure_count integer   default 0,
+    skipped_count integer   default 0
 );
 
--- Index for faster analytical lookups
-CREATE INDEX IF NOT EXISTS idx_pipeline_audit_filename ON public.pipeline_audit_logs(filename);    
+alter table public.pipeline_runs
+    owner to rating_warehouse_user;
+
+create table public.pipeline_file_details
+(
+    id              serial
+        primary key,
+    run_id          bigint
+        references public.pipeline_runs
+            on delete cascade,
+    file_name       varchar(255)                                                        not null,
+    processed_at    timestamp default CURRENT_TIMESTAMP,
+    outcome         varchar(20),
+    submission_id   integer,
+    execution_stage varchar(50),
+    error_message   text,
+    file_content    bytea
+);
+
+alter table public.pipeline_file_details
+    owner to rating_warehouse_user;
 

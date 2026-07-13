@@ -1,0 +1,47 @@
+[
+  {
+    "upload_id": 682,
+    "filename": "submission_091_invalid.xlsm",
+    "uploaded_at": "2026-07-13T06:46:06.336665",
+    "status": "FAILURE",
+    "submission_id": 555,
+    "execution_stage": "3.Validation",
+    "error_message": "Value violation on 'Industry risk score': Element '100 Notches Down' is out of bounds.; Value violation on 'Business risk profile': Element 'CORRUPT_RISK_SCORE_INVALID_X' is out of bounds.; Mathematical allocation error: Combined weights sum to 110.0% instead of 100%."
+  },
+  {
+    "upload_id": 681,
+    "filename": "submission_048_valid.xlsm",
+    "uploaded_at": "2026-07-13T06:46:06.315393",
+    "status": "FAILURE",
+    "submission_id": 554,
+    "execution_stage": "3.Validation",
+    "error_message": "Value violation on 'Industry risk': Element 'Chemicals' is out of bounds.; Value violation on 'Industry risk score': Element 'BB-' is out of bounds."
+  },
+  {
+    "upload_id": 680,
+    "filename": "submission_096_invalid.xlsm",
+    "uploaded_at": "2026-07-13T06:46:06.295422",
+    "status": "FAILURE",
+    "submission_id": 553,
+    "execution_stage": "3.Validation",
+    "error_message": "Value violation on 'Industry risk score': Element 'MALFORMED_MATRIX_VALUE_ERR' is out of bounds.; Mathematical allocation error: Combined weights sum to 110.0% instead of 100%."
+  },
+  {
+    "upload_id": 679,
+    "filename": "corporates_A_2 copy.xlsm",
+    "uploaded_at": "2026-07-13T06:46:06.265188",
+    "status": "SUCCESS",
+    "submission_id": 552,
+    "execution_stage": "5.Transform",
+    "error_message": null
+  },
+  {
+    "upload_id": 678,
+    "filename": "submission_080_valid.xlsm",
+    "uploaded_at": "2026-07-13T06:46:06.240829",
+    "status": "FAILURE",
+    "submission_id": 551,
+    "execution_stage": "3.Validation",
+    "error_message": "Value violation on 'Industry risk': Element 'Chemicals' is out of bounds.; Value violation on 'Industry risk score': Element 'BB-' is out of bounds."
+  }
+]

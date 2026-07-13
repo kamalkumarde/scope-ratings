@@ -1,0 +1,39 @@
+{
+  "natural_id": "Company A",
+  "entity_name": "Company A",
+  "country_of_origin": "Federal Republic of Germany",
+  "is_current": true,
+  "valid_from": "2026-07-13T06:46:06.260373",
+  "valid_to": null,
+  "submission_id": 552,
+  "metadata": {
+    "Leverage": "CCC",
+    "Liquidity": "-2 notches",
+    "Market share": "B+",
+    "Rated entity": "Company A",
+    "Industry risk": [
+      {
+        "sector": "Consumer Products: Non-Discretionary",
+        "Industry weight": "100%",
+        "Industry risk score": "BBB"
+      }
+    ],
+    "Interest cover": "B-",
+    "Cash flow cover": "CCC",
+    "CorporateSector": "Personal & Household Goods",
+    "Diversification": "B+",
+    "Country of origin": "Federal Republic of Germany",
+    "End of business year": "December",
+    "Accounting principles": "IFRS",
+    "Business risk profile": "B",
+    "Segmentation criteria": "EBITDA contribution",
+    "Financial risk profile": "CC",
+    "Competitive Positioning": "B+",
+    "Operating profitability": "B",
+    "Reporting Currency/Units": "EUR",
+    "Rating methodologies applied": "General Corporate Rating Methodology",
+    "(Blended) Industry risk profile": "A",
+    "Sector/company-specific factors (1)": "B-",
+    "Sector/company-specific factors (2)": null
+  }
+}

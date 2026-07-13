@@ -13,12 +13,15 @@ class CompanyVersion(BaseModel):
 class CompanyDetailResponse(BaseModel):
     natural_id: str
     entity_name: str
-    country_of_origin: str
+    country_of_origin: Optional[str] = None  # Safe against database NULL fields
     is_current: bool
     valid_from: datetime
     valid_to: Optional[datetime] = None
     submission_id: Optional[int] = None
-    metadata: Dict[str, Any]
+    metadata: Dict[str, Any] = {}
+
+    class Config:
+        from_attributes = True
 
 # --- Snapshots ---
 class SnapshotResponse(BaseModel):
@@ -43,24 +46,49 @@ class TimeSeriesAnalysisResponse(BaseModel):
 
 # --- Audits & Telemetry ---
 class UploadAuditResponse(BaseModel):
-    id: int
+    upload_id: int
     filename: str
+    uploaded_at: datetime
     status: str
-    submitted_at: datetime
-    execution_duration: float
+    submission_id: Optional[int] = None
+    execution_stage: Optional[str] = None
+    error_message: Optional[str] = None
+
+class SnapshotImpactReference(BaseModel):
+    natural_id: str
+    entity_name: str
+    country_of_origin: Optional[str] = None
+    is_current: bool
+    valid_from: datetime
+    valid_to: Optional[datetime] = None
 
 class UploadAuditDetailResponse(BaseModel):
-    id: int
+    upload_id: int
     filename: str
-    final_status: str
-    current_status: str
-    submitted_at: datetime
-    execution_duration_seconds: float
-    file_metadata: Dict[str, Any]
-    parsed_data: Dict[str, Any]
+    uploaded_at: datetime
+    status: str
+    submission_id: Optional[int] = None
+    execution_stage: Optional[str] = None
+    error_message: Optional[str] = None
+    impacted_snapshots: List[SnapshotImpactReference] = []
 
 class UploadStatsResponse(BaseModel):
-    total_uploads: int
-    successful_uploads: int
-    failed_uploads: int
-    processing_uploads: int
+    total_pipeline_runs: int
+    total_files_evaluated: int
+    success_count: int
+    failure_count: int
+    skipped_count: int
+    
+class CompanySnapshotListItem(BaseModel):
+    natural_id: str
+    entity_name: str
+    country_of_origin: Optional[str] = None
+    is_current: bool
+    valid_from: datetime
+    valid_to: Optional[datetime] = None
+    submission_id: Optional[int] = None
+    sector: Optional[str] = None
+    currency: Optional[str] = None
+
+    class Config:
+        from_attributes = True    

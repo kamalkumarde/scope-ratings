@@ -1,0 +1,38 @@
+[
+  {
+    "submission_id": 552,
+    "valid_from": "2026-07-13T06:46:06.260373",
+    "valid_to": null,
+    "is_current": true
+  },
+  {
+    "submission_id": 499,
+    "valid_from": "2026-07-13T06:46:05.012149",
+    "valid_to": "2026-07-13T06:46:06.260373",
+    "is_current": false
+  },
+  {
+    "submission_id": 477,
+    "valid_from": "2026-07-13T06:46:04.419075",
+    "valid_to": "2026-07-13T06:46:05.012149",
+    "is_current": false
+  },
+  {
+    "submission_id": 476,
+    "valid_from": "2026-07-13T06:46:04.290841",
+    "valid_to": "2026-07-13T06:46:04.419075",
+    "is_current": false
+  },
+  {
+    "submission_id": 473,
+    "valid_from": "2026-07-13T06:46:04.127508",
+    "valid_to": "2026-07-13T06:46:04.290841",
+    "is_current": false
+  },
+  {
+    "submission_id": 446,
+    "valid_from": "2026-07-13T06:46:03.379074",
+    "valid_to": "2026-07-13T06:46:04.127508",
+    "is_current": false
+  }
+]

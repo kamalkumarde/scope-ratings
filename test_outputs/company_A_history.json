@@ -1,0 +1,518 @@
+[
+  {
+    "natural_id": "Company A",
+    "metric_name": "Liquidity",
+    "history": [
+      {
+        "calendar_year": 2018,
+        "year_label": "2018",
+        "metric_value": "4.86",
+        "metric_value_formatted": "4.86",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2019,
+        "year_label": "2019",
+        "metric_value": "4.86",
+        "metric_value_formatted": "4.86",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2020,
+        "year_label": "2020",
+        "metric_value": "4.86",
+        "metric_value_formatted": "4.86",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2021,
+        "year_label": "2021",
+        "metric_value": "21.53",
+        "metric_value_formatted": "21.53",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2022,
+        "year_label": "2022",
+        "metric_value": "21.53",
+        "metric_value_formatted": "21.53",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2023,
+        "year_label": "2023",
+        "metric_value": "21.53",
+        "metric_value_formatted": "21.53",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2024,
+        "year_label": "2024",
+        "metric_value": "21.53",
+        "metric_value_formatted": "21.53",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2025,
+        "year_label": "2025E",
+        "metric_value": "21.53",
+        "metric_value_formatted": "21.53",
+        "is_forecast": true,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2026,
+        "year_label": "2026E",
+        "metric_value": "21.53",
+        "metric_value_formatted": "21.53",
+        "is_forecast": true,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2027,
+        "year_label": "2027E",
+        "metric_value": "23.0",
+        "metric_value_formatted": "23.00",
+        "is_forecast": true,
+        "processing_status": "Locked"
+      }
+    ]
+  },
+  {
+    "natural_id": "Company A",
+    "metric_name": "Scope-adjusted EBITDA interest cover",
+    "history": [
+      {
+        "calendar_year": 2018,
+        "year_label": "2018",
+        "metric_value": "27.33",
+        "metric_value_formatted": "27.33",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2019,
+        "year_label": "2019",
+        "metric_value": "27.33",
+        "metric_value_formatted": "27.33",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2020,
+        "year_label": "2020",
+        "metric_value": "27.33",
+        "metric_value_formatted": "27.33",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2021,
+        "year_label": "2021",
+        "metric_value": "4.86",
+        "metric_value_formatted": "4.86",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2022,
+        "year_label": "2022",
+        "metric_value": "4.86",
+        "metric_value_formatted": "4.86",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2023,
+        "year_label": "2023",
+        "metric_value": "4.86",
+        "metric_value_formatted": "4.86",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2024,
+        "year_label": "2024",
+        "metric_value": "36.8",
+        "metric_value_formatted": "36.80",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2025,
+        "year_label": "2025E",
+        "metric_value": "36.8",
+        "metric_value_formatted": "36.80",
+        "is_forecast": true,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2026,
+        "year_label": "2026E",
+        "metric_value": "18.49",
+        "metric_value_formatted": "18.49",
+        "is_forecast": true,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2027,
+        "year_label": "2027E",
+        "metric_value": "18.49",
+        "metric_value_formatted": "18.49",
+        "is_forecast": true,
+        "processing_status": "Locked"
+      }
+    ]
+  },
+  {
+    "natural_id": "Company A",
+    "metric_name": "Scope-adjusted FFO/debt",
+    "history": [
+      {
+        "calendar_year": 2018,
+        "year_label": "2018",
+        "metric_value": "22.0",
+        "metric_value_formatted": "22.00",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2019,
+        "year_label": "2019",
+        "metric_value": "27.33",
+        "metric_value_formatted": "27.33",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2020,
+        "year_label": "2020",
+        "metric_value": "22.0",
+        "metric_value_formatted": "22.00",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2021,
+        "year_label": "2021",
+        "metric_value": "36.8",
+        "metric_value_formatted": "36.80",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2022,
+        "year_label": "2022",
+        "metric_value": "36.8",
+        "metric_value_formatted": "36.80",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2023,
+        "year_label": "2023",
+        "metric_value": "27.33",
+        "metric_value_formatted": "27.33",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2024,
+        "year_label": "2024",
+        "metric_value": "29.0",
+        "metric_value_formatted": "29.00",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2025,
+        "year_label": "2025E",
+        "metric_value": "29.0",
+        "metric_value_formatted": "29.00",
+        "is_forecast": true,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2026,
+        "year_label": "2026E",
+        "metric_value": "29.0",
+        "metric_value_formatted": "29.00",
+        "is_forecast": true,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2027,
+        "year_label": "2027E",
+        "metric_value": "8.0",
+        "metric_value_formatted": "8.00",
+        "is_forecast": true,
+        "processing_status": "Locked"
+      }
+    ]
+  },
+  {
+    "natural_id": "Company A",
+    "metric_name": "Scope-adjusted FOCF/debt",
+    "history": [
+      {
+        "calendar_year": 2018,
+        "year_label": "2018",
+        "metric_value": "21.53",
+        "metric_value_formatted": "21.53",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2019,
+        "year_label": "2019",
+        "metric_value": "21.53",
+        "metric_value_formatted": "21.53",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2020,
+        "year_label": "2020",
+        "metric_value": "21.53",
+        "metric_value_formatted": "21.53",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2021,
+        "year_label": "2021",
+        "metric_value": "21.53",
+        "metric_value_formatted": "21.53",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2022,
+        "year_label": "2022",
+        "metric_value": "4.86",
+        "metric_value_formatted": "4.86",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2023,
+        "year_label": "2023",
+        "metric_value": "4.86",
+        "metric_value_formatted": "4.86",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2024,
+        "year_label": "2024",
+        "metric_value": "4.86",
+        "metric_value_formatted": "4.86",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2025,
+        "year_label": "2025E",
+        "metric_value": "4.86",
+        "metric_value_formatted": "4.86",
+        "is_forecast": true,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2026,
+        "year_label": "2026E",
+        "metric_value": "4.86",
+        "metric_value_formatted": "4.86",
+        "is_forecast": true,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2027,
+        "year_label": "2027E",
+        "metric_value": "4.86",
+        "metric_value_formatted": "4.86",
+        "is_forecast": true,
+        "processing_status": "Locked"
+      }
+    ]
+  },
+  {
+    "natural_id": "Company A",
+    "metric_name": "Scope-adjusted debt/EBITDA",
+    "history": [
+      {
+        "calendar_year": 2018,
+        "year_label": "2018",
+        "metric_value": "18.49",
+        "metric_value_formatted": "18.49",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2019,
+        "year_label": "2019",
+        "metric_value": "18.49",
+        "metric_value_formatted": "18.49",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2020,
+        "year_label": "2020",
+        "metric_value": "18.49",
+        "metric_value_formatted": "18.49",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2021,
+        "year_label": "2021",
+        "metric_value": "18.49",
+        "metric_value_formatted": "18.49",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2022,
+        "year_label": "2022",
+        "metric_value": "18.49",
+        "metric_value_formatted": "18.49",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2023,
+        "year_label": "2023",
+        "metric_value": "18.49",
+        "metric_value_formatted": "18.49",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2024,
+        "year_label": "2024",
+        "metric_value": "36.8",
+        "metric_value_formatted": "36.80",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2025,
+        "year_label": "2025E",
+        "metric_value": "36.8",
+        "metric_value_formatted": "36.80",
+        "is_forecast": true,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2026,
+        "year_label": "2026E",
+        "metric_value": "18.49",
+        "metric_value_formatted": "18.49",
+        "is_forecast": true,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2027,
+        "year_label": "2027E",
+        "metric_value": "18.49",
+        "metric_value_formatted": "18.49",
+        "is_forecast": true,
+        "processing_status": "Locked"
+      }
+    ]
+  },
+  {
+    "natural_id": "Company A",
+    "metric_name": "Scope-adjusted loan/value",
+    "history": [
+      {
+        "calendar_year": 2018,
+        "year_label": "2018",
+        "metric_value": "27.33",
+        "metric_value_formatted": "27.33",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2019,
+        "year_label": "2019",
+        "metric_value": "27.33",
+        "metric_value_formatted": "27.33",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2020,
+        "year_label": "2020",
+        "metric_value": "27.33",
+        "metric_value_formatted": "27.33",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2021,
+        "year_label": "2021",
+        "metric_value": "36.8",
+        "metric_value_formatted": "36.80",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2022,
+        "year_label": "2022",
+        "metric_value": "36.8",
+        "metric_value_formatted": "36.80",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2023,
+        "year_label": "2023",
+        "metric_value": null,
+        "metric_value_formatted": null,
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2024,
+        "year_label": "2024",
+        "metric_value": "27.33",
+        "metric_value_formatted": "27.33",
+        "is_forecast": false,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2025,
+        "year_label": "2025E",
+        "metric_value": "27.33",
+        "metric_value_formatted": "27.33",
+        "is_forecast": true,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2026,
+        "year_label": "2026E",
+        "metric_value": "27.33",
+        "metric_value_formatted": "27.33",
+        "is_forecast": true,
+        "processing_status": "Locked"
+      },
+      {
+        "calendar_year": 2027,
+        "year_label": "2027E",
+        "metric_value": "4.86",
+        "metric_value_formatted": "4.86",
+        "is_forecast": true,
+        "processing_status": "Locked"
+      }
+    ]
+  }
+]

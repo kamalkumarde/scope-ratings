@@ -39,7 +39,8 @@ services:
     volumes:
       - .:/app
       - ./data:/app/data
-      - ./tests:/app/tests
+      
+     
     networks:
       - warehouse_network
 
