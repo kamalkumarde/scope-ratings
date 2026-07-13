@@ -1,0 +1,74 @@
+[
+  {
+    "submission_id": 1112,
+    "valid_from": "2026-07-13T18:18:19.322589",
+    "valid_to": null,
+    "is_current": true
+  },
+  {
+    "submission_id": 1059,
+    "valid_from": "2026-07-13T18:18:18.111093",
+    "valid_to": "2026-07-13T18:18:19.322589",
+    "is_current": false
+  },
+  {
+    "submission_id": 1037,
+    "valid_from": "2026-07-13T18:18:17.540359",
+    "valid_to": "2026-07-13T18:18:18.111093",
+    "is_current": false
+  },
+  {
+    "submission_id": 1036,
+    "valid_from": "2026-07-13T18:18:17.416328",
+    "valid_to": "2026-07-13T18:18:17.540359",
+    "is_current": false
+  },
+  {
+    "submission_id": 1033,
+    "valid_from": "2026-07-13T18:18:17.260728",
+    "valid_to": "2026-07-13T18:18:17.416328",
+    "is_current": false
+  },
+  {
+    "submission_id": 1006,
+    "valid_from": "2026-07-13T18:18:16.568153",
+    "valid_to": "2026-07-13T18:18:17.260728",
+    "is_current": false
+  },
+  {
+    "submission_id": 1001,
+    "valid_from": "2026-07-13T18:16:14.971332",
+    "valid_to": "2026-07-13T18:18:16.568153",
+    "is_current": false
+  },
+  {
+    "submission_id": 948,
+    "valid_from": "2026-07-13T18:16:13.712116",
+    "valid_to": "2026-07-13T18:16:14.971332",
+    "is_current": false
+  },
+  {
+    "submission_id": 926,
+    "valid_from": "2026-07-13T18:16:13.119348",
+    "valid_to": "2026-07-13T18:16:13.712116",
+    "is_current": false
+  },
+  {
+    "submission_id": 925,
+    "valid_from": "2026-07-13T18:16:12.995480",
+    "valid_to": "2026-07-13T18:16:13.119348",
+    "is_current": false
+  },
+  {
+    "submission_id": 922,
+    "valid_from": "2026-07-13T18:16:12.837137",
+    "valid_to": "2026-07-13T18:16:12.995480",
+    "is_current": false
+  },
+  {
+    "submission_id": 895,
+    "valid_from": "2026-07-13T18:16:12.055713",
+    "valid_to": "2026-07-13T18:16:12.837137",
+    "is_current": false
+  }
+]

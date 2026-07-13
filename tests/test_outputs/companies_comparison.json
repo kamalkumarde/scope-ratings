@@ -1,0 +1,525 @@
+[
+  {
+    "natural_id": "Company B",
+    "entity_name": "Company B",
+    "country_of_origin": "Swiss Confederation",
+    "is_current": true,
+    "valid_from": "2026-07-13T18:16:12.350896",
+    "valid_to": null,
+    "submission_id": 903,
+    "metadata": {
+      "Leverage": "BB+",
+      "Liquidity": "+1 notch",
+      "Market share": "BBB+",
+      "Rated entity": "Company B",
+      "Industry risk": [
+        {
+          "sector": "Automotive Suppliers",
+          "Industry weight": "20%",
+          "Industry risk score": "BBB"
+        },
+        {
+          "sector": "Automotive and Commercial Vehicle Manufacturers",
+          "Industry weight": "25%",
+          "Industry risk score": "BB"
+        },
+        {
+          "sector": "Automotive and Commercial Vehicle Manufacturers",
+          "Industry weight": "55%",
+          "Industry risk score": "B"
+        }
+      ],
+      "Interest cover": "BBB+",
+      "Cash flow cover": "A-",
+      "CorporateSector": "Automobiles & Parts",
+      "Diversification": "A-",
+      "Country of origin": "Swiss Confederation",
+      "End of business year": "March",
+      "Accounting principles": "IFRS",
+      "Business risk profile": "BBB-",
+      "Segmentation criteria": "EBITDA contribution",
+      "Financial risk profile": "BB",
+      "Competitive Positioning": "A+",
+      "Operating profitability": "BB+",
+      "Reporting Currency/Units": "CHF",
+      "Rating methodologies applied": "Automotive and Commercial Vehicle Manufacturers Rating Methodology",
+      "(Blended) Industry risk profile": "A",
+      "Sector/company-specific factors (1)": "BBB+",
+      "Sector/company-specific factors (2)": null
+    }
+  },
+  {
+    "natural_id": "Company A",
+    "entity_name": "Company A",
+    "country_of_origin": "Federal Republic of Germany",
+    "is_current": false,
+    "valid_from": "2026-07-13T18:16:12.055713",
+    "valid_to": "2026-07-13T18:16:12.837137",
+    "submission_id": 895,
+    "metadata": {
+      "Leverage": "CCC",
+      "Liquidity": "-2 notches",
+      "Market share": "B+",
+      "Rated entity": "Company A",
+      "Industry risk": [
+        {
+          "sector": "Consumer Products: Non-Discretionary",
+          "Industry weight": "100%",
+          "Industry risk score": "BBB"
+        }
+      ],
+      "Interest cover": "B-",
+      "Cash flow cover": "CCC",
+      "CorporateSector": "Construction & Materials",
+      "Diversification": "B+",
+      "Country of origin": "Federal Republic of Germany",
+      "End of business year": "December",
+      "Accounting principles": "IFRS",
+      "Business risk profile": "B",
+      "Segmentation criteria": "EBITDA contribution",
+      "Financial risk profile": "CC",
+      "Competitive Positioning": "B+",
+      "Operating profitability": "B",
+      "Reporting Currency/Units": "EUR",
+      "Rating methodologies applied": "Metals and Mining Rating Methodology",
+      "(Blended) Industry risk profile": "A",
+      "Sector/company-specific factors (1)": "B-",
+      "Sector/company-specific factors (2)": null
+    }
+  },
+  {
+    "natural_id": "Company A",
+    "entity_name": "Company A",
+    "country_of_origin": "Federal Republic of Germany",
+    "is_current": false,
+    "valid_from": "2026-07-13T18:16:12.837137",
+    "valid_to": "2026-07-13T18:16:12.995480",
+    "submission_id": 922,
+    "metadata": {
+      "Leverage": "CCC",
+      "Liquidity": "-2 notches",
+      "Market share": "BB-",
+      "Rated entity": "Company A",
+      "Industry risk": [
+        {
+          "sector": "Consumer Products: Non-Discretionary",
+          "Industry weight": "100%",
+          "Industry risk score": "A"
+        }
+      ],
+      "Interest cover": "B-",
+      "Cash flow cover": "CCC",
+      "CorporateSector": "Personal & Household Goods",
+      "Diversification": "B+",
+      "Country of origin": "Federal Republic of Germany",
+      "End of business year": "December",
+      "Accounting principles": "IFRS",
+      "Business risk profile": "B+",
+      "Segmentation criteria": "EBITDA contribution",
+      "Financial risk profile": "C",
+      "Competitive Positioning": "B+",
+      "Operating profitability": "BB-",
+      "Reporting Currency/Units": "EUR",
+      "Rating methodologies applied": [
+        "General Corporate Rating Methodology",
+        "Consumer Products Rating Methodology"
+      ],
+      "(Blended) Industry risk profile": "A",
+      "Sector/company-specific factors (1)": "B-",
+      "Sector/company-specific factors (2)": null
+    }
+  },
+  {
+    "natural_id": "Company A",
+    "entity_name": "Company A",
+    "country_of_origin": "Federal Republic of Germany",
+    "is_current": false,
+    "valid_from": "2026-07-13T18:16:12.995480",
+    "valid_to": "2026-07-13T18:16:13.119348",
+    "submission_id": 925,
+    "metadata": {
+      "Leverage": "CCC",
+      "Liquidity": "-2 notches",
+      "Market share": "B+",
+      "Rated entity": "Company A",
+      "Industry risk": [
+        {
+          "sector": "Consumer Products: Non-Discretionary",
+          "Industry weight": "100%",
+          "Industry risk score": "BBB"
+        }
+      ],
+      "Interest cover": "B-",
+      "Cash flow cover": "CCC",
+      "CorporateSector": "Construction & Materials",
+      "Diversification": "B+",
+      "Country of origin": "Federal Republic of Germany",
+      "End of business year": "December",
+      "Accounting principles": "IFRS",
+      "Business risk profile": "B",
+      "Segmentation criteria": "EBITDA contribution",
+      "Financial risk profile": "CC",
+      "Competitive Positioning": "B+",
+      "Operating profitability": "B",
+      "Reporting Currency/Units": "USD",
+      "Rating methodologies applied": "Government Related Entities Rating Methodology",
+      "(Blended) Industry risk profile": "A",
+      "Sector/company-specific factors (1)": "B-",
+      "Sector/company-specific factors (2)": null
+    }
+  },
+  {
+    "natural_id": "Company A",
+    "entity_name": "Company A",
+    "country_of_origin": "Federal Republic of Germany",
+    "is_current": false,
+    "valid_from": "2026-07-13T18:16:13.119348",
+    "valid_to": "2026-07-13T18:16:13.712116",
+    "submission_id": 926,
+    "metadata": {
+      "Leverage": "CCC",
+      "Liquidity": "-2 notches",
+      "Market share": "B+",
+      "Rated entity": "Company A",
+      "Industry risk": [
+        {
+          "sector": "Consumer Products: Non-Discretionary",
+          "Industry weight": "100%",
+          "Industry risk score": "BBB"
+        }
+      ],
+      "Interest cover": "B-",
+      "Cash flow cover": "CCC",
+      "CorporateSector": "Construction & Materials",
+      "Diversification": "B+",
+      "Country of origin": "Federal Republic of Germany",
+      "End of business year": "December",
+      "Accounting principles": "IFRS",
+      "Business risk profile": "B",
+      "Segmentation criteria": "EBITDA contribution",
+      "Financial risk profile": "CC",
+      "Competitive Positioning": "B+",
+      "Operating profitability": "B",
+      "Reporting Currency/Units": "EUR",
+      "Rating methodologies applied": "Government Related Entities Rating Methodology",
+      "(Blended) Industry risk profile": "A",
+      "Sector/company-specific factors (1)": "B-",
+      "Sector/company-specific factors (2)": null
+    }
+  },
+  {
+    "natural_id": "Company A",
+    "entity_name": "Company A",
+    "country_of_origin": "Federal Republic of Germany",
+    "is_current": false,
+    "valid_from": "2026-07-13T18:16:13.712116",
+    "valid_to": "2026-07-13T18:16:14.971332",
+    "submission_id": 948,
+    "metadata": {
+      "Leverage": "CCC",
+      "Liquidity": "-2 notches",
+      "Market share": "B+",
+      "Rated entity": "Company A",
+      "Industry risk": [
+        {
+          "sector": "Consumer Products: Non-Discretionary",
+          "Industry weight": "100%",
+          "Industry risk score": "BBB"
+        }
+      ],
+      "Interest cover": "B-",
+      "Cash flow cover": "CCC",
+      "CorporateSector": "Construction & Materials",
+      "Diversification": "B+",
+      "Country of origin": "Federal Republic of Germany",
+      "End of business year": "December",
+      "Accounting principles": "IFRS",
+      "Business risk profile": "B",
+      "Segmentation criteria": "EBITDA contribution",
+      "Financial risk profile": "CC",
+      "Competitive Positioning": "B+",
+      "Operating profitability": "B",
+      "Reporting Currency/Units": "AED",
+      "Rating methodologies applied": "Government Related Entities Rating Methodology",
+      "(Blended) Industry risk profile": "A",
+      "Sector/company-specific factors (1)": "B-",
+      "Sector/company-specific factors (2)": null
+    }
+  },
+  {
+    "natural_id": "Company A",
+    "entity_name": "Company A",
+    "country_of_origin": "Federal Republic of Germany",
+    "is_current": false,
+    "valid_from": "2026-07-13T18:16:14.971332",
+    "valid_to": "2026-07-13T18:18:16.568153",
+    "submission_id": 1001,
+    "metadata": {
+      "Leverage": "CCC",
+      "Liquidity": "-2 notches",
+      "Market share": "B+",
+      "Rated entity": "Company A",
+      "Industry risk": [
+        {
+          "sector": "Consumer Products: Non-Discretionary",
+          "Industry weight": "100%",
+          "Industry risk score": "BBB"
+        }
+      ],
+      "Interest cover": "B-",
+      "Cash flow cover": "CCC",
+      "CorporateSector": "Personal & Household Goods",
+      "Diversification": "B+",
+      "Country of origin": "Federal Republic of Germany",
+      "End of business year": "December",
+      "Accounting principles": "IFRS",
+      "Business risk profile": "B",
+      "Segmentation criteria": "EBITDA contribution",
+      "Financial risk profile": "CC",
+      "Competitive Positioning": "B+",
+      "Operating profitability": "B",
+      "Reporting Currency/Units": "EUR",
+      "Rating methodologies applied": "General Corporate Rating Methodology",
+      "(Blended) Industry risk profile": "A",
+      "Sector/company-specific factors (1)": "B-",
+      "Sector/company-specific factors (2)": null
+    }
+  },
+  {
+    "natural_id": "Company A",
+    "entity_name": "Company A",
+    "country_of_origin": "Federal Republic of Germany",
+    "is_current": false,
+    "valid_from": "2026-07-13T18:18:16.568153",
+    "valid_to": "2026-07-13T18:18:17.260728",
+    "submission_id": 1006,
+    "metadata": {
+      "Leverage": "CCC",
+      "Liquidity": "-2 notches",
+      "Market share": "B+",
+      "Rated entity": "Company A",
+      "Industry risk": [
+        {
+          "sector": "Consumer Products: Non-Discretionary",
+          "Industry weight": "100%",
+          "Industry risk score": "BBB"
+        }
+      ],
+      "Interest cover": "B-",
+      "Cash flow cover": "CCC",
+      "CorporateSector": "Construction & Materials",
+      "Diversification": "B+",
+      "Country of origin": "Federal Republic of Germany",
+      "End of business year": "December",
+      "Accounting principles": "IFRS",
+      "Business risk profile": "B",
+      "Segmentation criteria": "EBITDA contribution",
+      "Financial risk profile": "CC",
+      "Competitive Positioning": "B+",
+      "Operating profitability": "B",
+      "Reporting Currency/Units": "EUR",
+      "Rating methodologies applied": "Metals and Mining Rating Methodology",
+      "(Blended) Industry risk profile": "A",
+      "Sector/company-specific factors (1)": "B-",
+      "Sector/company-specific factors (2)": null
+    }
+  },
+  {
+    "natural_id": "Company A",
+    "entity_name": "Company A",
+    "country_of_origin": "Federal Republic of Germany",
+    "is_current": false,
+    "valid_from": "2026-07-13T18:18:17.260728",
+    "valid_to": "2026-07-13T18:18:17.416328",
+    "submission_id": 1033,
+    "metadata": {
+      "Leverage": "CCC",
+      "Liquidity": "-2 notches",
+      "Market share": "BB-",
+      "Rated entity": "Company A",
+      "Industry risk": [
+        {
+          "sector": "Consumer Products: Non-Discretionary",
+          "Industry weight": "100%",
+          "Industry risk score": "A"
+        }
+      ],
+      "Interest cover": "B-",
+      "Cash flow cover": "CCC",
+      "CorporateSector": "Personal & Household Goods",
+      "Diversification": "B+",
+      "Country of origin": "Federal Republic of Germany",
+      "End of business year": "December",
+      "Accounting principles": "IFRS",
+      "Business risk profile": "B+",
+      "Segmentation criteria": "EBITDA contribution",
+      "Financial risk profile": "C",
+      "Competitive Positioning": "B+",
+      "Operating profitability": "BB-",
+      "Reporting Currency/Units": "EUR",
+      "Rating methodologies applied": [
+        "General Corporate Rating Methodology",
+        "Consumer Products Rating Methodology"
+      ],
+      "(Blended) Industry risk profile": "A",
+      "Sector/company-specific factors (1)": "B-",
+      "Sector/company-specific factors (2)": null
+    }
+  },
+  {
+    "natural_id": "Company A",
+    "entity_name": "Company A",
+    "country_of_origin": "Federal Republic of Germany",
+    "is_current": false,
+    "valid_from": "2026-07-13T18:18:17.416328",
+    "valid_to": "2026-07-13T18:18:17.540359",
+    "submission_id": 1036,
+    "metadata": {
+      "Leverage": "CCC",
+      "Liquidity": "-2 notches",
+      "Market share": "B+",
+      "Rated entity": "Company A",
+      "Industry risk": [
+        {
+          "sector": "Consumer Products: Non-Discretionary",
+          "Industry weight": "100%",
+          "Industry risk score": "BBB"
+        }
+      ],
+      "Interest cover": "B-",
+      "Cash flow cover": "CCC",
+      "CorporateSector": "Construction & Materials",
+      "Diversification": "B+",
+      "Country of origin": "Federal Republic of Germany",
+      "End of business year": "December",
+      "Accounting principles": "IFRS",
+      "Business risk profile": "B",
+      "Segmentation criteria": "EBITDA contribution",
+      "Financial risk profile": "CC",
+      "Competitive Positioning": "B+",
+      "Operating profitability": "B",
+      "Reporting Currency/Units": "USD",
+      "Rating methodologies applied": "Government Related Entities Rating Methodology",
+      "(Blended) Industry risk profile": "A",
+      "Sector/company-specific factors (1)": "B-",
+      "Sector/company-specific factors (2)": null
+    }
+  },
+  {
+    "natural_id": "Company A",
+    "entity_name": "Company A",
+    "country_of_origin": "Federal Republic of Germany",
+    "is_current": false,
+    "valid_from": "2026-07-13T18:18:17.540359",
+    "valid_to": "2026-07-13T18:18:18.111093",
+    "submission_id": 1037,
+    "metadata": {
+      "Leverage": "CCC",
+      "Liquidity": "-2 notches",
+      "Market share": "B+",
+      "Rated entity": "Company A",
+      "Industry risk": [
+        {
+          "sector": "Consumer Products: Non-Discretionary",
+          "Industry weight": "100%",
+          "Industry risk score": "BBB"
+        }
+      ],
+      "Interest cover": "B-",
+      "Cash flow cover": "CCC",
+      "CorporateSector": "Construction & Materials",
+      "Diversification": "B+",
+      "Country of origin": "Federal Republic of Germany",
+      "End of business year": "December",
+      "Accounting principles": "IFRS",
+      "Business risk profile": "B",
+      "Segmentation criteria": "EBITDA contribution",
+      "Financial risk profile": "CC",
+      "Competitive Positioning": "B+",
+      "Operating profitability": "B",
+      "Reporting Currency/Units": "EUR",
+      "Rating methodologies applied": "Government Related Entities Rating Methodology",
+      "(Blended) Industry risk profile": "A",
+      "Sector/company-specific factors (1)": "B-",
+      "Sector/company-specific factors (2)": null
+    }
+  },
+  {
+    "natural_id": "Company A",
+    "entity_name": "Company A",
+    "country_of_origin": "Federal Republic of Germany",
+    "is_current": false,
+    "valid_from": "2026-07-13T18:18:18.111093",
+    "valid_to": "2026-07-13T18:18:19.322589",
+    "submission_id": 1059,
+    "metadata": {
+      "Leverage": "CCC",
+      "Liquidity": "-2 notches",
+      "Market share": "B+",
+      "Rated entity": "Company A",
+      "Industry risk": [
+        {
+          "sector": "Consumer Products: Non-Discretionary",
+          "Industry weight": "100%",
+          "Industry risk score": "BBB"
+        }
+      ],
+      "Interest cover": "B-",
+      "Cash flow cover": "CCC",
+      "CorporateSector": "Construction & Materials",
+      "Diversification": "B+",
+      "Country of origin": "Federal Republic of Germany",
+      "End of business year": "December",
+      "Accounting principles": "IFRS",
+      "Business risk profile": "B",
+      "Segmentation criteria": "EBITDA contribution",
+      "Financial risk profile": "CC",
+      "Competitive Positioning": "B+",
+      "Operating profitability": "B",
+      "Reporting Currency/Units": "AED",
+      "Rating methodologies applied": "Government Related Entities Rating Methodology",
+      "(Blended) Industry risk profile": "A",
+      "Sector/company-specific factors (1)": "B-",
+      "Sector/company-specific factors (2)": null
+    }
+  },
+  {
+    "natural_id": "Company A",
+    "entity_name": "Company A",
+    "country_of_origin": "Federal Republic of Germany",
+    "is_current": true,
+    "valid_from": "2026-07-13T18:18:19.322589",
+    "valid_to": null,
+    "submission_id": 1112,
+    "metadata": {
+      "Leverage": "CCC",
+      "Liquidity": "-2 notches",
+      "Market share": "B+",
+      "Rated entity": "Company A",
+      "Industry risk": [
+        {
+          "sector": "Consumer Products: Non-Discretionary",
+          "Industry weight": "100%",
+          "Industry risk score": "BBB"
+        }
+      ],
+      "Interest cover": "B-",
+      "Cash flow cover": "CCC",
+      "CorporateSector": "Personal & Household Goods",
+      "Diversification": "B+",
+      "Country of origin": "Federal Republic of Germany",
+      "End of business year": "December",
+      "Accounting principles": "IFRS",
+      "Business risk profile": "B",
+      "Segmentation criteria": "EBITDA contribution",
+      "Financial risk profile": "CC",
+      "Competitive Positioning": "B+",
+      "Operating profitability": "B",
+      "Reporting Currency/Units": "EUR",
+      "Rating methodologies applied": "General Corporate Rating Methodology",
+      "(Blended) Industry risk profile": "A",
+      "Sector/company-specific factors (1)": "B-",
+      "Sector/company-specific factors (2)": null
+    }
+  }
+]

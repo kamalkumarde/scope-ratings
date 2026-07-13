@@ -1,0 +1,466 @@
+[
+  {
+    "natural_id": "Borealis Chemical Group SE",
+    "entity_name": "Borealis Chemical Group SE",
+    "country_of_origin": "Federal Republic of Germany",
+    "is_current": true,
+    "valid_from": "2026-07-13T18:16:13.962985",
+    "valid_to": null,
+    "submission_id": 958,
+    "metadata": {
+      "Leverage": "CCC",
+      "Liquidity": "-2 notches",
+      "Market share": "BB-",
+      "Rated entity": "Borealis Chemical Group SE",
+      "Industry risk": [
+        {
+          "sector": "Automotive Suppliers",
+          "Industry weight": "10%",
+          "Industry risk score": "A"
+        },
+        {
+          "sector": "Automotive Suppliers",
+          "Industry weight": "90%",
+          "Industry risk score": "BB"
+        }
+      ],
+      "Interest cover": "B-",
+      "Cash flow cover": "CCC",
+      "CorporateSector": "Technology",
+      "Diversification": "B+",
+      "Country of origin": "Federal Republic of Germany",
+      "End of business year": "December",
+      "Accounting principles": "Local GAAP",
+      "Business risk profile": "CCC",
+      "Segmentation criteria": "EBITDA contribution",
+      "Financial risk profile": "C",
+      "Competitive Positioning": "B+",
+      "Operating profitability": "BB-",
+      "Reporting Currency/Units": "EUR",
+      "Rating methodologies applied": [
+        "General Corporate Rating Methodology",
+        "Consumer Products Rating Methodology"
+      ],
+      "(Blended) Industry risk profile": "A",
+      "Sector/company-specific factors (1)": "B-",
+      "Sector/company-specific factors (2)": null
+    }
+  },
+  {
+    "natural_id": "Chronos Logistics & Transport",
+    "entity_name": "Chronos Logistics & Transport",
+    "country_of_origin": "Federal Republic of Germany",
+    "is_current": true,
+    "valid_from": "2026-07-13T18:16:14.058780",
+    "valid_to": null,
+    "submission_id": 962,
+    "metadata": {
+      "Leverage": "CCC",
+      "Liquidity": "-2 notches",
+      "Market share": "BB-",
+      "Rated entity": "Chronos Logistics & Transport",
+      "Industry risk": [
+        {
+          "sector": "Automotive Suppliers",
+          "Industry weight": "95%",
+          "Industry risk score": "BBB"
+        },
+        {
+          "sector": "Automotive Suppliers",
+          "Industry weight": "5%",
+          "Industry risk score": "BB"
+        }
+      ],
+      "Interest cover": "B-",
+      "Cash flow cover": "CCC",
+      "CorporateSector": "Technology",
+      "Diversification": "B+",
+      "Country of origin": "Federal Republic of Germany",
+      "End of business year": "December",
+      "Accounting principles": "IFRS",
+      "Business risk profile": "BBB",
+      "Segmentation criteria": "EBITDA contribution",
+      "Financial risk profile": "C",
+      "Competitive Positioning": "B+",
+      "Operating profitability": "BB-",
+      "Reporting Currency/Units": "EUR",
+      "Rating methodologies applied": [
+        "General Corporate Rating Methodology",
+        "Consumer Products Rating Methodology"
+      ],
+      "(Blended) Industry risk profile": "A",
+      "Sector/company-specific factors (1)": "B-",
+      "Sector/company-specific factors (2)": null
+    }
+  },
+  {
+    "natural_id": "Company A",
+    "entity_name": "Company A",
+    "country_of_origin": "Federal Republic of Germany",
+    "is_current": true,
+    "valid_from": "2026-07-13T18:18:19.322589",
+    "valid_to": null,
+    "submission_id": 1112,
+    "metadata": {
+      "Leverage": "CCC",
+      "Liquidity": "-2 notches",
+      "Market share": "B+",
+      "Rated entity": "Company A",
+      "Industry risk": [
+        {
+          "sector": "Consumer Products: Non-Discretionary",
+          "Industry weight": "100%",
+          "Industry risk score": "BBB"
+        }
+      ],
+      "Interest cover": "B-",
+      "Cash flow cover": "CCC",
+      "CorporateSector": "Personal & Household Goods",
+      "Diversification": "B+",
+      "Country of origin": "Federal Republic of Germany",
+      "End of business year": "December",
+      "Accounting principles": "IFRS",
+      "Business risk profile": "B",
+      "Segmentation criteria": "EBITDA contribution",
+      "Financial risk profile": "CC",
+      "Competitive Positioning": "B+",
+      "Operating profitability": "B",
+      "Reporting Currency/Units": "EUR",
+      "Rating methodologies applied": "General Corporate Rating Methodology",
+      "(Blended) Industry risk profile": "A",
+      "Sector/company-specific factors (1)": "B-",
+      "Sector/company-specific factors (2)": null
+    }
+  },
+  {
+    "natural_id": "Company B",
+    "entity_name": "Company B",
+    "country_of_origin": "Swiss Confederation",
+    "is_current": true,
+    "valid_from": "2026-07-13T18:16:12.350896",
+    "valid_to": null,
+    "submission_id": 903,
+    "metadata": {
+      "Leverage": "BB+",
+      "Liquidity": "+1 notch",
+      "Market share": "BBB+",
+      "Rated entity": "Company B",
+      "Industry risk": [
+        {
+          "sector": "Automotive Suppliers",
+          "Industry weight": "20%",
+          "Industry risk score": "BBB"
+        },
+        {
+          "sector": "Automotive and Commercial Vehicle Manufacturers",
+          "Industry weight": "25%",
+          "Industry risk score": "BB"
+        },
+        {
+          "sector": "Automotive and Commercial Vehicle Manufacturers",
+          "Industry weight": "55%",
+          "Industry risk score": "B"
+        }
+      ],
+      "Interest cover": "BBB+",
+      "Cash flow cover": "A-",
+      "CorporateSector": "Automobiles & Parts",
+      "Diversification": "A-",
+      "Country of origin": "Swiss Confederation",
+      "End of business year": "March",
+      "Accounting principles": "IFRS",
+      "Business risk profile": "BBB-",
+      "Segmentation criteria": "EBITDA contribution",
+      "Financial risk profile": "BB",
+      "Competitive Positioning": "A+",
+      "Operating profitability": "BB+",
+      "Reporting Currency/Units": "CHF",
+      "Rating methodologies applied": "Automotive and Commercial Vehicle Manufacturers Rating Methodology",
+      "(Blended) Industry risk profile": "A",
+      "Sector/company-specific factors (1)": "BBB+",
+      "Sector/company-specific factors (2)": null
+    }
+  },
+  {
+    "natural_id": "Delta Energy Infrastructure Corp",
+    "entity_name": "Delta Energy Infrastructure Corp",
+    "country_of_origin": "Federal Republic of Germany",
+    "is_current": true,
+    "valid_from": "2026-07-13T18:18:19.238499",
+    "valid_to": null,
+    "submission_id": 1108,
+    "metadata": {
+      "Leverage": "CCC",
+      "Liquidity": "-2 notches",
+      "Market share": "BB-",
+      "Rated entity": "Delta Energy Infrastructure Corp",
+      "Industry risk": [
+        {
+          "sector": "Automotive Suppliers",
+          "Industry weight": "5%",
+          "Industry risk score": "BBB"
+        },
+        {
+          "sector": "Automotive Suppliers",
+          "Industry weight": "95%",
+          "Industry risk score": "BB"
+        }
+      ],
+      "Interest cover": "B-",
+      "Cash flow cover": "CCC",
+      "CorporateSector": "Personal & Household Goods",
+      "Diversification": "B+",
+      "Country of origin": "Federal Republic of Germany",
+      "End of business year": "December",
+      "Accounting principles": "Local GAAP",
+      "Business risk profile": "A",
+      "Segmentation criteria": "EBITDA contribution",
+      "Financial risk profile": "C",
+      "Competitive Positioning": "B+",
+      "Operating profitability": "BB-",
+      "Reporting Currency/Units": "EUR",
+      "Rating methodologies applied": [
+        "General Corporate Rating Methodology",
+        "Consumer Products Rating Methodology"
+      ],
+      "(Blended) Industry risk profile": "A",
+      "Sector/company-specific factors (1)": "B-",
+      "Sector/company-specific factors (2)": null
+    }
+  },
+  {
+    "natural_id": "Ironclad Industrial Goods",
+    "entity_name": "Ironclad Industrial Goods",
+    "country_of_origin": "Federal Republic of Germany",
+    "is_current": true,
+    "valid_from": "2026-07-13T18:18:19.137775",
+    "valid_to": null,
+    "submission_id": 1104,
+    "metadata": {
+      "Leverage": "CCC",
+      "Liquidity": "-2 notches",
+      "Market share": "BB-",
+      "Rated entity": "Ironclad Industrial Goods",
+      "Industry risk": [
+        {
+          "sector": "Automotive Suppliers",
+          "Industry weight": "85%",
+          "Industry risk score": "A"
+        },
+        {
+          "sector": "Automotive Suppliers",
+          "Industry weight": "15%",
+          "Industry risk score": "BB"
+        }
+      ],
+      "Interest cover": "B-",
+      "Cash flow cover": "CCC",
+      "CorporateSector": "Personal & Household Goods",
+      "Diversification": "B+",
+      "Country of origin": "Federal Republic of Germany",
+      "End of business year": "December",
+      "Accounting principles": "IFRS",
+      "Business risk profile": "C",
+      "Segmentation criteria": "EBITDA contribution",
+      "Financial risk profile": "C",
+      "Competitive Positioning": "B+",
+      "Operating profitability": "BB-",
+      "Reporting Currency/Units": "EUR",
+      "Rating methodologies applied": [
+        "General Corporate Rating Methodology",
+        "Consumer Products Rating Methodology"
+      ],
+      "(Blended) Industry risk profile": "A",
+      "Sector/company-specific factors (1)": "B-",
+      "Sector/company-specific factors (2)": null
+    }
+  },
+  {
+    "natural_id": "Keystone Construction Materials",
+    "entity_name": "Keystone Construction Materials",
+    "country_of_origin": "Federal Republic of Germany",
+    "is_current": true,
+    "valid_from": "2026-07-13T18:16:13.320137",
+    "valid_to": null,
+    "submission_id": 934,
+    "metadata": {
+      "Leverage": "CCC",
+      "Liquidity": "-2 notches",
+      "Market share": "BB-",
+      "Rated entity": "Keystone Construction Materials",
+      "Industry risk": [
+        {
+          "sector": "Consumer Products: Non-Discretionary",
+          "Industry weight": "85%",
+          "Industry risk score": "A"
+        },
+        {
+          "sector": "Automotive Suppliers",
+          "Industry weight": "15%",
+          "Industry risk score": "BB"
+        }
+      ],
+      "Interest cover": "B-",
+      "Cash flow cover": "CCC",
+      "CorporateSector": "Chemicals",
+      "Diversification": "B+",
+      "Country of origin": "Federal Republic of Germany",
+      "End of business year": "December",
+      "Accounting principles": "IFRS",
+      "Business risk profile": "B+",
+      "Segmentation criteria": "EBITDA contribution",
+      "Financial risk profile": "C",
+      "Competitive Positioning": "B+",
+      "Operating profitability": "BB-",
+      "Reporting Currency/Units": "EUR",
+      "Rating methodologies applied": [
+        "General Corporate Rating Methodology",
+        "Consumer Products Rating Methodology"
+      ],
+      "(Blended) Industry risk profile": "A",
+      "Sector/company-specific factors (1)": "B-",
+      "Sector/company-specific factors (2)": null
+    }
+  },
+  {
+    "natural_id": "Luminary Software & IT Services",
+    "entity_name": "Luminary Software & IT Services",
+    "country_of_origin": "Federal Republic of Germany",
+    "is_current": true,
+    "valid_from": "2026-07-13T18:16:13.742035",
+    "valid_to": null,
+    "submission_id": 949,
+    "metadata": {
+      "Leverage": "CCC",
+      "Liquidity": "-2 notches",
+      "Market share": "BB-",
+      "Rated entity": "Luminary Software & IT Services",
+      "Industry risk": [
+        {
+          "sector": "Automotive Suppliers",
+          "Industry weight": "95%",
+          "Industry risk score": "BBB"
+        },
+        {
+          "sector": "Automotive Suppliers",
+          "Industry weight": "5%",
+          "Industry risk score": "BB"
+        }
+      ],
+      "Interest cover": "B-",
+      "Cash flow cover": "CCC",
+      "CorporateSector": "Chemicals",
+      "Diversification": "B+",
+      "Country of origin": "Federal Republic of Germany",
+      "End of business year": "December",
+      "Accounting principles": "Local GAAP",
+      "Business risk profile": "C",
+      "Segmentation criteria": "EBITDA contribution",
+      "Financial risk profile": "C",
+      "Competitive Positioning": "B+",
+      "Operating profitability": "BB-",
+      "Reporting Currency/Units": "EUR",
+      "Rating methodologies applied": [
+        "General Corporate Rating Methodology",
+        "Consumer Products Rating Methodology"
+      ],
+      "(Blended) Industry risk profile": "A",
+      "Sector/company-specific factors (1)": "B-",
+      "Sector/company-specific factors (2)": null
+    }
+  },
+  {
+    "natural_id": "Nexus Aerospace & Defence",
+    "entity_name": "Nexus Aerospace & Defence",
+    "country_of_origin": "Federal Republic of Germany",
+    "is_current": true,
+    "valid_from": "2026-07-13T18:18:18.915392",
+    "valid_to": null,
+    "submission_id": 1094,
+    "metadata": {
+      "Leverage": "CCC",
+      "Liquidity": "-2 notches",
+      "Market share": "BB-",
+      "Rated entity": "Nexus Aerospace & Defence",
+      "Industry risk": [
+        {
+          "sector": "Consumer Products: Non-Discretionary",
+          "Industry weight": "35%",
+          "Industry risk score": "A"
+        },
+        {
+          "sector": "Automotive Suppliers",
+          "Industry weight": "65%",
+          "Industry risk score": "BB"
+        }
+      ],
+      "Interest cover": "B-",
+      "Cash flow cover": "CCC",
+      "CorporateSector": "Personal & Household Goods",
+      "Diversification": "B+",
+      "Country of origin": "Federal Republic of Germany",
+      "End of business year": "December",
+      "Accounting principles": "IFRS",
+      "Business risk profile": "B+",
+      "Segmentation criteria": "EBITDA contribution",
+      "Financial risk profile": "C",
+      "Competitive Positioning": "B+",
+      "Operating profitability": "BB-",
+      "Reporting Currency/Units": "EUR",
+      "Rating methodologies applied": [
+        "General Corporate Rating Methodology",
+        "Consumer Products Rating Methodology"
+      ],
+      "(Blended) Industry risk profile": "A",
+      "Sector/company-specific factors (1)": "B-",
+      "Sector/company-specific factors (2)": null
+    }
+  },
+  {
+    "natural_id": "Summit Network Utilities",
+    "entity_name": "Summit Network Utilities",
+    "country_of_origin": "Federal Republic of Germany",
+    "is_current": true,
+    "valid_from": "2026-07-13T18:16:12.782374",
+    "valid_to": null,
+    "submission_id": 920,
+    "metadata": {
+      "Leverage": "CCC",
+      "Liquidity": "-2 notches",
+      "Market share": "BB-",
+      "Rated entity": "Summit Network Utilities",
+      "Industry risk": [
+        {
+          "sector": "Consumer Products: Non-Discretionary",
+          "Industry weight": "30%",
+          "Industry risk score": "BBB"
+        },
+        {
+          "sector": "Automotive Suppliers",
+          "Industry weight": "70%",
+          "Industry risk score": "BB"
+        }
+      ],
+      "Interest cover": "B-",
+      "Cash flow cover": "CCC",
+      "CorporateSector": "Technology",
+      "Diversification": "B+",
+      "Country of origin": "Federal Republic of Germany",
+      "End of business year": "December",
+      "Accounting principles": "IFRS",
+      "Business risk profile": "C",
+      "Segmentation criteria": "EBITDA contribution",
+      "Financial risk profile": "C",
+      "Competitive Positioning": "B+",
+      "Operating profitability": "BB-",
+      "Reporting Currency/Units": "EUR",
+      "Rating methodologies applied": [
+        "General Corporate Rating Methodology",
+        "Consumer Products Rating Methodology"
+      ],
+      "(Blended) Industry risk profile": "A",
+      "Sector/company-specific factors (1)": "B-",
+      "Sector/company-specific factors (2)": null
+    }
+  }
+]
