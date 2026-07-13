@@ -10,9 +10,6 @@ class ConfigManager:
         self.logger = logging.getLogger(self.__class__.__name__)
         
         if project_root_path is None:
-            # Path(__file__).resolve() is this file
-            # .parent is the folder containing this file
-            # .parent.parent is one level above that (your project root)
             self.project_root = Path(__file__).resolve().parent.parent
         else:
             self.project_root = Path(project_root_path).resolve()

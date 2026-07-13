@@ -252,16 +252,16 @@ class WarehouseLoader:
 
 
             """
-            self.logger.info("load_profile |************************* ")
+            #self.logger.info("load_profile |************************* ")
             tcur.execute(sql_prepare, (submission_id, entity_key, entity_hash))
-            self.logger.info("load_profile |**********11111111*************** ")
+            #self.logger.info("load_profile |**********11111111*************** ")
             
             row = tcur.fetchone()
             if not row:
                 return 0
 
             new_profile_hash = row[-1]
-            self.logger.info("load_profile |**********2222222222222221*************** ")
+            #self.logger.info("load_profile |**********2222222222222221*************** ")
 
             # Check for change
             tcur.execute("""
@@ -270,7 +270,7 @@ class WarehouseLoader:
                 WHERE entity_key = %s AND is_current = TRUE
             """, (entity_key,))
             current = tcur.fetchone()
-            self.logger.info("load_profile |**********333333333333333333*************** ")
+            #self.logger.info("load_profile |**********333333333333333333*************** ")
 
             if current and current[1] == new_profile_hash:
                 self.logger.info("No change in profile")
@@ -282,7 +282,7 @@ class WarehouseLoader:
                         (entity_key,))
 
             # Insert new profile
-            self.logger.info("load_profile |**********44444444*************** %s", )
+            #self.logger.info("load_profile |**********44444444*************** %s", )
             sql_insert = """
                 INSERT INTO dim_profiles (
                     entity_key, entity_hash_key, profile_hash_key, industry_aggregate_hash_key,

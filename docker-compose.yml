@@ -50,7 +50,7 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: rating_api_service
-    # Overrides the default "python main.py" inside your multi-stage Dockerfile
+    
     command: uvicorn src.api.main:app --host 0.0.0.0 --port 8000
     ports:
       - "8000:8000"
