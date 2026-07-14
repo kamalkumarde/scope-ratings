@@ -113,3 +113,59 @@ docker compose run --rm -v "$(pwd):/app" --workdir /app api pytest tests/test_ap
 docker compose run pipeline 
 ```
  
+### Curls to run all the apis
+
+```bash
+curl -s -X 'GET' \
+  'http://localhost:8000/api/v1/companies?limit=10&offset=0' \
+  -H 'accept: application/json' | jq
+
+
+  curl -s -X 'GET' \
+  'http://localhost:8000/api/v1/companies/43 \
+  -H 'accept: application/json' | jq
+
+   curl -s -X 'GET' \
+  'http://localhost:8000/api/v1/companies/Company%20A/versions' \
+  -H 'accept: application/json' | jq
+
+ curl -s -X 'GET' 'http://localhost:8000/api/v1/companies/Company%20A/history' \
+ -H 'accept: application/json' | jq
+
+ curl -s -X 'GET' \
+  'http://localhost:8000/api/v1/companies/compare?company_ids=Company%20A&company_ids=Company%20B&as_of_date=2026-07-13' \
+  -H 'accept: application/json' | jq
+
+
+  curl -s -X 'GET' \
+  'http://localhost:8000/api/v1/snapshots?company_id=Company%20A' \
+  -H 'accept: application/json' | jq
+
+
+   curl -s -X 'GET' \
+  'http://localhost:8000/api/v1/snapshots/25' \
+  -H 'accept: application/json' | jq
+
+  curl -s -X 'GET' \
+  'http://localhost:8000/api/v1/snapshots/latest' \
+  -H 'accept: application/json' | jq
+
+
+  curl -s -X 'GET' \
+  'http://localhost:8000/api/v1/uploads?limit=10' \
+  -H 'accept: application/json' | jq
+
+  curl -s -X 'GET' 'http://localhost:8000/api/v1/uploads/stats' -H 'accept: application/json' | jq
+{
+
+curl -s -X 'GET' 'http://localhost:8000/api/v1/uploads?limit=5' -H 'accept: application/json' | jq
+
+curl -X 'GET' \
+  'http://localhost:8000/api/v1/uploads/568/file' \
+  -H 'accept: application/json' \
+  -o submission_013_valid.xlsm
+
+
+```
+ 
+
