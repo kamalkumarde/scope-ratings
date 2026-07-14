@@ -38,7 +38,7 @@ scope-ratings/
 ```bash
 git clone https://github.com/kamalkumarde/scope-ratings.git
 cd scope-ratings
-mkdir data dlq archive
+mkdir data dlq archive log
 ```
 
 ### 2. Build and Deploy
@@ -108,7 +108,7 @@ docker compose run --rm -v "$(pwd):/app" --workdir /app api pytest tests/test_ap
 ```
 
 
-### Run the Pipeline
+### Run the Pipeline move the data files to the data folder in the project root
 ```bash
 docker compose run pipeline 
 ```
