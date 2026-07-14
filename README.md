@@ -113,7 +113,7 @@ docker compose run --rm -v "$(pwd):/app" --workdir /app api pytest tests/test_ap
 docker compose run pipeline 
 ```
  
-### Curls to run all the apis
+### Curls to run all the apis or run test/api_verifier.sh to get the seperate json files per api call
 
 ```bash
 curl -s -X 'GET' \
